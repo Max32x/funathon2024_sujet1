@@ -218,22 +218,6 @@ window.Quarto = {
 </header>
 
 
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in get_travel_time_api_response(ROUTES_API_URL, request_body): Failed
-to retrieve data: Client error: (429) Too Many Requests (RFC 6585)
-Warning in get_travel_time_api_response(ROUTES_API_URL, request_body): Failed
-to retrieve data: Client error: (429) Too Many Requests (RFC 6585)
-Warning in get_travel_time_api_response(ROUTES_API_URL, request_body): Failed
-to retrieve data: Client error: (429) Too Many Requests (RFC 6585)
-Warning in get_travel_time_api_response(ROUTES_API_URL, request_body): Failed
-to retrieve data: Client error: (429) Too Many Requests (RFC 6585)
-Warning in get_travel_time_api_response(ROUTES_API_URL, request_body): Failed
-to retrieve data: Client error: (429) Too Many Requests (RFC 6585)
-Warning in get_travel_time_api_response(ROUTES_API_URL, request_body): Failed
-to retrieve data: Client error: (429) Too Many Requests (RFC 6585)</code></pre>
-</div>
-</div>
 <section id="récupération-des-coordonnées-des-villes-françaises" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Récupération des coordonnées des villes françaises</h1>
 <p>L’objectif de cette partie est de récupérer les coordonnées géographiques des gares françaises à partir d’une base de données disponible en accès ouvert sur <a href="https://www.data.gouv.fr/">data.gouv.fr</a>.</p>
@@ -251,7 +235,7 @@ Comment télécharger un CSV dans un programe R ?
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -260,7 +244,7 @@ Comment télécharger un CSV dans un programe R ?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>Sur <a href="https://www.data.gouv.fr/">data.gouv.fr</a>, chercher le jeu de données correspondant à la liste des gare.</p></li>
@@ -269,10 +253,10 @@ Comment télécharger un CSV dans un programe R ?
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On définit l'URL des données</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>STATIONS_DATA_URL <span class="ot">&lt;-</span> <span class="st">"https://www.data.gouv.fr/fr/datasets/r/d22ba593-90a4-4725-977c-095d1f654d28"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>stations_data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(STATIONS_DATA_URL)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On définit l'URL des données</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>STATIONS_DATA_URL <span class="ot">&lt;-</span> <span class="st">"https://www.data.gouv.fr/fr/datasets/r/d22ba593-90a4-4725-977c-095d1f654d28"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>stations_data <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(STATIONS_DATA_URL)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <details>
@@ -441,43 +425,55 @@ Afficher les données
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>STATION_NAME <span class="ot">&lt;-</span> <span class="st">"Lille-Flandres"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>coords <span class="ot">&lt;-</span> stations_data <span class="sc">|&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">lng =</span> x_wgs84, <span class="at">lat =</span> y_wgs84, libelle) <span class="sc">|&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(libelle <span class="sc">==</span> STATION_NAME) <span class="sc">|&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">lat =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(<span class="fu">as.numeric</span>(lat)), <span class="at">lng =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(<span class="fu">as.numeric</span>(lng))) <span class="sc">|&gt;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unlist</span>(<span class="at">use.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>STATION_NAME <span class="ot">&lt;-</span> <span class="st">"Lille-Flandres"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>coords <span class="ot">&lt;-</span> stations_data <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">lng =</span> x_wgs84, <span class="at">lat =</span> y_wgs84, libelle) <span class="sc">|&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(libelle <span class="sc">==</span> STATION_NAME) <span class="sc">|&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">lat =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(<span class="fu">as.numeric</span>(lat)), <span class="at">lng =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(<span class="fu">as.numeric</span>(lng))) <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unlist</span>(<span class="at">use.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="4" type="1">
 <li>Encapsuler le code précédent dans une fonction renvoyant les coordonnées d’une gare à partir de la chaîne de caractère du nom de la gare. Faire un test en affichant les coordonnées de la gare de Toulouse-Matabiau.</li>
 </ol>
-<p>::::{.callout-warning} Dans le jeu de données des stations de France, le point géographique pour la gare de Strasbourg-Ville si situe au milieu des rails… point qui est considéré inatteignable pour l’API de TravelTime. Utiliser le point <span class="math inline">\((48.584488, 7.735626)\)</span> pour cette gare, qui correspond à l’entrée de la gare. ::::</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Avertissement
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans le jeu de données des stations de France, le point géographique pour la gare de Strasbourg-Ville si situe au milieu des rails… point qui est considéré inatteignable pour l’API de TravelTime. Utiliser le point <span class="math inline">\((48.584488, 7.735626)\)</span> pour cette gare, qui correspond à l’entrée de la gare.</p>
+</div>
+</div>
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>get_station_coordinates <span class="ot">&lt;-</span> <span class="cf">function</span>(station, data, <span class="at">verbose =</span> <span class="cn">TRUE</span>){</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (station <span class="sc">!=</span> <span class="st">"Strasbourg-Ville"</span>) {</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    coords <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">lng =</span> x_wgs84, <span class="at">lat =</span> y_wgs84, libelle) <span class="sc">|&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      dplyr<span class="sc">::</span><span class="fu">filter</span>(libelle <span class="sc">==</span> station) <span class="sc">|&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">lat =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(<span class="fu">as.numeric</span>(lat)), <span class="at">lng =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(<span class="fu">as.numeric</span>(lng))) <span class="sc">|&gt;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">unlist</span>(<span class="at">use.names =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    coords <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">48.584488</span>, <span class="fl">7.735626</span>)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Si verbose est TRUE, on affiche les coordonnées</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (verbose){</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"%s -&gt; (%f, %f)</span><span class="sc">\n</span><span class="st">"</span>, station, coords[<span class="dv">1</span>], coords[<span class="dv">2</span>]))</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(coords)</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>tlse_coords <span class="ot">&lt;-</span> <span class="fu">get_station_coordinates</span>(<span class="st">"Toulouse-Matabiau"</span>, stations_data, <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>get_station_coordinates <span class="ot">&lt;-</span> <span class="cf">function</span>(station, data, <span class="at">verbose =</span> <span class="cn">TRUE</span>){</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (station <span class="sc">!=</span> <span class="st">"Strasbourg-Ville"</span>) {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    coords <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">lng =</span> x_wgs84, <span class="at">lat =</span> y_wgs84, libelle) <span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>      dplyr<span class="sc">::</span><span class="fu">filter</span>(libelle <span class="sc">==</span> station) <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">lat =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(<span class="fu">as.numeric</span>(lat)), <span class="at">lng =</span> dplyr<span class="sc">::</span><span class="fu">first</span>(<span class="fu">as.numeric</span>(lng))) <span class="sc">|&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">unlist</span>(<span class="at">use.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    coords <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">48.584488</span>, <span class="fl">7.735626</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Si verbose est TRUE, on affiche les coordonnées</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (verbose){</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"%s -&gt; (%f, %f)</span><span class="sc">\n</span><span class="st">"</span>, station, coords[<span class="dv">1</span>], coords[<span class="dv">2</span>]))</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(coords)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>tlse_coords <span class="ot">&lt;-</span> <span class="fu">get_station_coordinates</span>(<span class="st">"Toulouse-Matabiau"</span>, stations_data, <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Toulouse-Matabiau -&gt; (43.610699, 1.454396)</code></pre>
@@ -491,7 +487,7 @@ Afficher les données
 <h1 data-number="2"><span class="header-section-number">2</span> Obtention du temps de transport entre 2 villes</h1>
 <p>L’objectif de cette partie est de récupérer le temps de transport entre deux gares à partir de leur nom en combinant la fonction <code>get_travel_time_api_response()</code> donnée dans la fonction <code>get_travel_time_api_response()</code> et la fonction <code>get_station_coordinates()</code>.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -500,7 +496,7 @@ Afficher les données
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Créer une fonction qui prend en paramètres deux couples de coordonnées et qui renvoie un JSON (en chaine de caractère) destiné à l’API de routage. Utilisez ces paramètres par défaut dans votre corps de requête :</li>
@@ -516,57 +512,57 @@ Afficher les données
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>get_routes_api_json <span class="ot">&lt;-</span> <span class="cf">function</span>(coords1, coords2){</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># On créé le JSON pour l'API de routage en se basant sur celui de la sous-partie "Interaction avec l'API de routage de TravelTime"</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  request_body <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">'{</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">    "locations": [</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="st">      {</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="st">        "id": "point-from",</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="st">        "coords": {</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="st">          "lat": %f,</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="st">          "lng": %f </span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="st">        }</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="st">      },</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="st">      {</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="st">        "id": "point-to-1",</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="st">        "coords": {</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="st">          "lat": %f,</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="st">          "lng": %f </span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="st">        }</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="st">      }</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="st">    ],</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="st">    "departure_searches": [</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="st">      {</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="st">        "id": "departure-search",</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="st">        "transportation": {</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="st">          "type": "public_transport",</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="st">          "walking_time": 900,</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="st">          "cycling_time_to_station": 100,</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="st">          "parking_time": 0,</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="st">          "boarding_time": 0,</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="st">          "driving_time_to_station": 1800,</span></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="st">          "pt_change_delay": 0,</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="st">          "disable_border_crossing": false</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="st">        },</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="st">        "departure_location_id": "point-from",</span></span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="st">        "arrival_location_ids": [</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="st">          "point-to-1"</span></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="st">        ],</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="st">        "departure_time": "2024-06-05T18:00:00.000Z",</span></span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="st">        "properties": [</span></span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="st">          "travel_time",</span></span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="st">          "route"</span></span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="st">        ],</span></span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="st">        "range": {</span></span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="st">          "enabled": true,</span></span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="st">          "max_results": 5,</span></span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="st">          "width": 43200</span></span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="st">        }</span></span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="st">      }</span></span>
-<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="st">    ]</span></span>
-<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a><span class="st">  }'</span> , coords1[<span class="dv">1</span>], coords1[<span class="dv">2</span>], coords2[<span class="dv">1</span>], coords2[<span class="dv">2</span>])</span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(request_body)</span>
-<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>get_routes_api_json <span class="ot">&lt;-</span> <span class="cf">function</span>(coords1, coords2){</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># On créé le JSON pour l'API de routage en se basant sur celui de la sous-partie "Interaction avec l'API de routage de TravelTime"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  request_body <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">'{</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="st">    "locations": [</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="st">      {</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="st">        "id": "point-from",</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="st">        "coords": {</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="st">          "lat": %f,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="st">          "lng": %f </span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="st">        }</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="st">      },</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="st">      {</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="st">        "id": "point-to-1",</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="st">        "coords": {</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="st">          "lat": %f,</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="st">          "lng": %f </span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="st">        }</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="st">      }</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="st">    ],</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="st">    "departure_searches": [</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="st">      {</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="st">        "id": "departure-search",</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="st">        "transportation": {</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="st">          "type": "public_transport",</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="st">          "walking_time": 900,</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="st">          "cycling_time_to_station": 100,</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="st">          "parking_time": 0,</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="st">          "boarding_time": 0,</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="st">          "driving_time_to_station": 1800,</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="st">          "pt_change_delay": 0,</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="st">          "disable_border_crossing": false</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="st">        },</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="st">        "departure_location_id": "point-from",</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="st">        "arrival_location_ids": [</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="st">          "point-to-1"</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="st">        ],</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="st">        "departure_time": "2024-06-05T18:00:00.000Z",</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="st">        "properties": [</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="st">          "travel_time",</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="st">          "route"</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="st">        ],</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="st">        "range": {</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="st">          "enabled": true,</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="st">          "max_results": 5,</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="st">          "width": 43200</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="st">        }</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="st">      }</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="st">    ]</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="st">  }'</span> , coords1[<span class="dv">1</span>], coords1[<span class="dv">2</span>], coords2[<span class="dv">1</span>], coords2[<span class="dv">2</span>])</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(request_body)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="2" type="1">
@@ -575,46 +571,46 @@ Afficher les données
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>get_travel_time_between_stations <span class="ot">&lt;-</span> <span class="cf">function</span>(station1, station2, data, <span class="at">verbose =</span> <span class="cn">TRUE</span>) {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Si les stations sont identiques aucun trajet nécessaire</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (station1 <span class="sc">==</span> station2) {</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">NA</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Récupérer les coordonnées pour les deux stations</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  coordinates <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">c</span>(station1, station2), get_station_coordinates, <span class="at">data =</span> data, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Générer le JSON pour l'API de routage</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  request_body <span class="ot">&lt;-</span> <span class="fu">get_routes_api_json</span>(coordinates[[<span class="dv">1</span>]], coordinates[[<span class="dv">2</span>]])</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Interroger l'API de routage</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  response <span class="ot">&lt;-</span> <span class="fu">get_travel_time_api_response</span>(ROUTES_API_URL, request_body)</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Gérer la limitation du taux d'API</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (response[[<span class="dv">2</span>]] <span class="sc">==</span> <span class="dv">429</span>) {</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (verbose) <span class="fu">cat</span>(<span class="st">"Trop de requêtes, attente d'une minute...</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.sleep</span>(<span class="dv">60</span>)</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">get_travel_time_between_stations</span>(station1, station2, data, verbose))</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Vérifier l'existence d'un itinéraire valide</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(response[[<span class="dv">1</span>]]<span class="sc">$</span>results[[<span class="dv">1</span>]]<span class="sc">$</span>locations) <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    travel_time <span class="ot">&lt;-</span> <span class="cn">Inf</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extraire les données de temps de trajet et trouver le temps de trajet minimum en heures</span></span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    travel_times <span class="ot">&lt;-</span> <span class="fu">sapply</span>(response[[<span class="dv">1</span>]]<span class="sc">$</span>results[[<span class="dv">1</span>]]<span class="sc">$</span>locations[[<span class="dv">1</span>]]<span class="sc">$</span>properties, <span class="cf">function</span>(item) item<span class="sc">$</span>travel_time)</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    travel_time <span class="ot">&lt;-</span> <span class="fu">min</span>(travel_times) <span class="sc">/</span> <span class="dv">3600</span></span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Afficher le temps de trajet si verbose</span></span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (verbose) {</span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    message_text <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"%s -&gt; %s : %s heures</span><span class="sc">\n</span><span class="st">"</span>, station1, station2, <span class="fu">ifelse</span>(<span class="fu">is.infinite</span>(travel_time), <span class="st">"Aucun itinéraire trouvé"</span>, <span class="fu">round</span>(travel_time, <span class="dv">2</span>)))</span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(message_text)</span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(travel_time)</span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>get_travel_time_between_stations <span class="ot">&lt;-</span> <span class="cf">function</span>(station1, station2, data, <span class="at">verbose =</span> <span class="cn">TRUE</span>) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Si les stations sont identiques aucun trajet nécessaire</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (station1 <span class="sc">==</span> station2) {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">NA</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Récupérer les coordonnées pour les deux stations</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  coordinates <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">c</span>(station1, station2), get_station_coordinates, <span class="at">data =</span> data, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Générer le JSON pour l'API de routage</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  request_body <span class="ot">&lt;-</span> <span class="fu">get_routes_api_json</span>(coordinates[[<span class="dv">1</span>]], coordinates[[<span class="dv">2</span>]])</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Interroger l'API de routage</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  response <span class="ot">&lt;-</span> <span class="fu">get_travel_time_api_response</span>(ROUTES_API_URL, request_body)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Gérer la limitation du taux d'API</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (response[[<span class="dv">2</span>]] <span class="sc">==</span> <span class="dv">429</span>) {</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (verbose) <span class="fu">cat</span>(<span class="st">"Trop de requêtes, attente d'une minute...</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.sleep</span>(<span class="dv">60</span>)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">get_travel_time_between_stations</span>(station1, station2, data, verbose))</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Vérifier l'existence d'un itinéraire valide</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(response[[<span class="dv">1</span>]]<span class="sc">$</span>results[[<span class="dv">1</span>]]<span class="sc">$</span>locations) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    travel_time <span class="ot">&lt;-</span> <span class="cn">Inf</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extraire les données de temps de trajet et trouver le temps de trajet minimum en heures</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    travel_times <span class="ot">&lt;-</span> <span class="fu">sapply</span>(response[[<span class="dv">1</span>]]<span class="sc">$</span>results[[<span class="dv">1</span>]]<span class="sc">$</span>locations[[<span class="dv">1</span>]]<span class="sc">$</span>properties, <span class="cf">function</span>(item) item<span class="sc">$</span>travel_time)</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    travel_time <span class="ot">&lt;-</span> <span class="fu">min</span>(travel_times) <span class="sc">/</span> <span class="dv">3600</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Afficher le temps de trajet si verbose</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (verbose) {</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    message_text <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"%s -&gt; %s : %s heures</span><span class="sc">\n</span><span class="st">"</span>, station1, station2, <span class="fu">ifelse</span>(<span class="fu">is.infinite</span>(travel_time), <span class="st">"Aucun itinéraire trouvé"</span>, <span class="fu">round</span>(travel_time, <span class="dv">2</span>)))</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(message_text)</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(travel_time)</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="3" type="1">
@@ -623,7 +619,7 @@ Afficher les données
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>travel_time <span class="ot">&lt;-</span> <span class="fu">get_travel_time_between_stations</span>(<span class="st">"Paris-Montparnasse"</span>, <span class="st">"Toulouse-Matabiau"</span>, stations_data, <span class="at">verbose=</span><span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>travel_time <span class="ot">&lt;-</span> <span class="fu">get_travel_time_between_stations</span>(<span class="st">"Paris-Montparnasse"</span>, <span class="st">"Toulouse-Matabiau"</span>, stations_data, <span class="at">verbose=</span><span class="cn">TRUE</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Paris-Montparnasse -&gt; Toulouse-Matabiau : 4.4 heures</code></pre>
@@ -648,19 +644,19 @@ L’API de routage de TravelTime a un quota de requêtes par minute
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the stations</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>STATIONS <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Paris-Nord"</span>, <span class="st">"Lyon-Perrache"</span>, <span class="st">"Marseille-St-Charles"</span>, <span class="st">"Toulouse-Matabiau"</span>, <span class="st">"Lille-Flandres"</span>, <span class="st">"Bordeaux-St-Jean"</span>, <span class="st">"Nice-Ville"</span>, <span class="st">"Nantes"</span>, <span class="st">"Strasbourg-Ville"</span>, <span class="st">"Montpellier-St-Roch"</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialisation de la matrice</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>time_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="cn">NA</span>, <span class="at">nrow =</span> <span class="fu">length</span>(STATIONS), <span class="at">ncol =</span> <span class="fu">length</span>(STATIONS), <span class="at">dimnames =</span> <span class="fu">list</span>(STATIONS, STATIONS))</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># On remplit la matrice avec toutes les pairs possibles</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>combinations <span class="ot">&lt;-</span> <span class="fu">combn</span>(STATIONS, <span class="dv">2</span>, <span class="at">simplify =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (pair <span class="cf">in</span> combinations) {</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  travel_time <span class="ot">&lt;-</span> <span class="fu">get_travel_time_between_stations</span>(pair[<span class="dv">1</span>], pair[<span class="dv">2</span>], stations_data, <span class="at">verbose=</span><span class="cn">FALSE</span>)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  time_matrix[pair[<span class="dv">1</span>], pair[<span class="dv">2</span>]] <span class="ot">&lt;-</span> <span class="fu">round</span>(travel_time, <span class="dv">2</span>)</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  time_matrix[pair[<span class="dv">2</span>], pair[<span class="dv">1</span>]] <span class="ot">&lt;-</span> <span class="fu">round</span>(travel_time, <span class="dv">2</span>)</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the stations</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>STATIONS <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Paris-Nord"</span>, <span class="st">"Lyon-Perrache"</span>, <span class="st">"Marseille-St-Charles"</span>, <span class="st">"Toulouse-Matabiau"</span>, <span class="st">"Lille-Flandres"</span>, <span class="st">"Bordeaux-St-Jean"</span>, <span class="st">"Nice-Ville"</span>, <span class="st">"Nantes"</span>, <span class="st">"Strasbourg-Ville"</span>, <span class="st">"Montpellier-St-Roch"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialisation de la matrice</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>time_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="cn">NA</span>, <span class="at">nrow =</span> <span class="fu">length</span>(STATIONS), <span class="at">ncol =</span> <span class="fu">length</span>(STATIONS), <span class="at">dimnames =</span> <span class="fu">list</span>(STATIONS, STATIONS))</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># On remplit la matrice avec toutes les pairs possibles</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>combinations <span class="ot">&lt;-</span> <span class="fu">combn</span>(STATIONS, <span class="dv">2</span>, <span class="at">simplify =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (pair <span class="cf">in</span> combinations) {</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  travel_time <span class="ot">&lt;-</span> <span class="fu">get_travel_time_between_stations</span>(pair[<span class="dv">1</span>], pair[<span class="dv">2</span>], stations_data, <span class="at">verbose=</span><span class="cn">FALSE</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  time_matrix[pair[<span class="dv">1</span>], pair[<span class="dv">2</span>]] <span class="ot">&lt;-</span> <span class="fu">round</span>(travel_time, <span class="dv">2</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  time_matrix[pair[<span class="dv">2</span>], pair[<span class="dv">1</span>]] <span class="ot">&lt;-</span> <span class="fu">round</span>(travel_time, <span class="dv">2</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <details>
@@ -698,7 +694,7 @@ Afficher la matrice
 <td style="text-align: right;">2.70</td>
 <td style="text-align: right;">5.85</td>
 <td style="text-align: right;">2.76</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">2.05</td>
 <td style="text-align: right;">3.75</td>
 </tr>
 <tr class="even">
@@ -711,7 +707,7 @@ Afficher la matrice
 <td style="text-align: right;">5.78</td>
 <td style="text-align: right;">5.05</td>
 <td style="text-align: right;">4.91</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">4.48</td>
 <td style="text-align: right;">2.05</td>
 </tr>
 <tr class="odd">
@@ -724,7 +720,7 @@ Afficher la matrice
 <td style="text-align: right;">6.17</td>
 <td style="text-align: right;">2.70</td>
 <td style="text-align: right;">6.80</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">5.66</td>
 <td style="text-align: right;">1.73</td>
 </tr>
 <tr class="even">
@@ -737,7 +733,7 @@ Afficher la matrice
 <td style="text-align: right;">2.16</td>
 <td style="text-align: right;">6.72</td>
 <td style="text-align: right;">7.59</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">8.10</td>
 <td style="text-align: right;">2.24</td>
 </tr>
 <tr class="odd">
@@ -750,7 +746,7 @@ Afficher la matrice
 <td style="text-align: right;">4.07</td>
 <td style="text-align: right;">7.52</td>
 <td style="text-align: right;">4.15</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">3.19</td>
 <td style="text-align: right;">5.04</td>
 </tr>
 <tr class="even">
@@ -763,7 +759,7 @@ Afficher la matrice
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">9.51</td>
 <td style="text-align: right;">3.89</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">4.46</td>
 <td style="text-align: right;">4.51</td>
 </tr>
 <tr class="odd">
@@ -776,7 +772,7 @@ Afficher la matrice
 <td style="text-align: right;">9.51</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">8.99</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">8.28</td>
 <td style="text-align: right;">4.66</td>
 </tr>
 <tr class="even">
@@ -789,21 +785,21 @@ Afficher la matrice
 <td style="text-align: right;">3.89</td>
 <td style="text-align: right;">8.99</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">4.94</td>
 <td style="text-align: right;">2.81</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Strasbourg-Ville</td>
-<td style="text-align: right;">Inf</td>
-<td style="text-align: right;">Inf</td>
-<td style="text-align: right;">Inf</td>
-<td style="text-align: right;">Inf</td>
-<td style="text-align: right;">Inf</td>
-<td style="text-align: right;">Inf</td>
-<td style="text-align: right;">Inf</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">2.05</td>
+<td style="text-align: right;">4.48</td>
+<td style="text-align: right;">5.66</td>
+<td style="text-align: right;">8.10</td>
+<td style="text-align: right;">3.19</td>
+<td style="text-align: right;">4.46</td>
+<td style="text-align: right;">8.28</td>
+<td style="text-align: right;">4.94</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">6.01</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Montpellier-St-Roch</td>
@@ -815,7 +811,7 @@ Afficher la matrice
 <td style="text-align: right;">4.51</td>
 <td style="text-align: right;">4.66</td>
 <td style="text-align: right;">2.81</td>
-<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">6.01</td>
 <td style="text-align: right;">NA</td>
 </tr>
 </tbody>
@@ -832,21 +828,21 @@ Afficher la matrice
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>THRESHOLD <span class="ot">&lt;-</span> <span class="fl">4.5</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># On garde seulement la matrice triangulaire inférieur (car on la supposé symmétrique)</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>lower_tri_matrix <span class="ot">&lt;-</span> <span class="fu">lower.tri</span>(time_matrix)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># On extrait les indices où la condition n'est pas respectée</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>under_threshold_indices <span class="ot">&lt;-</span> <span class="fu">which</span>(time_matrix <span class="sc">&lt;</span> THRESHOLD <span class="sc">&amp;</span> lower_tri_matrix, <span class="at">arr.ind =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># On crée une liste de paires qui remplissent les conditions</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>under_threshold_routes <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(i, j) <span class="fu">c</span>(STATIONS[i], STATIONS[j]),</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">i =</span> under_threshold_indices[, <span class="dv">1</span>],</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">j =</span> under_threshold_indices[, <span class="dv">2</span>],</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">SIMPLIFY =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">USE.NAMES =</span> <span class="cn">FALSE</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>                                 )</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>THRESHOLD <span class="ot">&lt;-</span> <span class="fl">4.5</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># On garde seulement la matrice triangulaire inférieur (car on la supposé symmétrique)</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>lower_tri_matrix <span class="ot">&lt;-</span> <span class="fu">lower.tri</span>(time_matrix)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># On extrait les indices où la condition n'est pas respectée</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>under_threshold_indices <span class="ot">&lt;-</span> <span class="fu">which</span>(time_matrix <span class="sc">&lt;</span> THRESHOLD <span class="sc">&amp;</span> lower_tri_matrix, <span class="at">arr.ind =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># On crée une liste de paires qui remplissent les conditions</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>under_threshold_routes <span class="ot">&lt;-</span> <span class="fu">mapply</span>(<span class="cf">function</span>(i, j) <span class="fu">c</span>(STATIONS[i], STATIONS[j]),</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">i =</span> under_threshold_indices[, <span class="dv">1</span>],</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">j =</span> under_threshold_indices[, <span class="dv">2</span>],</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">SIMPLIFY =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">USE.NAMES =</span> <span class="cn">FALSE</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>                                 )</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
@@ -857,7 +853,7 @@ Afficher la matrice
 <h1 data-number="3"><span class="header-section-number">3</span> Téléchargement et traitement des données de trafic aérien entre deux villes</h1>
 <p>Cette partie du sujet consiste à télécharger et traiter des données de trafic aérien entre deux aéroports en 2019 pour calculer les émissions de CO2 du trafic aérien entre les couples de villes/de gares identifiés précédemment et d’en déduire les émissions de CO2 approximatives évitées avec des mesures hypothétiques d’interdictions de liaisons aériennes.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -866,7 +862,7 @@ Afficher la matrice
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>Sur <a href="https://www.data.gouv.fr/">data.gouv.fr</a>, trouver le jeu de données correspondant au trafic aérien publié par la DGAC.</p></li>
@@ -875,10 +871,10 @@ Afficher la matrice
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On définit l'URL des données</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>AIR_TRAFFIC_DATA_URL <span class="ot">&lt;-</span> <span class="st">"https://www.data.gouv.fr/fr/datasets/r/0c0a451e-983b-4f06-9627-b5ff1bccd2fc"</span> </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>air_traffic_df <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(AIR_TRAFFIC_DATA_URL)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On définit l'URL des données</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>AIR_TRAFFIC_DATA_URL <span class="ot">&lt;-</span> <span class="st">"https://www.data.gouv.fr/fr/datasets/r/0c0a451e-983b-4f06-9627-b5ff1bccd2fc"</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>air_traffic_df <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(AIR_TRAFFIC_DATA_URL)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <details>
@@ -1034,7 +1030,7 @@ Astuce
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Les noms des principaux aéroports de métropole contiennent le nom de la ville qu’il déssert.</li>
+<li>Les noms des principaux aéroports de métropole contiennent le nom de la ville qu’il dessert.</li>
 <li>Le nombre de passagers correspond à la variable <code>LSN_PAX_loc</code>.</li>
 <li>N’oubliez pas de prendre en compte le trafic aérien dans les deux sens.</li>
 <li>Paris qui possède 2 aéroports commerciaux</li>
@@ -1044,18 +1040,18 @@ Astuce
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>get_air_traffic_between_cities <span class="ot">&lt;-</span> <span class="cf">function</span>(city1, city2, data) {</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Calcul du trafic dans les deux sens city1 -&gt; city2 et city2 -&gt; city1</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  total_traffic <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">filter</span>(</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>      (<span class="fu">grepl</span>(city1, LSN_DEP_NOM, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>) <span class="sc">&amp;</span> <span class="fu">grepl</span>(city2, LSN_ARR_NOM, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)) <span class="sc">|</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        (<span class="fu">grepl</span>(city2, LSN_DEP_NOM, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>) <span class="sc">&amp;</span> <span class="fu">grepl</span>(city1, LSN_ARR_NOM, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">traffic =</span> <span class="fu">sum</span>(LSN_DIST <span class="sc">*</span> LSN_PAX_loc)) <span class="sc">|&gt;</span> <span class="co"># calcul du PKT</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">pull</span>(traffic)</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">as.numeric</span>(total_traffic))</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>get_air_traffic_between_cities <span class="ot">&lt;-</span> <span class="cf">function</span>(city1, city2, data) {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Calcul du trafic dans les deux sens city1 -&gt; city2 et city2 -&gt; city1</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  total_traffic <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">filter</span>(</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>      (<span class="fu">grepl</span>(city1, LSN_DEP_NOM, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>) <span class="sc">&amp;</span> <span class="fu">grepl</span>(city2, LSN_ARR_NOM, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)) <span class="sc">|</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        (<span class="fu">grepl</span>(city2, LSN_DEP_NOM, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>) <span class="sc">&amp;</span> <span class="fu">grepl</span>(city1, LSN_ARR_NOM, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">traffic =</span> <span class="fu">sum</span>(LSN_DIST <span class="sc">*</span> LSN_PAX_loc)) <span class="sc">|&gt;</span> <span class="co"># calcul du PKT</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">pull</span>(traffic)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">as.numeric</span>(total_traffic))</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="4" type="1">
@@ -1064,7 +1060,7 @@ Astuce
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_air_traffic_between_cities</span>(<span class="st">"Paris"</span>, <span class="st">"Toulouse"</span>, air_traffic_df)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_air_traffic_between_cities</span>(<span class="st">"Paris"</span>, <span class="st">"Toulouse"</span>, air_traffic_df)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1870474245</code></pre>
@@ -1083,27 +1079,27 @@ Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Les noms des principales gares de métropole contiennent le nom de la ville qu’il déssert</p>
+<p>Les noms des principales gares de métropole contiennent le nom de la ville qu’il dessert.</p>
 </div>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction pour extraire les noms des villes à partir des noms des gares</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>extract_city_name <span class="ot">&lt;-</span> <span class="cf">function</span>(station) {</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sapply</span>(station, <span class="cf">function</span>(x) <span class="fu">strsplit</span>(x, <span class="st">"-"</span>)[[<span class="dv">1</span>]][<span class="dv">1</span>])</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraire les paires de villes </span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>city_pairs <span class="ot">&lt;-</span> <span class="fu">lapply</span>(under_threshold_routes, extract_city_name)</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>under_threshold_air_traffic <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculer le trafic aérien pour chaque paire</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (pair <span class="cf">in</span> city_pairs) {</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  air_traffic <span class="ot">&lt;-</span> <span class="fu">get_air_traffic_between_cities</span>(pair[<span class="dv">1</span>], pair[<span class="dv">2</span>], air_traffic_df)</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  under_threshold_air_traffic <span class="ot">&lt;-</span> under_threshold_air_traffic <span class="sc">+</span> air_traffic</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction pour extraire les noms des villes à partir des noms des gares</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>extract_city_name <span class="ot">&lt;-</span> <span class="cf">function</span>(station) {</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sapply</span>(station, <span class="cf">function</span>(x) <span class="fu">strsplit</span>(x, <span class="st">"-"</span>)[[<span class="dv">1</span>]][<span class="dv">1</span>])</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraire les paires de villes </span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>city_pairs <span class="ot">&lt;-</span> <span class="fu">lapply</span>(under_threshold_routes, extract_city_name)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>under_threshold_air_traffic <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculer le trafic aérien pour chaque paire</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (pair <span class="cf">in</span> city_pairs) {</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  air_traffic <span class="ot">&lt;-</span> <span class="fu">get_air_traffic_between_cities</span>(pair[<span class="dv">1</span>], pair[<span class="dv">2</span>], air_traffic_df)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  under_threshold_air_traffic <span class="ot">&lt;-</span> under_threshold_air_traffic <span class="sc">+</span> air_traffic</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="6" type="1">
@@ -1112,10 +1108,10 @@ Astuce
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>GCO2_PER_PKT <span class="ot">&lt;-</span> <span class="dv">80</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># On estime les émissions de CO2 en tCO2éq</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"En 2019, environ %.2f gCO2éq aurait pu être évités"</span>, under_threshold_air_traffic <span class="sc">*</span> GCO2_PER_PKT <span class="sc">/</span> <span class="dv">1000000</span>))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>GCO2_PER_PKT <span class="ot">&lt;-</span> <span class="dv">80</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># On estime les émissions de CO2 en tCO2éq</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"En 2019, environ %.2f gCO2éq aurait pu être évités"</span>, under_threshold_air_traffic <span class="sc">*</span> GCO2_PER_PKT <span class="sc">/</span> <span class="dv">1000000</span>))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>En 2019, environ 213252.05 gCO2éq aurait pu être évités</code></pre>
