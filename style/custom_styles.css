@@ -1,0 +1,6 @@
+.long-output {
+  color: rgb(0, 0, 0);
+  max-height: 300px;
+  overflow: scroll;
+  background: #f0f0f0;
+}
