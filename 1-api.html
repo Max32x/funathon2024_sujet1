@@ -319,9 +319,11 @@ Qu’est ce qu’un fichier yaml ?
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>headers <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">add_headers</span>(<span class="st">"Content-Type"</span> <span class="ot">=</span> <span class="st">"application/json"</span>,</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"X-Application-Id"</span> <span class="ot">=</span> X_API_ID,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"X-Api-Key"</span> <span class="ot">=</span> X_API_KEY)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>headers <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">add_headers</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Content-Type"</span> <span class="ot">=</span> <span class="st">"application/json"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"X-Application-Id"</span> <span class="ot">=</span> X_API_ID,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"X-Api-Key"</span> <span class="ot">=</span> X_API_KEY</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="8" type="1">
@@ -347,7 +349,7 @@ Qu’est ce qu’un fichier yaml ?
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(content)</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Affichage d'un message d'erreur si le code de la réponse n'est pas 200</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">sprintf</span>(<span class="st">"Une erreur est survenue. Code de la réponse : %d"</span>, httr<span class="sc">::</span><span class="fu">status_code</span>(response)))</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">sprintf</span>(<span class="st">"Une erreur est survenue. Code de la réponse : %d"</span>, httr<span class="sc">::</span><span class="fu">status_code</span>(response)))</span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -365,14 +367,14 @@ $results[[1]]$locations[[1]]$id
 $results[[1]]$locations[[1]]$properties
 $results[[1]]$locations[[1]]$properties[[1]]
 $results[[1]]$locations[[1]]$properties[[1]]$travel_time
-[1] 1287
+[1] 1282
 
 $results[[1]]$locations[[1]]$properties[[1]]$route
 $results[[1]]$locations[[1]]$properties[[1]]$route$departure_time
-[1] "2024-06-05T08:11:27+01:00"
+[1] "2024-06-05T08:11:30+01:00"
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$arrival_time
-[1] "2024-06-05T08:32:54+01:00"
+[1] "2024-06-05T08:32:52+01:00"
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]
@@ -427,13 +429,13 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[1]]
@@ -460,6 +462,46 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[3]]$lng
 [1] -0.1277612
 
 
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]
@@ -476,18 +518,18 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$directions
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$distance
-[1] 67
+[1] 58
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[2]]
@@ -688,10 +730,10 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$directions
 [1] "Leave Bank Underground Station"
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$distance
-[1] 16
+[1] 11
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$travel_time
-[1] 24
+[1] 16
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[1]]
@@ -704,10 +746,10 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[1]]$lng
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[2]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[2]]$lat
-[1] 51.51344
+[1] 51.5134
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[2]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 
@@ -723,61 +765,61 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$directions
-[1] "Walk 380 meters"
+[1] "Walk 386 meters"
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$distance
-[1] 380
+[1] 386
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$travel_time
-[1] 334
+[1] 340
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.5134
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[2]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51341
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0884714
+[1] -0.0884398
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[3]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51346
+[1] 51.51342
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0884774
+[1] -0.0884771
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[4]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51346
+[1] 51.51343
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0884931
+[1] -0.0885099
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[5]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51346
+[1] 51.51344
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0885073
+[1] -0.0885208
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[6]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51346
+[1] 51.51344
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0885353
+[1] -0.0885285
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[7]]
@@ -785,63 +827,63 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[7]]$lat
 [1] 51.51346
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0885364
+[1] -0.0885353
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[8]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51348
+[1] 51.51346
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0885281
+[1] -0.0885364
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[9]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51349
+[1] 51.51348
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0885464
+[1] -0.0885281
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[10]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51351
+[1] 51.51349
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0885851
+[1] -0.0885464
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[11]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.51353
+[1] 51.51351
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0886268
+[1] -0.0885851
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[12]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51356
+[1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0886882
+[1] -0.0886268
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[13]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51354
+[1] 51.51356
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0887415
+[1] -0.0886882
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[14]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51353
+[1] 51.51354
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0888122
+[1] -0.0887415
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[15]]
@@ -849,95 +891,95 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[15]]$lat
 [1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0888883
+[1] -0.0888122
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[16]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51354
+[1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0889143
+[1] -0.0888883
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[17]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[17]]$lat
-[1] 51.51356
+[1] 51.51354
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0889273
+[1] -0.0889143
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[18]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51451
+[1] 51.51356
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[18]]$lng
-[1] -0.089619
+[1] -0.0889273
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[19]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[19]]$lat
-[1] 51.51464
+[1] 51.51451
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[19]]$lng
-[1] -0.0896809
+[1] -0.089619
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[20]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[20]]$lat
-[1] 51.51469
+[1] 51.51464
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[20]]$lng
-[1] -0.0896341
+[1] -0.0896809
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[21]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[21]]$lat
-[1] 51.5147
+[1] 51.51469
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[21]]$lng
-[1] -0.0897491
+[1] -0.0896341
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[22]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[22]]$lat
-[1] 51.51472
+[1] 51.5147
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[22]]$lng
-[1] -0.0898988
+[1] -0.0897491
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[23]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[23]]$lat
-[1] 51.51476
+[1] 51.51472
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[23]]$lng
-[1] -0.0899594
+[1] -0.0898988
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[24]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[24]]$lat
-[1] 51.51482
+[1] 51.51476
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[24]]$lng
-[1] -0.0899281
+[1] -0.0899594
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[25]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[25]]$lat
-[1] 51.5149
+[1] 51.51482
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[25]]$lng
-[1] -0.0898848
+[1] -0.0899281
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[26]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[26]]$lat
-[1] 51.51495
+[1] 51.5149
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[26]]$lng
-[1] -0.0902604
+[1] -0.0898848
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[27]]
@@ -945,23 +987,23 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[27]]$lat
 [1] 51.51495
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[27]]$lng
-[1] -0.0903181
+[1] -0.0902604
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[28]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[28]]$lat
-[1] 51.51496
+[1] 51.51495
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[28]]$lng
-[1] -0.0903744
+[1] -0.0903181
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[29]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[29]]$lat
-[1] 51.51503
+[1] 51.51496
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[29]]$lng
-[1] -0.0910251
+[1] -0.0903744
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[30]]
@@ -969,30 +1011,38 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[30]]$lat
 [1] 51.51503
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[30]]$lng
-[1] -0.091083
+[1] -0.0910251
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[31]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[31]]$lat
-[1] 51.51504
+[1] 51.51503
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[31]]$lng
-[1] -0.0911337
+[1] -0.091083
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[32]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[32]]$lat
-[1] 51.51537
+[1] 51.51504
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[32]]$lng
-[1] -0.091066
+[1] -0.0911337
 
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[33]]
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[33]]$lat
-[1] 51.51539
+[1] 51.51537
 
 $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.091066
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[34]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[34]]$lat
+[1] 51.51539
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[34]]$lng
 [1] -0.0917676
 
 
@@ -1152,14 +1202,14 @@ $results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$direction
 
 $results[[1]]$locations[[1]]$properties[[2]]
 $results[[1]]$locations[[1]]$properties[[2]]$travel_time
-[1] 1287
+[1] 1282
 
 $results[[1]]$locations[[1]]$properties[[2]]$route
 $results[[1]]$locations[[1]]$properties[[2]]$route$departure_time
-[1] "2024-06-05T08:01:27+01:00"
+[1] "2024-06-05T08:01:30+01:00"
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$arrival_time
-[1] "2024-06-05T08:22:54+01:00"
+[1] "2024-06-05T08:22:52+01:00"
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]
@@ -1214,13 +1264,13 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[1]]
@@ -1247,6 +1297,46 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[3]]$lng
 [1] -0.1277612
 
 
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]
@@ -1263,18 +1353,18 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$directions
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$distance
-[1] 67
+[1] 58
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[2]]
@@ -1475,10 +1565,10 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$directions
 [1] "Leave Bank Underground Station"
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$distance
-[1] 16
+[1] 11
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$travel_time
-[1] 24
+[1] 16
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[1]]
@@ -1491,10 +1581,10 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[1]]$lng
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[2]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[2]]$lat
-[1] 51.51344
+[1] 51.5134
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[2]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 
@@ -1510,61 +1600,61 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$directions
-[1] "Walk 380 meters"
+[1] "Walk 386 meters"
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$distance
-[1] 380
+[1] 386
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$travel_time
-[1] 334
+[1] 340
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.5134
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[2]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51341
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0884714
+[1] -0.0884398
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[3]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51346
+[1] 51.51342
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0884774
+[1] -0.0884771
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[4]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51346
+[1] 51.51343
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0884931
+[1] -0.0885099
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[5]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51346
+[1] 51.51344
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0885073
+[1] -0.0885208
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[6]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51346
+[1] 51.51344
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0885353
+[1] -0.0885285
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[7]]
@@ -1572,63 +1662,63 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[7]]$lat
 [1] 51.51346
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0885364
+[1] -0.0885353
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[8]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51348
+[1] 51.51346
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0885281
+[1] -0.0885364
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[9]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51349
+[1] 51.51348
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0885464
+[1] -0.0885281
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[10]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51351
+[1] 51.51349
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0885851
+[1] -0.0885464
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[11]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.51353
+[1] 51.51351
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0886268
+[1] -0.0885851
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[12]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51356
+[1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0886882
+[1] -0.0886268
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[13]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51354
+[1] 51.51356
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0887415
+[1] -0.0886882
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[14]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51353
+[1] 51.51354
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0888122
+[1] -0.0887415
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[15]]
@@ -1636,95 +1726,95 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[15]]$lat
 [1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0888883
+[1] -0.0888122
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[16]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51354
+[1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0889143
+[1] -0.0888883
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[17]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[17]]$lat
-[1] 51.51356
+[1] 51.51354
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0889273
+[1] -0.0889143
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[18]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51451
+[1] 51.51356
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[18]]$lng
-[1] -0.089619
+[1] -0.0889273
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[19]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[19]]$lat
-[1] 51.51464
+[1] 51.51451
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[19]]$lng
-[1] -0.0896809
+[1] -0.089619
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[20]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[20]]$lat
-[1] 51.51469
+[1] 51.51464
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[20]]$lng
-[1] -0.0896341
+[1] -0.0896809
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[21]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[21]]$lat
-[1] 51.5147
+[1] 51.51469
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[21]]$lng
-[1] -0.0897491
+[1] -0.0896341
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[22]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[22]]$lat
-[1] 51.51472
+[1] 51.5147
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[22]]$lng
-[1] -0.0898988
+[1] -0.0897491
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[23]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[23]]$lat
-[1] 51.51476
+[1] 51.51472
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[23]]$lng
-[1] -0.0899594
+[1] -0.0898988
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[24]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[24]]$lat
-[1] 51.51482
+[1] 51.51476
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[24]]$lng
-[1] -0.0899281
+[1] -0.0899594
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[25]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[25]]$lat
-[1] 51.5149
+[1] 51.51482
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[25]]$lng
-[1] -0.0898848
+[1] -0.0899281
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[26]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[26]]$lat
-[1] 51.51495
+[1] 51.5149
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[26]]$lng
-[1] -0.0902604
+[1] -0.0898848
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[27]]
@@ -1732,23 +1822,23 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[27]]$lat
 [1] 51.51495
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[27]]$lng
-[1] -0.0903181
+[1] -0.0902604
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[28]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[28]]$lat
-[1] 51.51496
+[1] 51.51495
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[28]]$lng
-[1] -0.0903744
+[1] -0.0903181
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[29]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[29]]$lat
-[1] 51.51503
+[1] 51.51496
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[29]]$lng
-[1] -0.0910251
+[1] -0.0903744
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[30]]
@@ -1756,30 +1846,38 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[30]]$lat
 [1] 51.51503
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[30]]$lng
-[1] -0.091083
+[1] -0.0910251
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[31]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[31]]$lat
-[1] 51.51504
+[1] 51.51503
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[31]]$lng
-[1] -0.0911337
+[1] -0.091083
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[32]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[32]]$lat
-[1] 51.51537
+[1] 51.51504
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[32]]$lng
-[1] -0.091066
+[1] -0.0911337
 
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[33]]
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[33]]$lat
-[1] 51.51539
+[1] 51.51537
 
 $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.091066
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[34]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[34]]$lat
+[1] 51.51539
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[34]]$lng
 [1] -0.0917676
 
 
@@ -1939,14 +2037,14 @@ $results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$direction
 
 $results[[1]]$locations[[1]]$properties[[3]]
 $results[[1]]$locations[[1]]$properties[[3]]$travel_time
-[1] 1313
+[1] 1308
 
 $results[[1]]$locations[[1]]$properties[[3]]$route
 $results[[1]]$locations[[1]]$properties[[3]]$route$departure_time
-[1] "2024-06-05T08:04:01+01:00"
+[1] "2024-06-05T08:04:04+01:00"
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$arrival_time
-[1] "2024-06-05T08:25:54+01:00"
+[1] "2024-06-05T08:25:52+01:00"
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]
@@ -2001,13 +2099,13 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[1]]
@@ -2034,6 +2132,46 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[3]]$lng
 [1] -0.1277612
 
 
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]
@@ -2050,18 +2188,18 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$directions
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$distance
-[1] 67
+[1] 58
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[2]]
@@ -2262,10 +2400,10 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$directions
 [1] "Leave Bank Underground Station"
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$distance
-[1] 16
+[1] 11
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$travel_time
-[1] 24
+[1] 16
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[1]]
@@ -2278,10 +2416,10 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[1]]$lng
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[2]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[2]]$lat
-[1] 51.51344
+[1] 51.5134
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[2]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 
@@ -2297,61 +2435,61 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$directions
-[1] "Walk 380 meters"
+[1] "Walk 386 meters"
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$distance
-[1] 380
+[1] 386
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$travel_time
-[1] 334
+[1] 340
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.5134
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[2]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51341
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0884714
+[1] -0.0884398
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[3]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51346
+[1] 51.51342
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0884774
+[1] -0.0884771
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[4]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51346
+[1] 51.51343
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0884931
+[1] -0.0885099
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[5]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51346
+[1] 51.51344
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0885073
+[1] -0.0885208
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[6]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51346
+[1] 51.51344
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0885353
+[1] -0.0885285
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[7]]
@@ -2359,63 +2497,63 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[7]]$lat
 [1] 51.51346
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0885364
+[1] -0.0885353
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[8]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51348
+[1] 51.51346
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0885281
+[1] -0.0885364
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[9]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51349
+[1] 51.51348
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0885464
+[1] -0.0885281
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[10]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51351
+[1] 51.51349
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0885851
+[1] -0.0885464
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[11]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.51353
+[1] 51.51351
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0886268
+[1] -0.0885851
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[12]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51356
+[1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0886882
+[1] -0.0886268
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[13]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51354
+[1] 51.51356
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0887415
+[1] -0.0886882
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[14]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51353
+[1] 51.51354
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0888122
+[1] -0.0887415
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[15]]
@@ -2423,95 +2561,95 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[15]]$lat
 [1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0888883
+[1] -0.0888122
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[16]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51354
+[1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0889143
+[1] -0.0888883
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[17]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[17]]$lat
-[1] 51.51356
+[1] 51.51354
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0889273
+[1] -0.0889143
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[18]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51451
+[1] 51.51356
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[18]]$lng
-[1] -0.089619
+[1] -0.0889273
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[19]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[19]]$lat
-[1] 51.51464
+[1] 51.51451
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[19]]$lng
-[1] -0.0896809
+[1] -0.089619
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[20]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[20]]$lat
-[1] 51.51469
+[1] 51.51464
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[20]]$lng
-[1] -0.0896341
+[1] -0.0896809
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[21]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[21]]$lat
-[1] 51.5147
+[1] 51.51469
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[21]]$lng
-[1] -0.0897491
+[1] -0.0896341
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[22]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[22]]$lat
-[1] 51.51472
+[1] 51.5147
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[22]]$lng
-[1] -0.0898988
+[1] -0.0897491
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[23]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[23]]$lat
-[1] 51.51476
+[1] 51.51472
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[23]]$lng
-[1] -0.0899594
+[1] -0.0898988
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[24]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[24]]$lat
-[1] 51.51482
+[1] 51.51476
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[24]]$lng
-[1] -0.0899281
+[1] -0.0899594
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[25]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[25]]$lat
-[1] 51.5149
+[1] 51.51482
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[25]]$lng
-[1] -0.0898848
+[1] -0.0899281
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[26]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[26]]$lat
-[1] 51.51495
+[1] 51.5149
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[26]]$lng
-[1] -0.0902604
+[1] -0.0898848
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[27]]
@@ -2519,23 +2657,23 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[27]]$lat
 [1] 51.51495
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[27]]$lng
-[1] -0.0903181
+[1] -0.0902604
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[28]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[28]]$lat
-[1] 51.51496
+[1] 51.51495
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[28]]$lng
-[1] -0.0903744
+[1] -0.0903181
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[29]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[29]]$lat
-[1] 51.51503
+[1] 51.51496
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[29]]$lng
-[1] -0.0910251
+[1] -0.0903744
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[30]]
@@ -2543,30 +2681,38 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[30]]$lat
 [1] 51.51503
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[30]]$lng
-[1] -0.091083
+[1] -0.0910251
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[31]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[31]]$lat
-[1] 51.51504
+[1] 51.51503
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[31]]$lng
-[1] -0.0911337
+[1] -0.091083
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[32]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[32]]$lat
-[1] 51.51537
+[1] 51.51504
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[32]]$lng
-[1] -0.091066
+[1] -0.0911337
 
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[33]]
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[33]]$lat
-[1] 51.51539
+[1] 51.51537
 
 $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.091066
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[34]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[34]]$lat
+[1] 51.51539
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[34]]$lng
 [1] -0.0917676
 
 
@@ -2726,14 +2872,14 @@ $results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$direction
 
 $results[[1]]$locations[[1]]$properties[[4]]
 $results[[1]]$locations[[1]]$properties[[4]]$travel_time
-[1] 1407
+[1] 1402
 
 $results[[1]]$locations[[1]]$properties[[4]]$route
 $results[[1]]$locations[[1]]$properties[[4]]$route$departure_time
-[1] "2024-06-05T08:06:27+01:00"
+[1] "2024-06-05T08:06:30+01:00"
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$arrival_time
-[1] "2024-06-05T08:29:54+01:00"
+[1] "2024-06-05T08:29:52+01:00"
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[1]]
@@ -2788,13 +2934,13 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[1]]
@@ -2821,6 +2967,46 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[3]]$lng
 [1] -0.1277612
 
 
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[3]]
@@ -2837,18 +3023,18 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[3]]$directions
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[3]]$distance
-[1] 67
+[1] 58
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[3]]$coords
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[3]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[3]]$coords[[2]]
@@ -3049,10 +3235,10 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[7]]$directions
 [1] "Leave Bank Underground Station"
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[7]]$distance
-[1] 16
+[1] 11
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[7]]$travel_time
-[1] 24
+[1] 16
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[7]]$coords
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[7]]$coords[[1]]
@@ -3065,10 +3251,10 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[7]]$coords[[1]]$lng
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[7]]$coords[[2]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[7]]$coords[[2]]$lat
-[1] 51.51344
+[1] 51.5134
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[7]]$coords[[2]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 
@@ -3084,61 +3270,61 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$directions
-[1] "Walk 380 meters"
+[1] "Walk 386 meters"
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$distance
-[1] 380
+[1] 386
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$travel_time
-[1] 334
+[1] 340
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.5134
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[2]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51341
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0884714
+[1] -0.0884398
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[3]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51346
+[1] 51.51342
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0884774
+[1] -0.0884771
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[4]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51346
+[1] 51.51343
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0884931
+[1] -0.0885099
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[5]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51346
+[1] 51.51344
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0885073
+[1] -0.0885208
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[6]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51346
+[1] 51.51344
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0885353
+[1] -0.0885285
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[7]]
@@ -3146,63 +3332,63 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[7]]$lat
 [1] 51.51346
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0885364
+[1] -0.0885353
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[8]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51348
+[1] 51.51346
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0885281
+[1] -0.0885364
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[9]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51349
+[1] 51.51348
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0885464
+[1] -0.0885281
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[10]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51351
+[1] 51.51349
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0885851
+[1] -0.0885464
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[11]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.51353
+[1] 51.51351
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0886268
+[1] -0.0885851
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[12]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51356
+[1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0886882
+[1] -0.0886268
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[13]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51354
+[1] 51.51356
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0887415
+[1] -0.0886882
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[14]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51353
+[1] 51.51354
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0888122
+[1] -0.0887415
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[15]]
@@ -3210,95 +3396,95 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[15]]$lat
 [1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0888883
+[1] -0.0888122
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[16]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51354
+[1] 51.51353
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0889143
+[1] -0.0888883
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[17]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[17]]$lat
-[1] 51.51356
+[1] 51.51354
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0889273
+[1] -0.0889143
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[18]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51451
+[1] 51.51356
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[18]]$lng
-[1] -0.089619
+[1] -0.0889273
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[19]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[19]]$lat
-[1] 51.51464
+[1] 51.51451
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[19]]$lng
-[1] -0.0896809
+[1] -0.089619
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[20]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[20]]$lat
-[1] 51.51469
+[1] 51.51464
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[20]]$lng
-[1] -0.0896341
+[1] -0.0896809
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[21]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[21]]$lat
-[1] 51.5147
+[1] 51.51469
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[21]]$lng
-[1] -0.0897491
+[1] -0.0896341
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[22]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[22]]$lat
-[1] 51.51472
+[1] 51.5147
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[22]]$lng
-[1] -0.0898988
+[1] -0.0897491
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[23]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[23]]$lat
-[1] 51.51476
+[1] 51.51472
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[23]]$lng
-[1] -0.0899594
+[1] -0.0898988
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[24]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[24]]$lat
-[1] 51.51482
+[1] 51.51476
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[24]]$lng
-[1] -0.0899281
+[1] -0.0899594
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[25]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[25]]$lat
-[1] 51.5149
+[1] 51.51482
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[25]]$lng
-[1] -0.0898848
+[1] -0.0899281
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[26]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[26]]$lat
-[1] 51.51495
+[1] 51.5149
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[26]]$lng
-[1] -0.0902604
+[1] -0.0898848
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[27]]
@@ -3306,23 +3492,23 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[27]]$lat
 [1] 51.51495
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[27]]$lng
-[1] -0.0903181
+[1] -0.0902604
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[28]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[28]]$lat
-[1] 51.51496
+[1] 51.51495
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[28]]$lng
-[1] -0.0903744
+[1] -0.0903181
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[29]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[29]]$lat
-[1] 51.51503
+[1] 51.51496
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[29]]$lng
-[1] -0.0910251
+[1] -0.0903744
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[30]]
@@ -3330,30 +3516,38 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[30]]$lat
 [1] 51.51503
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[30]]$lng
-[1] -0.091083
+[1] -0.0910251
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[31]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[31]]$lat
-[1] 51.51504
+[1] 51.51503
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[31]]$lng
-[1] -0.0911337
+[1] -0.091083
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[32]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[32]]$lat
-[1] 51.51537
+[1] 51.51504
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[32]]$lng
-[1] -0.091066
+[1] -0.0911337
 
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[33]]
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[33]]$lat
-[1] 51.51539
+[1] 51.51537
 
 $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.091066
+
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[34]]
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[34]]$lat
+[1] 51.51539
+
+$results[[1]]$locations[[1]]$properties[[4]]$route$parts[[8]]$coords[[34]]$lng
 [1] -0.0917676
 
 
@@ -3513,11 +3707,11 @@ $results[[1]]$locations[[1]]$properties[[4]]$route$parts[[10]]$direction
 
 $results[[1]]$locations[[1]]$properties[[5]]
 $results[[1]]$locations[[1]]$properties[[5]]$travel_time
-[1] 1452
+[1] 1449
 
 $results[[1]]$locations[[1]]$properties[[5]]$route
 $results[[1]]$locations[[1]]$properties[[5]]$route$departure_time
-[1] "2024-06-05T08:08:16+01:00"
+[1] "2024-06-05T08:08:19+01:00"
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$arrival_time
 [1] "2024-06-05T08:32:28+01:00"
@@ -3575,13 +3769,13 @@ $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[1]]
@@ -3608,6 +3802,46 @@ $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[3]]$lng
 [1] -0.1277612
 
 
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[3]]
@@ -3624,18 +3858,18 @@ $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[3]]$directions
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[3]]$distance
-[1] 29
+[1] 20
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[3]]$coords
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[3]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[3]]$coords[[2]]
@@ -3844,10 +4078,10 @@ $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[7]]$directions
 [1] "Exit 'Bank Underground Station' through 'Entrance 1'"
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[7]]$distance
-[1] 95
+[1] 96
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[7]]$travel_time
-[1] 301
+[1] 302
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[7]]$coords
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[7]]$coords[[1]]
@@ -3868,10 +4102,10 @@ $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[7]]$coords[[2]]$lng
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[7]]$coords[[3]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[7]]$coords[[3]]$lat
-[1] 51.51344
+[1] 51.51345
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[7]]$coords[[3]]$lng
-[1] -0.0902804
+[1] -0.0903019
 
 
 
@@ -3887,141 +4121,141 @@ $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$mode
 [1] "walk"
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$directions
-[1] "Walk 281 meters"
+[1] "Walk 280 meters"
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$distance
-[1] 281
+[1] 280
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$travel_time
-[1] 225
+[1] 224
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[1]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.51345
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0902804
+[1] -0.0903019
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[2]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51351
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0903019
+[1] -0.0906602
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[3]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51351
+[1] 51.51354
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0906602
+[1] -0.0908316
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[4]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51354
+[1] 51.51363
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0908316
+[1] -0.0913372
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[5]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51363
+[1] 51.51375
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0913372
+[1] -0.0922006
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[6]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51375
+[1] 51.5138
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0922006
+[1] -0.0921616
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[7]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[7]]$lat
-[1] 51.5138
+[1] 51.51385
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0921616
+[1] -0.0921487
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[8]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51385
+[1] 51.51387
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0921487
+[1] -0.0922702
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[9]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51387
+[1] 51.51389
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0922702
+[1] -0.0922708
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[10]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51389
+[1] 51.5139
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0922708
+[1] -0.0922712
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[11]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.5139
+[1] 51.51392
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0922712
+[1] -0.0922715
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[12]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51392
+[1] 51.51431
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0922715
+[1] -0.0921998
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[13]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51431
+[1] 51.51441
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0921998
+[1] -0.0921822
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[14]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51441
+[1] 51.51442
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0921822
+[1] -0.0921797
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[15]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[15]]$lat
-[1] 51.51442
+[1] 51.51461
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0921797
+[1] -0.0921495
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[16]]
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51461
+[1] 51.51499
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0921495
+[1] -0.0920829
 
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[17]]
@@ -4029,14 +4263,6 @@ $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[17]]$lat
 [1] 51.51499
 
 $results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0920829
-
-
-$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[18]]
-$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51499
-
-$results[[1]]$locations[[1]]$properties[[5]]$route$parts[[8]]$coords[[18]]$lng
 [1] -0.0921332
 
 
@@ -4365,25 +4591,29 @@ list()</code></pre>
 <summary>Cliquer pour voir la réponse</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>get_travel_time_api_response <span class="ot">&lt;-</span> <span class="cf">function</span>(api_url, request_body) {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># On prépare les headers</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  headers <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">add_headers</span>(<span class="st">"Content-Type"</span> <span class="ot">=</span> <span class="st">"application/json"</span>,</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"X-Application-Id"</span> <span class="ot">=</span> X_API_ID,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"X-Api-Key"</span> <span class="ot">=</span> X_API_KEY)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="do">## On envoie la requête avec les headers spécifiés</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  response <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">POST</span>(api_url, <span class="at">body =</span> request_body, <span class="at">encode =</span> <span class="st">"json"</span>, headers)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># On vérifie s'il y a eu une erreur</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span>httr<span class="sc">::</span><span class="fu">http_error</span>(response)) {</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">"Content"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">content</span>(response, <span class="at">as =</span> <span class="st">"parsed"</span>), </span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Status_code"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">status_code</span>(response)</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>                )</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>          )</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On affiche une message d'avertissement lorsque la requête n'a rien renvoyé</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">warning</span>(<span class="st">"Failed to retrieve data: "</span>, httr<span class="sc">::</span><span class="fu">http_status</span>(response)<span class="sc">$</span>message)</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">"Content"</span> <span class="ot">=</span> <span class="cn">NA</span>, </span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Status_code"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">status_code</span>(response)))</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  headers <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">add_headers</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Content-Type"</span> <span class="ot">=</span> <span class="st">"application/json"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"X-Application-Id"</span> <span class="ot">=</span> X_API_ID,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"X-Api-Key"</span> <span class="ot">=</span> X_API_KEY</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="do">## On envoie la requête avec les headers spécifiés</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  response <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">POST</span>(api_url, <span class="at">body =</span> request_body, <span class="at">encode =</span> <span class="st">"json"</span>, headers)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># On vérifie s'il y a eu une erreur</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span>httr<span class="sc">::</span><span class="fu">http_error</span>(response)) {</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Content"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">content</span>(response, <span class="at">as =</span> <span class="st">"parsed"</span>),</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Status_code"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">status_code</span>(response)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On affiche une message d'avertissement lorsque la requête n'a rien renvoyé</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">warning</span>(<span class="st">"Failed to retrieve data: "</span>, httr<span class="sc">::</span><span class="fu">http_status</span>(response)<span class="sc">$</span>message)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Content"</span> <span class="ot">=</span> <span class="cn">NA</span>,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Status_code"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">status_code</span>(response)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="11" type="1">
@@ -4407,14 +4637,14 @@ list()</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre class="long-output"><code>[[1]]
 [[1]]$travel_time
-[1] 1287
+[1] 1282
 
 [[1]]$route
 [[1]]$route$departure_time
-[1] "2024-06-05T08:11:27+01:00"
+[1] "2024-06-05T08:11:30+01:00"
 
 [[1]]$route$arrival_time
-[1] "2024-06-05T08:32:54+01:00"
+[1] "2024-06-05T08:32:52+01:00"
 
 [[1]]$route$parts
 [[1]]$route$parts[[1]]
@@ -4469,13 +4699,13 @@ list()</code></pre>
 [1] "walk"
 
 [[1]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 [[1]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 [[1]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 [[1]]$route$parts[[2]]$coords
 [[1]]$route$parts[[2]]$coords[[1]]
@@ -4502,6 +4732,46 @@ list()</code></pre>
 [1] -0.1277612
 
 
+[[1]]$route$parts[[2]]$coords[[4]]
+[[1]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+[[1]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+[[1]]$route$parts[[2]]$coords[[5]]
+[[1]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+[[1]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+[[1]]$route$parts[[2]]$coords[[6]]
+[[1]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+[[1]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+[[1]]$route$parts[[2]]$coords[[7]]
+[[1]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+[[1]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+[[1]]$route$parts[[2]]$coords[[8]]
+[[1]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+[[1]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 [[1]]$route$parts[[3]]
@@ -4518,18 +4788,18 @@ list()</code></pre>
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 [[1]]$route$parts[[3]]$distance
-[1] 67
+[1] 58
 
 [[1]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 [[1]]$route$parts[[3]]$coords
 [[1]]$route$parts[[3]]$coords[[1]]
 [[1]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 [[1]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 [[1]]$route$parts[[3]]$coords[[2]]
@@ -4730,10 +5000,10 @@ list()</code></pre>
 [1] "Leave Bank Underground Station"
 
 [[1]]$route$parts[[7]]$distance
-[1] 16
+[1] 11
 
 [[1]]$route$parts[[7]]$travel_time
-[1] 24
+[1] 16
 
 [[1]]$route$parts[[7]]$coords
 [[1]]$route$parts[[7]]$coords[[1]]
@@ -4746,10 +5016,10 @@ list()</code></pre>
 
 [[1]]$route$parts[[7]]$coords[[2]]
 [[1]]$route$parts[[7]]$coords[[2]]$lat
-[1] 51.51344
+[1] 51.5134
 
 [[1]]$route$parts[[7]]$coords[[2]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 
@@ -4765,61 +5035,61 @@ list()</code></pre>
 [1] "walk"
 
 [[1]]$route$parts[[8]]$directions
-[1] "Walk 380 meters"
+[1] "Walk 386 meters"
 
 [[1]]$route$parts[[8]]$distance
-[1] 380
+[1] 386
 
 [[1]]$route$parts[[8]]$travel_time
-[1] 334
+[1] 340
 
 [[1]]$route$parts[[8]]$coords
 [[1]]$route$parts[[8]]$coords[[1]]
 [[1]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.5134
 
 [[1]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 [[1]]$route$parts[[8]]$coords[[2]]
 [[1]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51341
 
 [[1]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0884714
+[1] -0.0884398
 
 
 [[1]]$route$parts[[8]]$coords[[3]]
 [[1]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51346
+[1] 51.51342
 
 [[1]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0884774
+[1] -0.0884771
 
 
 [[1]]$route$parts[[8]]$coords[[4]]
 [[1]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51346
+[1] 51.51343
 
 [[1]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0884931
+[1] -0.0885099
 
 
 [[1]]$route$parts[[8]]$coords[[5]]
 [[1]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51346
+[1] 51.51344
 
 [[1]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0885073
+[1] -0.0885208
 
 
 [[1]]$route$parts[[8]]$coords[[6]]
 [[1]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51346
+[1] 51.51344
 
 [[1]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0885353
+[1] -0.0885285
 
 
 [[1]]$route$parts[[8]]$coords[[7]]
@@ -4827,63 +5097,63 @@ list()</code></pre>
 [1] 51.51346
 
 [[1]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0885364
+[1] -0.0885353
 
 
 [[1]]$route$parts[[8]]$coords[[8]]
 [[1]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51348
+[1] 51.51346
 
 [[1]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0885281
+[1] -0.0885364
 
 
 [[1]]$route$parts[[8]]$coords[[9]]
 [[1]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51349
+[1] 51.51348
 
 [[1]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0885464
+[1] -0.0885281
 
 
 [[1]]$route$parts[[8]]$coords[[10]]
 [[1]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51351
+[1] 51.51349
 
 [[1]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0885851
+[1] -0.0885464
 
 
 [[1]]$route$parts[[8]]$coords[[11]]
 [[1]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.51353
+[1] 51.51351
 
 [[1]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0886268
+[1] -0.0885851
 
 
 [[1]]$route$parts[[8]]$coords[[12]]
 [[1]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51356
+[1] 51.51353
 
 [[1]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0886882
+[1] -0.0886268
 
 
 [[1]]$route$parts[[8]]$coords[[13]]
 [[1]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51354
+[1] 51.51356
 
 [[1]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0887415
+[1] -0.0886882
 
 
 [[1]]$route$parts[[8]]$coords[[14]]
 [[1]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51353
+[1] 51.51354
 
 [[1]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0888122
+[1] -0.0887415
 
 
 [[1]]$route$parts[[8]]$coords[[15]]
@@ -4891,95 +5161,95 @@ list()</code></pre>
 [1] 51.51353
 
 [[1]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0888883
+[1] -0.0888122
 
 
 [[1]]$route$parts[[8]]$coords[[16]]
 [[1]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51354
+[1] 51.51353
 
 [[1]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0889143
+[1] -0.0888883
 
 
 [[1]]$route$parts[[8]]$coords[[17]]
 [[1]]$route$parts[[8]]$coords[[17]]$lat
-[1] 51.51356
+[1] 51.51354
 
 [[1]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0889273
+[1] -0.0889143
 
 
 [[1]]$route$parts[[8]]$coords[[18]]
 [[1]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51451
+[1] 51.51356
 
 [[1]]$route$parts[[8]]$coords[[18]]$lng
-[1] -0.089619
+[1] -0.0889273
 
 
 [[1]]$route$parts[[8]]$coords[[19]]
 [[1]]$route$parts[[8]]$coords[[19]]$lat
-[1] 51.51464
+[1] 51.51451
 
 [[1]]$route$parts[[8]]$coords[[19]]$lng
-[1] -0.0896809
+[1] -0.089619
 
 
 [[1]]$route$parts[[8]]$coords[[20]]
 [[1]]$route$parts[[8]]$coords[[20]]$lat
-[1] 51.51469
+[1] 51.51464
 
 [[1]]$route$parts[[8]]$coords[[20]]$lng
-[1] -0.0896341
+[1] -0.0896809
 
 
 [[1]]$route$parts[[8]]$coords[[21]]
 [[1]]$route$parts[[8]]$coords[[21]]$lat
-[1] 51.5147
+[1] 51.51469
 
 [[1]]$route$parts[[8]]$coords[[21]]$lng
-[1] -0.0897491
+[1] -0.0896341
 
 
 [[1]]$route$parts[[8]]$coords[[22]]
 [[1]]$route$parts[[8]]$coords[[22]]$lat
-[1] 51.51472
+[1] 51.5147
 
 [[1]]$route$parts[[8]]$coords[[22]]$lng
-[1] -0.0898988
+[1] -0.0897491
 
 
 [[1]]$route$parts[[8]]$coords[[23]]
 [[1]]$route$parts[[8]]$coords[[23]]$lat
-[1] 51.51476
+[1] 51.51472
 
 [[1]]$route$parts[[8]]$coords[[23]]$lng
-[1] -0.0899594
+[1] -0.0898988
 
 
 [[1]]$route$parts[[8]]$coords[[24]]
 [[1]]$route$parts[[8]]$coords[[24]]$lat
-[1] 51.51482
+[1] 51.51476
 
 [[1]]$route$parts[[8]]$coords[[24]]$lng
-[1] -0.0899281
+[1] -0.0899594
 
 
 [[1]]$route$parts[[8]]$coords[[25]]
 [[1]]$route$parts[[8]]$coords[[25]]$lat
-[1] 51.5149
+[1] 51.51482
 
 [[1]]$route$parts[[8]]$coords[[25]]$lng
-[1] -0.0898848
+[1] -0.0899281
 
 
 [[1]]$route$parts[[8]]$coords[[26]]
 [[1]]$route$parts[[8]]$coords[[26]]$lat
-[1] 51.51495
+[1] 51.5149
 
 [[1]]$route$parts[[8]]$coords[[26]]$lng
-[1] -0.0902604
+[1] -0.0898848
 
 
 [[1]]$route$parts[[8]]$coords[[27]]
@@ -4987,23 +5257,23 @@ list()</code></pre>
 [1] 51.51495
 
 [[1]]$route$parts[[8]]$coords[[27]]$lng
-[1] -0.0903181
+[1] -0.0902604
 
 
 [[1]]$route$parts[[8]]$coords[[28]]
 [[1]]$route$parts[[8]]$coords[[28]]$lat
-[1] 51.51496
+[1] 51.51495
 
 [[1]]$route$parts[[8]]$coords[[28]]$lng
-[1] -0.0903744
+[1] -0.0903181
 
 
 [[1]]$route$parts[[8]]$coords[[29]]
 [[1]]$route$parts[[8]]$coords[[29]]$lat
-[1] 51.51503
+[1] 51.51496
 
 [[1]]$route$parts[[8]]$coords[[29]]$lng
-[1] -0.0910251
+[1] -0.0903744
 
 
 [[1]]$route$parts[[8]]$coords[[30]]
@@ -5011,30 +5281,38 @@ list()</code></pre>
 [1] 51.51503
 
 [[1]]$route$parts[[8]]$coords[[30]]$lng
-[1] -0.091083
+[1] -0.0910251
 
 
 [[1]]$route$parts[[8]]$coords[[31]]
 [[1]]$route$parts[[8]]$coords[[31]]$lat
-[1] 51.51504
+[1] 51.51503
 
 [[1]]$route$parts[[8]]$coords[[31]]$lng
-[1] -0.0911337
+[1] -0.091083
 
 
 [[1]]$route$parts[[8]]$coords[[32]]
 [[1]]$route$parts[[8]]$coords[[32]]$lat
-[1] 51.51537
+[1] 51.51504
 
 [[1]]$route$parts[[8]]$coords[[32]]$lng
-[1] -0.091066
+[1] -0.0911337
 
 
 [[1]]$route$parts[[8]]$coords[[33]]
 [[1]]$route$parts[[8]]$coords[[33]]$lat
-[1] 51.51539
+[1] 51.51537
 
 [[1]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.091066
+
+
+[[1]]$route$parts[[8]]$coords[[34]]
+[[1]]$route$parts[[8]]$coords[[34]]$lat
+[1] 51.51539
+
+[[1]]$route$parts[[8]]$coords[[34]]$lng
 [1] -0.0917676
 
 
@@ -5194,14 +5472,14 @@ list()</code></pre>
 
 [[2]]
 [[2]]$travel_time
-[1] 1287
+[1] 1282
 
 [[2]]$route
 [[2]]$route$departure_time
-[1] "2024-06-05T08:01:27+01:00"
+[1] "2024-06-05T08:01:30+01:00"
 
 [[2]]$route$arrival_time
-[1] "2024-06-05T08:22:54+01:00"
+[1] "2024-06-05T08:22:52+01:00"
 
 [[2]]$route$parts
 [[2]]$route$parts[[1]]
@@ -5256,13 +5534,13 @@ list()</code></pre>
 [1] "walk"
 
 [[2]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 [[2]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 [[2]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 [[2]]$route$parts[[2]]$coords
 [[2]]$route$parts[[2]]$coords[[1]]
@@ -5289,6 +5567,46 @@ list()</code></pre>
 [1] -0.1277612
 
 
+[[2]]$route$parts[[2]]$coords[[4]]
+[[2]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+[[2]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+[[2]]$route$parts[[2]]$coords[[5]]
+[[2]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+[[2]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+[[2]]$route$parts[[2]]$coords[[6]]
+[[2]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+[[2]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+[[2]]$route$parts[[2]]$coords[[7]]
+[[2]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+[[2]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+[[2]]$route$parts[[2]]$coords[[8]]
+[[2]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+[[2]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 [[2]]$route$parts[[3]]
@@ -5305,18 +5623,18 @@ list()</code></pre>
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 [[2]]$route$parts[[3]]$distance
-[1] 67
+[1] 58
 
 [[2]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 [[2]]$route$parts[[3]]$coords
 [[2]]$route$parts[[3]]$coords[[1]]
 [[2]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 [[2]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 [[2]]$route$parts[[3]]$coords[[2]]
@@ -5517,10 +5835,10 @@ list()</code></pre>
 [1] "Leave Bank Underground Station"
 
 [[2]]$route$parts[[7]]$distance
-[1] 16
+[1] 11
 
 [[2]]$route$parts[[7]]$travel_time
-[1] 24
+[1] 16
 
 [[2]]$route$parts[[7]]$coords
 [[2]]$route$parts[[7]]$coords[[1]]
@@ -5533,10 +5851,10 @@ list()</code></pre>
 
 [[2]]$route$parts[[7]]$coords[[2]]
 [[2]]$route$parts[[7]]$coords[[2]]$lat
-[1] 51.51344
+[1] 51.5134
 
 [[2]]$route$parts[[7]]$coords[[2]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 
@@ -5552,61 +5870,61 @@ list()</code></pre>
 [1] "walk"
 
 [[2]]$route$parts[[8]]$directions
-[1] "Walk 380 meters"
+[1] "Walk 386 meters"
 
 [[2]]$route$parts[[8]]$distance
-[1] 380
+[1] 386
 
 [[2]]$route$parts[[8]]$travel_time
-[1] 334
+[1] 340
 
 [[2]]$route$parts[[8]]$coords
 [[2]]$route$parts[[8]]$coords[[1]]
 [[2]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.5134
 
 [[2]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 [[2]]$route$parts[[8]]$coords[[2]]
 [[2]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51341
 
 [[2]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0884714
+[1] -0.0884398
 
 
 [[2]]$route$parts[[8]]$coords[[3]]
 [[2]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51346
+[1] 51.51342
 
 [[2]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0884774
+[1] -0.0884771
 
 
 [[2]]$route$parts[[8]]$coords[[4]]
 [[2]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51346
+[1] 51.51343
 
 [[2]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0884931
+[1] -0.0885099
 
 
 [[2]]$route$parts[[8]]$coords[[5]]
 [[2]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51346
+[1] 51.51344
 
 [[2]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0885073
+[1] -0.0885208
 
 
 [[2]]$route$parts[[8]]$coords[[6]]
 [[2]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51346
+[1] 51.51344
 
 [[2]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0885353
+[1] -0.0885285
 
 
 [[2]]$route$parts[[8]]$coords[[7]]
@@ -5614,63 +5932,63 @@ list()</code></pre>
 [1] 51.51346
 
 [[2]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0885364
+[1] -0.0885353
 
 
 [[2]]$route$parts[[8]]$coords[[8]]
 [[2]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51348
+[1] 51.51346
 
 [[2]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0885281
+[1] -0.0885364
 
 
 [[2]]$route$parts[[8]]$coords[[9]]
 [[2]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51349
+[1] 51.51348
 
 [[2]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0885464
+[1] -0.0885281
 
 
 [[2]]$route$parts[[8]]$coords[[10]]
 [[2]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51351
+[1] 51.51349
 
 [[2]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0885851
+[1] -0.0885464
 
 
 [[2]]$route$parts[[8]]$coords[[11]]
 [[2]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.51353
+[1] 51.51351
 
 [[2]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0886268
+[1] -0.0885851
 
 
 [[2]]$route$parts[[8]]$coords[[12]]
 [[2]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51356
+[1] 51.51353
 
 [[2]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0886882
+[1] -0.0886268
 
 
 [[2]]$route$parts[[8]]$coords[[13]]
 [[2]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51354
+[1] 51.51356
 
 [[2]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0887415
+[1] -0.0886882
 
 
 [[2]]$route$parts[[8]]$coords[[14]]
 [[2]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51353
+[1] 51.51354
 
 [[2]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0888122
+[1] -0.0887415
 
 
 [[2]]$route$parts[[8]]$coords[[15]]
@@ -5678,95 +5996,95 @@ list()</code></pre>
 [1] 51.51353
 
 [[2]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0888883
+[1] -0.0888122
 
 
 [[2]]$route$parts[[8]]$coords[[16]]
 [[2]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51354
+[1] 51.51353
 
 [[2]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0889143
+[1] -0.0888883
 
 
 [[2]]$route$parts[[8]]$coords[[17]]
 [[2]]$route$parts[[8]]$coords[[17]]$lat
-[1] 51.51356
+[1] 51.51354
 
 [[2]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0889273
+[1] -0.0889143
 
 
 [[2]]$route$parts[[8]]$coords[[18]]
 [[2]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51451
+[1] 51.51356
 
 [[2]]$route$parts[[8]]$coords[[18]]$lng
-[1] -0.089619
+[1] -0.0889273
 
 
 [[2]]$route$parts[[8]]$coords[[19]]
 [[2]]$route$parts[[8]]$coords[[19]]$lat
-[1] 51.51464
+[1] 51.51451
 
 [[2]]$route$parts[[8]]$coords[[19]]$lng
-[1] -0.0896809
+[1] -0.089619
 
 
 [[2]]$route$parts[[8]]$coords[[20]]
 [[2]]$route$parts[[8]]$coords[[20]]$lat
-[1] 51.51469
+[1] 51.51464
 
 [[2]]$route$parts[[8]]$coords[[20]]$lng
-[1] -0.0896341
+[1] -0.0896809
 
 
 [[2]]$route$parts[[8]]$coords[[21]]
 [[2]]$route$parts[[8]]$coords[[21]]$lat
-[1] 51.5147
+[1] 51.51469
 
 [[2]]$route$parts[[8]]$coords[[21]]$lng
-[1] -0.0897491
+[1] -0.0896341
 
 
 [[2]]$route$parts[[8]]$coords[[22]]
 [[2]]$route$parts[[8]]$coords[[22]]$lat
-[1] 51.51472
+[1] 51.5147
 
 [[2]]$route$parts[[8]]$coords[[22]]$lng
-[1] -0.0898988
+[1] -0.0897491
 
 
 [[2]]$route$parts[[8]]$coords[[23]]
 [[2]]$route$parts[[8]]$coords[[23]]$lat
-[1] 51.51476
+[1] 51.51472
 
 [[2]]$route$parts[[8]]$coords[[23]]$lng
-[1] -0.0899594
+[1] -0.0898988
 
 
 [[2]]$route$parts[[8]]$coords[[24]]
 [[2]]$route$parts[[8]]$coords[[24]]$lat
-[1] 51.51482
+[1] 51.51476
 
 [[2]]$route$parts[[8]]$coords[[24]]$lng
-[1] -0.0899281
+[1] -0.0899594
 
 
 [[2]]$route$parts[[8]]$coords[[25]]
 [[2]]$route$parts[[8]]$coords[[25]]$lat
-[1] 51.5149
+[1] 51.51482
 
 [[2]]$route$parts[[8]]$coords[[25]]$lng
-[1] -0.0898848
+[1] -0.0899281
 
 
 [[2]]$route$parts[[8]]$coords[[26]]
 [[2]]$route$parts[[8]]$coords[[26]]$lat
-[1] 51.51495
+[1] 51.5149
 
 [[2]]$route$parts[[8]]$coords[[26]]$lng
-[1] -0.0902604
+[1] -0.0898848
 
 
 [[2]]$route$parts[[8]]$coords[[27]]
@@ -5774,23 +6092,23 @@ list()</code></pre>
 [1] 51.51495
 
 [[2]]$route$parts[[8]]$coords[[27]]$lng
-[1] -0.0903181
+[1] -0.0902604
 
 
 [[2]]$route$parts[[8]]$coords[[28]]
 [[2]]$route$parts[[8]]$coords[[28]]$lat
-[1] 51.51496
+[1] 51.51495
 
 [[2]]$route$parts[[8]]$coords[[28]]$lng
-[1] -0.0903744
+[1] -0.0903181
 
 
 [[2]]$route$parts[[8]]$coords[[29]]
 [[2]]$route$parts[[8]]$coords[[29]]$lat
-[1] 51.51503
+[1] 51.51496
 
 [[2]]$route$parts[[8]]$coords[[29]]$lng
-[1] -0.0910251
+[1] -0.0903744
 
 
 [[2]]$route$parts[[8]]$coords[[30]]
@@ -5798,30 +6116,38 @@ list()</code></pre>
 [1] 51.51503
 
 [[2]]$route$parts[[8]]$coords[[30]]$lng
-[1] -0.091083
+[1] -0.0910251
 
 
 [[2]]$route$parts[[8]]$coords[[31]]
 [[2]]$route$parts[[8]]$coords[[31]]$lat
-[1] 51.51504
+[1] 51.51503
 
 [[2]]$route$parts[[8]]$coords[[31]]$lng
-[1] -0.0911337
+[1] -0.091083
 
 
 [[2]]$route$parts[[8]]$coords[[32]]
 [[2]]$route$parts[[8]]$coords[[32]]$lat
-[1] 51.51537
+[1] 51.51504
 
 [[2]]$route$parts[[8]]$coords[[32]]$lng
-[1] -0.091066
+[1] -0.0911337
 
 
 [[2]]$route$parts[[8]]$coords[[33]]
 [[2]]$route$parts[[8]]$coords[[33]]$lat
-[1] 51.51539
+[1] 51.51537
 
 [[2]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.091066
+
+
+[[2]]$route$parts[[8]]$coords[[34]]
+[[2]]$route$parts[[8]]$coords[[34]]$lat
+[1] 51.51539
+
+[[2]]$route$parts[[8]]$coords[[34]]$lng
 [1] -0.0917676
 
 
@@ -5981,14 +6307,14 @@ list()</code></pre>
 
 [[3]]
 [[3]]$travel_time
-[1] 1313
+[1] 1308
 
 [[3]]$route
 [[3]]$route$departure_time
-[1] "2024-06-05T08:04:01+01:00"
+[1] "2024-06-05T08:04:04+01:00"
 
 [[3]]$route$arrival_time
-[1] "2024-06-05T08:25:54+01:00"
+[1] "2024-06-05T08:25:52+01:00"
 
 [[3]]$route$parts
 [[3]]$route$parts[[1]]
@@ -6043,13 +6369,13 @@ list()</code></pre>
 [1] "walk"
 
 [[3]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 [[3]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 [[3]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 [[3]]$route$parts[[2]]$coords
 [[3]]$route$parts[[2]]$coords[[1]]
@@ -6076,6 +6402,46 @@ list()</code></pre>
 [1] -0.1277612
 
 
+[[3]]$route$parts[[2]]$coords[[4]]
+[[3]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+[[3]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+[[3]]$route$parts[[2]]$coords[[5]]
+[[3]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+[[3]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+[[3]]$route$parts[[2]]$coords[[6]]
+[[3]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+[[3]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+[[3]]$route$parts[[2]]$coords[[7]]
+[[3]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+[[3]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+[[3]]$route$parts[[2]]$coords[[8]]
+[[3]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+[[3]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 [[3]]$route$parts[[3]]
@@ -6092,18 +6458,18 @@ list()</code></pre>
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 [[3]]$route$parts[[3]]$distance
-[1] 67
+[1] 58
 
 [[3]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 [[3]]$route$parts[[3]]$coords
 [[3]]$route$parts[[3]]$coords[[1]]
 [[3]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 [[3]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 [[3]]$route$parts[[3]]$coords[[2]]
@@ -6304,10 +6670,10 @@ list()</code></pre>
 [1] "Leave Bank Underground Station"
 
 [[3]]$route$parts[[7]]$distance
-[1] 16
+[1] 11
 
 [[3]]$route$parts[[7]]$travel_time
-[1] 24
+[1] 16
 
 [[3]]$route$parts[[7]]$coords
 [[3]]$route$parts[[7]]$coords[[1]]
@@ -6320,10 +6686,10 @@ list()</code></pre>
 
 [[3]]$route$parts[[7]]$coords[[2]]
 [[3]]$route$parts[[7]]$coords[[2]]$lat
-[1] 51.51344
+[1] 51.5134
 
 [[3]]$route$parts[[7]]$coords[[2]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 
@@ -6339,61 +6705,61 @@ list()</code></pre>
 [1] "walk"
 
 [[3]]$route$parts[[8]]$directions
-[1] "Walk 380 meters"
+[1] "Walk 386 meters"
 
 [[3]]$route$parts[[8]]$distance
-[1] 380
+[1] 386
 
 [[3]]$route$parts[[8]]$travel_time
-[1] 334
+[1] 340
 
 [[3]]$route$parts[[8]]$coords
 [[3]]$route$parts[[8]]$coords[[1]]
 [[3]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.5134
 
 [[3]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 [[3]]$route$parts[[8]]$coords[[2]]
 [[3]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51341
 
 [[3]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0884714
+[1] -0.0884398
 
 
 [[3]]$route$parts[[8]]$coords[[3]]
 [[3]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51346
+[1] 51.51342
 
 [[3]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0884774
+[1] -0.0884771
 
 
 [[3]]$route$parts[[8]]$coords[[4]]
 [[3]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51346
+[1] 51.51343
 
 [[3]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0884931
+[1] -0.0885099
 
 
 [[3]]$route$parts[[8]]$coords[[5]]
 [[3]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51346
+[1] 51.51344
 
 [[3]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0885073
+[1] -0.0885208
 
 
 [[3]]$route$parts[[8]]$coords[[6]]
 [[3]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51346
+[1] 51.51344
 
 [[3]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0885353
+[1] -0.0885285
 
 
 [[3]]$route$parts[[8]]$coords[[7]]
@@ -6401,63 +6767,63 @@ list()</code></pre>
 [1] 51.51346
 
 [[3]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0885364
+[1] -0.0885353
 
 
 [[3]]$route$parts[[8]]$coords[[8]]
 [[3]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51348
+[1] 51.51346
 
 [[3]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0885281
+[1] -0.0885364
 
 
 [[3]]$route$parts[[8]]$coords[[9]]
 [[3]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51349
+[1] 51.51348
 
 [[3]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0885464
+[1] -0.0885281
 
 
 [[3]]$route$parts[[8]]$coords[[10]]
 [[3]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51351
+[1] 51.51349
 
 [[3]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0885851
+[1] -0.0885464
 
 
 [[3]]$route$parts[[8]]$coords[[11]]
 [[3]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.51353
+[1] 51.51351
 
 [[3]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0886268
+[1] -0.0885851
 
 
 [[3]]$route$parts[[8]]$coords[[12]]
 [[3]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51356
+[1] 51.51353
 
 [[3]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0886882
+[1] -0.0886268
 
 
 [[3]]$route$parts[[8]]$coords[[13]]
 [[3]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51354
+[1] 51.51356
 
 [[3]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0887415
+[1] -0.0886882
 
 
 [[3]]$route$parts[[8]]$coords[[14]]
 [[3]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51353
+[1] 51.51354
 
 [[3]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0888122
+[1] -0.0887415
 
 
 [[3]]$route$parts[[8]]$coords[[15]]
@@ -6465,95 +6831,95 @@ list()</code></pre>
 [1] 51.51353
 
 [[3]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0888883
+[1] -0.0888122
 
 
 [[3]]$route$parts[[8]]$coords[[16]]
 [[3]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51354
+[1] 51.51353
 
 [[3]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0889143
+[1] -0.0888883
 
 
 [[3]]$route$parts[[8]]$coords[[17]]
 [[3]]$route$parts[[8]]$coords[[17]]$lat
-[1] 51.51356
+[1] 51.51354
 
 [[3]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0889273
+[1] -0.0889143
 
 
 [[3]]$route$parts[[8]]$coords[[18]]
 [[3]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51451
+[1] 51.51356
 
 [[3]]$route$parts[[8]]$coords[[18]]$lng
-[1] -0.089619
+[1] -0.0889273
 
 
 [[3]]$route$parts[[8]]$coords[[19]]
 [[3]]$route$parts[[8]]$coords[[19]]$lat
-[1] 51.51464
+[1] 51.51451
 
 [[3]]$route$parts[[8]]$coords[[19]]$lng
-[1] -0.0896809
+[1] -0.089619
 
 
 [[3]]$route$parts[[8]]$coords[[20]]
 [[3]]$route$parts[[8]]$coords[[20]]$lat
-[1] 51.51469
+[1] 51.51464
 
 [[3]]$route$parts[[8]]$coords[[20]]$lng
-[1] -0.0896341
+[1] -0.0896809
 
 
 [[3]]$route$parts[[8]]$coords[[21]]
 [[3]]$route$parts[[8]]$coords[[21]]$lat
-[1] 51.5147
+[1] 51.51469
 
 [[3]]$route$parts[[8]]$coords[[21]]$lng
-[1] -0.0897491
+[1] -0.0896341
 
 
 [[3]]$route$parts[[8]]$coords[[22]]
 [[3]]$route$parts[[8]]$coords[[22]]$lat
-[1] 51.51472
+[1] 51.5147
 
 [[3]]$route$parts[[8]]$coords[[22]]$lng
-[1] -0.0898988
+[1] -0.0897491
 
 
 [[3]]$route$parts[[8]]$coords[[23]]
 [[3]]$route$parts[[8]]$coords[[23]]$lat
-[1] 51.51476
+[1] 51.51472
 
 [[3]]$route$parts[[8]]$coords[[23]]$lng
-[1] -0.0899594
+[1] -0.0898988
 
 
 [[3]]$route$parts[[8]]$coords[[24]]
 [[3]]$route$parts[[8]]$coords[[24]]$lat
-[1] 51.51482
+[1] 51.51476
 
 [[3]]$route$parts[[8]]$coords[[24]]$lng
-[1] -0.0899281
+[1] -0.0899594
 
 
 [[3]]$route$parts[[8]]$coords[[25]]
 [[3]]$route$parts[[8]]$coords[[25]]$lat
-[1] 51.5149
+[1] 51.51482
 
 [[3]]$route$parts[[8]]$coords[[25]]$lng
-[1] -0.0898848
+[1] -0.0899281
 
 
 [[3]]$route$parts[[8]]$coords[[26]]
 [[3]]$route$parts[[8]]$coords[[26]]$lat
-[1] 51.51495
+[1] 51.5149
 
 [[3]]$route$parts[[8]]$coords[[26]]$lng
-[1] -0.0902604
+[1] -0.0898848
 
 
 [[3]]$route$parts[[8]]$coords[[27]]
@@ -6561,23 +6927,23 @@ list()</code></pre>
 [1] 51.51495
 
 [[3]]$route$parts[[8]]$coords[[27]]$lng
-[1] -0.0903181
+[1] -0.0902604
 
 
 [[3]]$route$parts[[8]]$coords[[28]]
 [[3]]$route$parts[[8]]$coords[[28]]$lat
-[1] 51.51496
+[1] 51.51495
 
 [[3]]$route$parts[[8]]$coords[[28]]$lng
-[1] -0.0903744
+[1] -0.0903181
 
 
 [[3]]$route$parts[[8]]$coords[[29]]
 [[3]]$route$parts[[8]]$coords[[29]]$lat
-[1] 51.51503
+[1] 51.51496
 
 [[3]]$route$parts[[8]]$coords[[29]]$lng
-[1] -0.0910251
+[1] -0.0903744
 
 
 [[3]]$route$parts[[8]]$coords[[30]]
@@ -6585,30 +6951,38 @@ list()</code></pre>
 [1] 51.51503
 
 [[3]]$route$parts[[8]]$coords[[30]]$lng
-[1] -0.091083
+[1] -0.0910251
 
 
 [[3]]$route$parts[[8]]$coords[[31]]
 [[3]]$route$parts[[8]]$coords[[31]]$lat
-[1] 51.51504
+[1] 51.51503
 
 [[3]]$route$parts[[8]]$coords[[31]]$lng
-[1] -0.0911337
+[1] -0.091083
 
 
 [[3]]$route$parts[[8]]$coords[[32]]
 [[3]]$route$parts[[8]]$coords[[32]]$lat
-[1] 51.51537
+[1] 51.51504
 
 [[3]]$route$parts[[8]]$coords[[32]]$lng
-[1] -0.091066
+[1] -0.0911337
 
 
 [[3]]$route$parts[[8]]$coords[[33]]
 [[3]]$route$parts[[8]]$coords[[33]]$lat
-[1] 51.51539
+[1] 51.51537
 
 [[3]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.091066
+
+
+[[3]]$route$parts[[8]]$coords[[34]]
+[[3]]$route$parts[[8]]$coords[[34]]$lat
+[1] 51.51539
+
+[[3]]$route$parts[[8]]$coords[[34]]$lng
 [1] -0.0917676
 
 
@@ -6768,14 +7142,14 @@ list()</code></pre>
 
 [[4]]
 [[4]]$travel_time
-[1] 1407
+[1] 1402
 
 [[4]]$route
 [[4]]$route$departure_time
-[1] "2024-06-05T08:06:27+01:00"
+[1] "2024-06-05T08:06:30+01:00"
 
 [[4]]$route$arrival_time
-[1] "2024-06-05T08:29:54+01:00"
+[1] "2024-06-05T08:29:52+01:00"
 
 [[4]]$route$parts
 [[4]]$route$parts[[1]]
@@ -6830,13 +7204,13 @@ list()</code></pre>
 [1] "walk"
 
 [[4]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 [[4]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 [[4]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 [[4]]$route$parts[[2]]$coords
 [[4]]$route$parts[[2]]$coords[[1]]
@@ -6863,6 +7237,46 @@ list()</code></pre>
 [1] -0.1277612
 
 
+[[4]]$route$parts[[2]]$coords[[4]]
+[[4]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+[[4]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+[[4]]$route$parts[[2]]$coords[[5]]
+[[4]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+[[4]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+[[4]]$route$parts[[2]]$coords[[6]]
+[[4]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+[[4]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+[[4]]$route$parts[[2]]$coords[[7]]
+[[4]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+[[4]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+[[4]]$route$parts[[2]]$coords[[8]]
+[[4]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+[[4]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 [[4]]$route$parts[[3]]
@@ -6879,18 +7293,18 @@ list()</code></pre>
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 [[4]]$route$parts[[3]]$distance
-[1] 67
+[1] 58
 
 [[4]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 [[4]]$route$parts[[3]]$coords
 [[4]]$route$parts[[3]]$coords[[1]]
 [[4]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 [[4]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 [[4]]$route$parts[[3]]$coords[[2]]
@@ -7091,10 +7505,10 @@ list()</code></pre>
 [1] "Leave Bank Underground Station"
 
 [[4]]$route$parts[[7]]$distance
-[1] 16
+[1] 11
 
 [[4]]$route$parts[[7]]$travel_time
-[1] 24
+[1] 16
 
 [[4]]$route$parts[[7]]$coords
 [[4]]$route$parts[[7]]$coords[[1]]
@@ -7107,10 +7521,10 @@ list()</code></pre>
 
 [[4]]$route$parts[[7]]$coords[[2]]
 [[4]]$route$parts[[7]]$coords[[2]]$lat
-[1] 51.51344
+[1] 51.5134
 
 [[4]]$route$parts[[7]]$coords[[2]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 
@@ -7126,61 +7540,61 @@ list()</code></pre>
 [1] "walk"
 
 [[4]]$route$parts[[8]]$directions
-[1] "Walk 380 meters"
+[1] "Walk 386 meters"
 
 [[4]]$route$parts[[8]]$distance
-[1] 380
+[1] 386
 
 [[4]]$route$parts[[8]]$travel_time
-[1] 334
+[1] 340
 
 [[4]]$route$parts[[8]]$coords
 [[4]]$route$parts[[8]]$coords[[1]]
 [[4]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.5134
 
 [[4]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0884578
+[1] -0.0883912
 
 
 [[4]]$route$parts[[8]]$coords[[2]]
 [[4]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51341
 
 [[4]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0884714
+[1] -0.0884398
 
 
 [[4]]$route$parts[[8]]$coords[[3]]
 [[4]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51346
+[1] 51.51342
 
 [[4]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0884774
+[1] -0.0884771
 
 
 [[4]]$route$parts[[8]]$coords[[4]]
 [[4]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51346
+[1] 51.51343
 
 [[4]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0884931
+[1] -0.0885099
 
 
 [[4]]$route$parts[[8]]$coords[[5]]
 [[4]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51346
+[1] 51.51344
 
 [[4]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0885073
+[1] -0.0885208
 
 
 [[4]]$route$parts[[8]]$coords[[6]]
 [[4]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51346
+[1] 51.51344
 
 [[4]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0885353
+[1] -0.0885285
 
 
 [[4]]$route$parts[[8]]$coords[[7]]
@@ -7188,63 +7602,63 @@ list()</code></pre>
 [1] 51.51346
 
 [[4]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0885364
+[1] -0.0885353
 
 
 [[4]]$route$parts[[8]]$coords[[8]]
 [[4]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51348
+[1] 51.51346
 
 [[4]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0885281
+[1] -0.0885364
 
 
 [[4]]$route$parts[[8]]$coords[[9]]
 [[4]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51349
+[1] 51.51348
 
 [[4]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0885464
+[1] -0.0885281
 
 
 [[4]]$route$parts[[8]]$coords[[10]]
 [[4]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51351
+[1] 51.51349
 
 [[4]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0885851
+[1] -0.0885464
 
 
 [[4]]$route$parts[[8]]$coords[[11]]
 [[4]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.51353
+[1] 51.51351
 
 [[4]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0886268
+[1] -0.0885851
 
 
 [[4]]$route$parts[[8]]$coords[[12]]
 [[4]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51356
+[1] 51.51353
 
 [[4]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0886882
+[1] -0.0886268
 
 
 [[4]]$route$parts[[8]]$coords[[13]]
 [[4]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51354
+[1] 51.51356
 
 [[4]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0887415
+[1] -0.0886882
 
 
 [[4]]$route$parts[[8]]$coords[[14]]
 [[4]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51353
+[1] 51.51354
 
 [[4]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0888122
+[1] -0.0887415
 
 
 [[4]]$route$parts[[8]]$coords[[15]]
@@ -7252,95 +7666,95 @@ list()</code></pre>
 [1] 51.51353
 
 [[4]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0888883
+[1] -0.0888122
 
 
 [[4]]$route$parts[[8]]$coords[[16]]
 [[4]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51354
+[1] 51.51353
 
 [[4]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0889143
+[1] -0.0888883
 
 
 [[4]]$route$parts[[8]]$coords[[17]]
 [[4]]$route$parts[[8]]$coords[[17]]$lat
-[1] 51.51356
+[1] 51.51354
 
 [[4]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0889273
+[1] -0.0889143
 
 
 [[4]]$route$parts[[8]]$coords[[18]]
 [[4]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51451
+[1] 51.51356
 
 [[4]]$route$parts[[8]]$coords[[18]]$lng
-[1] -0.089619
+[1] -0.0889273
 
 
 [[4]]$route$parts[[8]]$coords[[19]]
 [[4]]$route$parts[[8]]$coords[[19]]$lat
-[1] 51.51464
+[1] 51.51451
 
 [[4]]$route$parts[[8]]$coords[[19]]$lng
-[1] -0.0896809
+[1] -0.089619
 
 
 [[4]]$route$parts[[8]]$coords[[20]]
 [[4]]$route$parts[[8]]$coords[[20]]$lat
-[1] 51.51469
+[1] 51.51464
 
 [[4]]$route$parts[[8]]$coords[[20]]$lng
-[1] -0.0896341
+[1] -0.0896809
 
 
 [[4]]$route$parts[[8]]$coords[[21]]
 [[4]]$route$parts[[8]]$coords[[21]]$lat
-[1] 51.5147
+[1] 51.51469
 
 [[4]]$route$parts[[8]]$coords[[21]]$lng
-[1] -0.0897491
+[1] -0.0896341
 
 
 [[4]]$route$parts[[8]]$coords[[22]]
 [[4]]$route$parts[[8]]$coords[[22]]$lat
-[1] 51.51472
+[1] 51.5147
 
 [[4]]$route$parts[[8]]$coords[[22]]$lng
-[1] -0.0898988
+[1] -0.0897491
 
 
 [[4]]$route$parts[[8]]$coords[[23]]
 [[4]]$route$parts[[8]]$coords[[23]]$lat
-[1] 51.51476
+[1] 51.51472
 
 [[4]]$route$parts[[8]]$coords[[23]]$lng
-[1] -0.0899594
+[1] -0.0898988
 
 
 [[4]]$route$parts[[8]]$coords[[24]]
 [[4]]$route$parts[[8]]$coords[[24]]$lat
-[1] 51.51482
+[1] 51.51476
 
 [[4]]$route$parts[[8]]$coords[[24]]$lng
-[1] -0.0899281
+[1] -0.0899594
 
 
 [[4]]$route$parts[[8]]$coords[[25]]
 [[4]]$route$parts[[8]]$coords[[25]]$lat
-[1] 51.5149
+[1] 51.51482
 
 [[4]]$route$parts[[8]]$coords[[25]]$lng
-[1] -0.0898848
+[1] -0.0899281
 
 
 [[4]]$route$parts[[8]]$coords[[26]]
 [[4]]$route$parts[[8]]$coords[[26]]$lat
-[1] 51.51495
+[1] 51.5149
 
 [[4]]$route$parts[[8]]$coords[[26]]$lng
-[1] -0.0902604
+[1] -0.0898848
 
 
 [[4]]$route$parts[[8]]$coords[[27]]
@@ -7348,23 +7762,23 @@ list()</code></pre>
 [1] 51.51495
 
 [[4]]$route$parts[[8]]$coords[[27]]$lng
-[1] -0.0903181
+[1] -0.0902604
 
 
 [[4]]$route$parts[[8]]$coords[[28]]
 [[4]]$route$parts[[8]]$coords[[28]]$lat
-[1] 51.51496
+[1] 51.51495
 
 [[4]]$route$parts[[8]]$coords[[28]]$lng
-[1] -0.0903744
+[1] -0.0903181
 
 
 [[4]]$route$parts[[8]]$coords[[29]]
 [[4]]$route$parts[[8]]$coords[[29]]$lat
-[1] 51.51503
+[1] 51.51496
 
 [[4]]$route$parts[[8]]$coords[[29]]$lng
-[1] -0.0910251
+[1] -0.0903744
 
 
 [[4]]$route$parts[[8]]$coords[[30]]
@@ -7372,30 +7786,38 @@ list()</code></pre>
 [1] 51.51503
 
 [[4]]$route$parts[[8]]$coords[[30]]$lng
-[1] -0.091083
+[1] -0.0910251
 
 
 [[4]]$route$parts[[8]]$coords[[31]]
 [[4]]$route$parts[[8]]$coords[[31]]$lat
-[1] 51.51504
+[1] 51.51503
 
 [[4]]$route$parts[[8]]$coords[[31]]$lng
-[1] -0.0911337
+[1] -0.091083
 
 
 [[4]]$route$parts[[8]]$coords[[32]]
 [[4]]$route$parts[[8]]$coords[[32]]$lat
-[1] 51.51537
+[1] 51.51504
 
 [[4]]$route$parts[[8]]$coords[[32]]$lng
-[1] -0.091066
+[1] -0.0911337
 
 
 [[4]]$route$parts[[8]]$coords[[33]]
 [[4]]$route$parts[[8]]$coords[[33]]$lat
-[1] 51.51539
+[1] 51.51537
 
 [[4]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.091066
+
+
+[[4]]$route$parts[[8]]$coords[[34]]
+[[4]]$route$parts[[8]]$coords[[34]]$lat
+[1] 51.51539
+
+[[4]]$route$parts[[8]]$coords[[34]]$lng
 [1] -0.0917676
 
 
@@ -7555,11 +7977,11 @@ list()</code></pre>
 
 [[5]]
 [[5]]$travel_time
-[1] 1452
+[1] 1449
 
 [[5]]$route
 [[5]]$route$departure_time
-[1] "2024-06-05T08:08:16+01:00"
+[1] "2024-06-05T08:08:19+01:00"
 
 [[5]]$route$arrival_time
 [1] "2024-06-05T08:32:28+01:00"
@@ -7617,13 +8039,13 @@ list()</code></pre>
 [1] "walk"
 
 [[5]]$route$parts[[2]]$directions
-[1] "Walk 8 meters"
+[1] "Walk 18 meters"
 
 [[5]]$route$parts[[2]]$distance
-[1] 8
+[1] 18
 
 [[5]]$route$parts[[2]]$travel_time
-[1] 6
+[1] 16
 
 [[5]]$route$parts[[2]]$coords
 [[5]]$route$parts[[2]]$coords[[1]]
@@ -7650,6 +8072,46 @@ list()</code></pre>
 [1] -0.1277612
 
 
+[[5]]$route$parts[[2]]$coords[[4]]
+[[5]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+[[5]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+[[5]]$route$parts[[2]]$coords[[5]]
+[[5]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+[[5]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+[[5]]$route$parts[[2]]$coords[[6]]
+[[5]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+[[5]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+[[5]]$route$parts[[2]]$coords[[7]]
+[[5]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+[[5]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+[[5]]$route$parts[[2]]$coords[[8]]
+[[5]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+[[5]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
 
 
 [[5]]$route$parts[[3]]
@@ -7666,18 +8128,18 @@ list()</code></pre>
 [1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
 
 [[5]]$route$parts[[3]]$distance
-[1] 29
+[1] 20
 
 [[5]]$route$parts[[3]]$travel_time
-[1] 318
+[1] 305
 
 [[5]]$route$parts[[3]]$coords
 [[5]]$route$parts[[3]]$coords[[1]]
 [[5]]$route$parts[[3]]$coords[[1]]$lat
-[1] 51.51165
+[1] 51.5116
 
 [[5]]$route$parts[[3]]$coords[[1]]$lng
-[1] -0.1277612
+[1] -0.1278801
 
 
 [[5]]$route$parts[[3]]$coords[[2]]
@@ -7886,10 +8348,10 @@ list()</code></pre>
 [1] "Exit 'Bank Underground Station' through 'Entrance 1'"
 
 [[5]]$route$parts[[7]]$distance
-[1] 95
+[1] 96
 
 [[5]]$route$parts[[7]]$travel_time
-[1] 301
+[1] 302
 
 [[5]]$route$parts[[7]]$coords
 [[5]]$route$parts[[7]]$coords[[1]]
@@ -7910,10 +8372,10 @@ list()</code></pre>
 
 [[5]]$route$parts[[7]]$coords[[3]]
 [[5]]$route$parts[[7]]$coords[[3]]$lat
-[1] 51.51344
+[1] 51.51345
 
 [[5]]$route$parts[[7]]$coords[[3]]$lng
-[1] -0.0902804
+[1] -0.0903019
 
 
 
@@ -7929,141 +8391,141 @@ list()</code></pre>
 [1] "walk"
 
 [[5]]$route$parts[[8]]$directions
-[1] "Walk 281 meters"
+[1] "Walk 280 meters"
 
 [[5]]$route$parts[[8]]$distance
-[1] 281
+[1] 280
 
 [[5]]$route$parts[[8]]$travel_time
-[1] 225
+[1] 224
 
 [[5]]$route$parts[[8]]$coords
 [[5]]$route$parts[[8]]$coords[[1]]
 [[5]]$route$parts[[8]]$coords[[1]]$lat
-[1] 51.51344
+[1] 51.51345
 
 [[5]]$route$parts[[8]]$coords[[1]]$lng
-[1] -0.0902804
+[1] -0.0903019
 
 
 [[5]]$route$parts[[8]]$coords[[2]]
 [[5]]$route$parts[[8]]$coords[[2]]$lat
-[1] 51.51345
+[1] 51.51351
 
 [[5]]$route$parts[[8]]$coords[[2]]$lng
-[1] -0.0903019
+[1] -0.0906602
 
 
 [[5]]$route$parts[[8]]$coords[[3]]
 [[5]]$route$parts[[8]]$coords[[3]]$lat
-[1] 51.51351
+[1] 51.51354
 
 [[5]]$route$parts[[8]]$coords[[3]]$lng
-[1] -0.0906602
+[1] -0.0908316
 
 
 [[5]]$route$parts[[8]]$coords[[4]]
 [[5]]$route$parts[[8]]$coords[[4]]$lat
-[1] 51.51354
+[1] 51.51363
 
 [[5]]$route$parts[[8]]$coords[[4]]$lng
-[1] -0.0908316
+[1] -0.0913372
 
 
 [[5]]$route$parts[[8]]$coords[[5]]
 [[5]]$route$parts[[8]]$coords[[5]]$lat
-[1] 51.51363
+[1] 51.51375
 
 [[5]]$route$parts[[8]]$coords[[5]]$lng
-[1] -0.0913372
+[1] -0.0922006
 
 
 [[5]]$route$parts[[8]]$coords[[6]]
 [[5]]$route$parts[[8]]$coords[[6]]$lat
-[1] 51.51375
+[1] 51.5138
 
 [[5]]$route$parts[[8]]$coords[[6]]$lng
-[1] -0.0922006
+[1] -0.0921616
 
 
 [[5]]$route$parts[[8]]$coords[[7]]
 [[5]]$route$parts[[8]]$coords[[7]]$lat
-[1] 51.5138
+[1] 51.51385
 
 [[5]]$route$parts[[8]]$coords[[7]]$lng
-[1] -0.0921616
+[1] -0.0921487
 
 
 [[5]]$route$parts[[8]]$coords[[8]]
 [[5]]$route$parts[[8]]$coords[[8]]$lat
-[1] 51.51385
+[1] 51.51387
 
 [[5]]$route$parts[[8]]$coords[[8]]$lng
-[1] -0.0921487
+[1] -0.0922702
 
 
 [[5]]$route$parts[[8]]$coords[[9]]
 [[5]]$route$parts[[8]]$coords[[9]]$lat
-[1] 51.51387
+[1] 51.51389
 
 [[5]]$route$parts[[8]]$coords[[9]]$lng
-[1] -0.0922702
+[1] -0.0922708
 
 
 [[5]]$route$parts[[8]]$coords[[10]]
 [[5]]$route$parts[[8]]$coords[[10]]$lat
-[1] 51.51389
+[1] 51.5139
 
 [[5]]$route$parts[[8]]$coords[[10]]$lng
-[1] -0.0922708
+[1] -0.0922712
 
 
 [[5]]$route$parts[[8]]$coords[[11]]
 [[5]]$route$parts[[8]]$coords[[11]]$lat
-[1] 51.5139
+[1] 51.51392
 
 [[5]]$route$parts[[8]]$coords[[11]]$lng
-[1] -0.0922712
+[1] -0.0922715
 
 
 [[5]]$route$parts[[8]]$coords[[12]]
 [[5]]$route$parts[[8]]$coords[[12]]$lat
-[1] 51.51392
+[1] 51.51431
 
 [[5]]$route$parts[[8]]$coords[[12]]$lng
-[1] -0.0922715
+[1] -0.0921998
 
 
 [[5]]$route$parts[[8]]$coords[[13]]
 [[5]]$route$parts[[8]]$coords[[13]]$lat
-[1] 51.51431
+[1] 51.51441
 
 [[5]]$route$parts[[8]]$coords[[13]]$lng
-[1] -0.0921998
+[1] -0.0921822
 
 
 [[5]]$route$parts[[8]]$coords[[14]]
 [[5]]$route$parts[[8]]$coords[[14]]$lat
-[1] 51.51441
+[1] 51.51442
 
 [[5]]$route$parts[[8]]$coords[[14]]$lng
-[1] -0.0921822
+[1] -0.0921797
 
 
 [[5]]$route$parts[[8]]$coords[[15]]
 [[5]]$route$parts[[8]]$coords[[15]]$lat
-[1] 51.51442
+[1] 51.51461
 
 [[5]]$route$parts[[8]]$coords[[15]]$lng
-[1] -0.0921797
+[1] -0.0921495
 
 
 [[5]]$route$parts[[8]]$coords[[16]]
 [[5]]$route$parts[[8]]$coords[[16]]$lat
-[1] 51.51461
+[1] 51.51499
 
 [[5]]$route$parts[[8]]$coords[[16]]$lng
-[1] -0.0921495
+[1] -0.0920829
 
 
 [[5]]$route$parts[[8]]$coords[[17]]
@@ -8071,14 +8533,6 @@ list()</code></pre>
 [1] 51.51499
 
 [[5]]$route$parts[[8]]$coords[[17]]$lng
-[1] -0.0920829
-
-
-[[5]]$route$parts[[8]]$coords[[18]]
-[[5]]$route$parts[[8]]$coords[[18]]$lat
-[1] 51.51499
-
-[[5]]$route$parts[[8]]$coords[[18]]$lng
 [1] -0.0921332
 
 
