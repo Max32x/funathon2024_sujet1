@@ -4,3 +4,24 @@
   overflow: scroll;
   background: #f0f0f0;
 }
+
+.level-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.level-debutant {
+  background-color: green;
+}
+
+.level-intermediaire {
+  background-color: yellow;
+  color: black; /* Black text on yellow background for better contrast */
+}
+
+.level-expert {
+  background-color: red;
+}

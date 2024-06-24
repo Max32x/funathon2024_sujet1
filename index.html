@@ -10,7 +10,7 @@
 <meta name="author" content="Enzo Pezzali">
 <meta name="author" content="Thomas Lechalupe">
 
-<title>Funathon 2024 - Sujet 1 - Effets d’une mesure de restriction des trajets aériens sur les émissions de Co2</title>
+<title>✈️ - Effets d’une mesure de restriction des trajets aériens sur les émissions de Co2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,9 +108,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="style/custom_styles.css">
-<meta property="og:title" content="Funathon 2024 - Sujet 1 - Effets d’une mesure de restriction des trajets aériens sur les émissions de Co2">
+<meta property="og:title" content="✈️ - Effets d’une mesure de restriction des trajets aériens sur les émissions de Co2">
 <meta property="og:description" content="Visualiser les émissions de CO2 liées à une mesure de restriction de liaison aérienne relativement à des durées de trajets ferroviaires dans le cadre. L’étude portera sur les liaisons aériennes entre les 10 plus grandes agglomérations de la Métropole française. Elle permettra de quantifier et de localiser les émissions de CO2 évitées avec des mesures hypothétiques d’interdictions de liaisons aériennes lorsqu’une alternative ferroviaire existe en moins de 3h30, 4h30, 5h30…">
-<meta property="og:site_name" content="Funathon 2024 - Sujet 1">
+<meta property="og:site_name" content="✈️">
 </head>
 
 <body class="nav-fixed">
@@ -119,6 +119,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">✈️</span>
+    </a>
+  </div>
             <div id="quarto-search" class="" title="Recherche"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -244,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><span class="level-button level-debutant">Débutant</span></td>
-<td>Suivre les consignes, tester les exemples, reprendre et comprendre les corrections. <strong>Utiliser le fichier CSV mis à disposition si l'intéraction avec l'API est trop compliquée.</strong>.</td>
+<td>Suivre les consignes, tester les exemples, reprendre et comprendre les corrections. <strong>Utiliser le fichier CSV mis à disposition si l'intéraction avec l'API est trop compliquée.</strong></td>
 </tr>
 <tr class="even">
 <td><span class="level-button level-intermediaire">Intermédiaire</span></td>
@@ -254,8 +259,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <section id="introduction" class="level1 unnumbered">
 <h1 class="unnumbered">Introduction</h1>
-<p>Prévue par la loi Climat et Résilience de 2021, l’interdiction des lignes aériennes en cas d’alternative de moins de 2h30 en train est entrée en vigueur en 2023. Faut-il aller plus loin ? Quels seraient les bénéfices attendues d’une restriction plus large des trajets aériens intérieurs ? Afin d’éclairer ces questions, nous proposons avec ce sujet de visualiser les effets de nouvelles restrictions en termes d’émissions de CO2.</p>
-<p>L’étude portera sur les liaisons aériennes entre les 10 plus grandes agglomérations de la métropole française. Elle permettra de quantifier et de localiser les émissions de CO2 évitées avec des mesures hypothétiques d’interdictions de liaisons aériennes lorsqu’une alternative ferroviaire existe en moins de 3h30, 4h30, 5h30…</p>
+<p>Prévue par la loi Climat et Résilience de 2021, l’interdiction des lignes aériennes lorsque des alternatives en train de moins de 2h30 sont disponibles est entrée en vigueur en 2023. Devrait-on aller plus loin ? Quels seraient les avantages d’une restriction plus étendue des vols intérieurs ? Pour éclairer ces questions, nous proposons d’examiner les effets potentiels de nouvelles restrictions sur les émissions de CO2.</p>
+<p>Cette étude se concentrera sur les liaisons aériennes entre les dix plus grandes agglomérations de la métropole française. Elle visera à quantifier et à localiser les émissions de CO2 évitées grâce à des interdictions hypothétiques de vols lorsqu’une alternative ferroviaire existe en moins de 3h30, 4h30, 5h30, etc.</p>
 <p>En travaillant sur ce sujet vous apprendrez à :</p>
 <ul>
 <li>Interroger l’API de <a href="https://traveltime.com/">TravelTime</a> pour obtenir des données de temps de trajet</li>
@@ -277,12 +282,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 data-number="2"><span class="header-section-number">2</span> Initialisation du projet</h1>
 <section id="récupérer-le-projet-squelette-avec-git" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="récupérer-le-projet-squelette-avec-git"><span class="header-section-number">2.1</span> Récupérer le projet squelette avec <code>Git</code> <i class="fa-brands fa-git-alt" aria-label="git-alt"></i></h2>
-<p>Si vous disposez d’un compte sur le <a href="https://www.sspcloud.fr/">SSP Cloud</a>, la méthode recommandée pour se lancer dans ce tutoriel est de cliquer sur le bouton suivant</p>
+<p>Si vous disposez d’un compte sur le <a href="https://www.sspcloud.fr/">SSP Cloud</a>, la méthode recommandée pour lancer ce tutoriel est de cliquer sur le bouton suivant :</p>
 <center>
 <a href="https://datalab.sspcloud.fr/launcher/ide/rstudio?version=1.15.25&amp;autoLaunch=true&amp;networking.user.enabled=true&amp;git.repository=«https%3A%2F%2Fgithub.com%2FInseeFrLab%2Ffunathon2024_sujet1.git»&amp;onyxia.friendlyName=«funathon2024-sujet1»&amp;kubernetes.role=«admin»" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSP%20Cloud-Ouvrir_dans_RStudio-blue?logo=rstudio&amp;logoColor=blue" alt="Onyxia"></a>
 </center>
 <br>
-<p>Si vous avez utilisé le lien de lancement rapide mis à disposition sur la page <a href="https://inseefrlab.github.io/funathon2024/">inseefrlab.github.io/funathon2024/</a> ou ci-dessus, vous pouvez sauter l’étape de récupération du modèle de projet avec <code>Git</code>, cela a été fait automatiquement lors de la création de votre environnement <code>RStudio</code>.</p>
+<p>Si vous utilisez effectivement ce lien de lancement rapide, vous pouvez sauter l’étape de récupération du modèle de projet avec <code>Git</code>, cela a été fait automatiquement lors de la création de votre environnement <code>RStudio</code>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -310,7 +315,7 @@ Récupérer le projet si vous n’avez pas utilisé le bouton proposé
 </ul>
 <p><img src="https://book.utilitr.org/pics_resized/git/create_project_2.png" class="img-fluid"></p>
 <ul>
-<li>3️⃣ Dans la fenêtre <code>Repository URL</code>, copier <code>{.r}https://github.com/inseefrlab/funathon2024_sujet1.git</code> laisser les valeurs par défaut qui viennent ensuite et créer le projet.</li>
+<li>3️⃣ Dans la fenêtre <code>Repository URL</code>, copier <code>https://github.com/inseefrlab/funathon2024_sujet1.git</code> laisser les valeurs par défaut qui viennent ensuite et créer le projet.</li>
 </ul>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
@@ -329,7 +334,7 @@ Récupérer le projet si vous n’avez pas utilisé le bouton proposé
 <h2 data-number="2.2" class="anchored" data-anchor-id="se-placer-dans-le-projet-rstudio-associé-au-sujet"><span class="header-section-number">2.2</span> Se placer dans le projet <code>RStudio</code> associé au sujet</h2>
 <section id="principe" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="principe"><span class="header-section-number">2.2.1</span> Principe</h3>
-<p>A la racine du projet, on trouve notamment le fichier <code>funathon-sujet1.Rproj</code>. Il s’agit d’un fichier de projet <code>RStudio</code>. Lorsqu’on travaille sur du code <code>R</code> avec <code>RStudio</code>, il est généralement préférable de travailler dans le cadre d’un projet. Entre autres raisons, cela favorise la reproductibilité: lorsqu’on se situe dans un projet <code>RStudio</code>, tous les chemins peuvent être définis de manière <em>relative</em> (à la racine du projet) plutôt que de manière absolue (à la racine de la machine). Ainsi, le projet s’exécutera de la même manière qu’il soit exécuté depuis une machine Windows ou Linux par exemple, ou avec des noms d’utilisateur différents. Pour plus de détails sur les bénéfices d’utiliser les projets <code>RStudio</code> ou leur utilisation en pratique, n’hésitez pas à consulter la <a href="https://book.utilitr.org/03_Fiches_thematiques/Fiche_rprojects.html">fiche UtilitR</a> dédiée.</p>
+<p>A la racine du projet, on trouve notamment le fichier <code>funathon-sujet1.Rproj</code>. Il s’agit d’un fichier de projet <code>RStudio</code>. Lorsqu’on travaille sur du code <code>R</code> avec <code>RStudio</code>, il est généralement préférable de travailler dans le cadre d’un projet. Entre autres raisons, cela favorise la reproductibilité : lorsqu’on se situe dans un projet <code>RStudio</code>, tous les chemins peuvent être définis de manière <em>relative</em> (à la racine du projet) plutôt que de manière absolue (à la racine de la machine). Ainsi, le projet s’exécutera de la même manière qu’il soit exécuté depuis une machine Windows ou Linux par exemple, ou avec des noms d’utilisateur différents. Pour plus de détails sur les bénéfices d’utiliser les projets <code>RStudio</code> ou leur utilisation en pratique, n’hésitez pas à consulter la <a href="https://book.utilitr.org/03_Fiches_thematiques/Fiche_rprojects.html">fiche UtilitR</a> dédiée.</p>
 </section>
 <section id="activer-un-projet-rstudio" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="activer-un-projet-rstudio"><span class="header-section-number">2.2.2</span> Activer un projet <code>RStudio</code></h3>
@@ -338,7 +343,7 @@ Récupérer le projet si vous n’avez pas utilisé le bouton proposé
 <li><p>cliquer directement sur le fichier dans l’explorateur de fichiers (en bas à droite)</p></li>
 <li><p>cliquer sur <code>File &gt; Open Project</code> puis dérouler l’arborescence jusqu’à sélectrionner le fichier <code>.Rproj</code></p></li>
 </ul>
-<p>Si cela a fonctionné, vous devriez voir le nom du projet (<code>funathon2024_sujet1</code>) dans le coin en à droite de <code>RStudio</code>.</p>
+<p>Si cela a fonctionné, vous devriez voir le nom du projet (<code>funathon2024_sujet1</code>) dans le coin en haut à droite de <code>RStudio</code>.</p>
 </section>
 </section>
 <section id="installer-les-packages-nécessaires-pour-ce-tutoriel" class="level2 page-columns page-full" data-number="2.3">
@@ -347,7 +352,7 @@ Récupérer le projet si vous n’avez pas utilisé le bouton proposé
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="principe-1"><span class="header-section-number">2.3.1</span> Principe</h3>
 <p>Pour progresser dans ce tutoriel, un certain nombre de <em>packages</em> doivent être installés. Sans eux, même avec le code de l’application, vous ne serez pas en mesure de reproduire celle-ci.</p>
 <p>Les bonnes pratiques pour la gestion de l’environnement suggèrent de lister l’intégralité des packages et leur versions associées ce que permet de faire automatiquement <code>renv</code>. Grâce à cette liste, d’autres personnes pourront reproduire l’application si elles disposent des mêmes <em>inputs</em> (le code, les données…).</p>
-<p>En effet, il est important de voir l’application comme le résultat de la combinaison de plusieurs ingrédients. Dans notre cas, nous en avons trois:</p>
+<p>En effet, il est important de voir l’application comme le résultat de la combinaison de plusieurs ingrédients. Dans notre cas, nous en avons trois :</p>
 <ul>
 <li>Du code <code>R</code> : celui-ci a été récupéré par le biais de <code>Git</code> via <code>Github</code></li>
 <li>Des éléments de configuration :
@@ -363,14 +368,14 @@ Récupérer le projet si vous n’avez pas utilisé le bouton proposé
 <figcaption>Illustration du principe de séparation du code, des données et de la configuration</figcaption>
 </figure>
 </div>
-<p>De manière générale, c’est une bonne pratique de structurer son projet comme une combinaison de ces facteurs. Cela vous amènera à faire des projets plus reproductible mais aussi à la structure plus lisible.</p>
+<p>De manière générale, c’est une bonne pratique de structurer son projet comme une combinaison de ces facteurs. Cela vous amènera à faire des projets plus reproductibles mais aussi à la structure plus lisible.</p>
 <p>Pour les utilisateurs de <code>R</code>, la <a href="https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/">formation de l’Insee aux bonnes pratiques</a> consacre une partie aux environnements reproductibles avec <code>renv</code>. N’hésitez pas à aller regarder la documentation de <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a></p>
 </section>
 <section id="créer-lenvironnement" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="créer-lenvironnement"><span class="header-section-number">2.3.2</span> Créer l’environnement</h3>
-<p>L’intérêt d’utiliser <code>renv</code> est que recréer l’environnement nécessaire au bon fonctionnement de l’application est très simple: il suffit de lancer la commande suivante dans la console de <code>RStudio</code></p>
+<p>L’intérêt d’utiliser <code>renv</code> réside dans la simplicité de recréer l’environnement nécessaire au bon fonctionnement de l’application : il suffit de lancer la commande suivante dans la console de <code>RStudio</code> :</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Il est tout à fait possible, ensuite, d’installer des <em>packages</em> supplémentaires par le biais de <code>install.packages</code>. L’environnement proposé par notre fichier <code>renv.lock</code> est le minimum requis pour reproduire l’application mais ce n’est pas un environnement figé. Si vous ajoutez des <em>packages</em> utiles pour votre application, avant la phase de mise en production, n’oubliez pas de faire <code>renv::snapshot()</code> pour mettre à jour le fichier <code>renv.lock</code>. Maintenant que nous disposons d’un environnement fonctionnel, nous pouvons avancer sur la conception du projet. La première étape est d’explorer les jeux de données que nous utiliserons dans l’application.</p>
+<p>Ensuite, il est tout à fait possible d’installer des <em>packages</em> supplémentaires via <code>install.packages</code>. L’environnement proposé par notre fichier <code>renv.lock</code> constitue le minimum requis pour reproduire l’application, mais il n’est pas figé. Si vous ajoutez des packages utiles pour votre application, n’oubliez pas d’exécuter <code>renv::snapshot()</code> avant la mise en production pour mettre à jour le fichier <code>renv.lock</code>. Maintenant que nous disposons d’un environnement fonctionnel, nous pouvons avancer sur la conception du projet. La première étape consiste à explorer les jeux de données que nous utiliserons dans l’application.</p>
 
 
 </section>
