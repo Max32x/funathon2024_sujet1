@@ -372,6 +372,2852 @@ Qu’est ce qu’un fichier yaml ?
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">sprintf</span>(<span class="st">"Une erreur est survenue. Code de la réponse : %d"</span>, httr<span class="sc">::</span><span class="fu">status_code</span>(response)))</span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre class="long-output"><code>[1] "La requête a bien été traitée"
+$results
+$results[[1]]
+$results[[1]]$search_id
+[1] "departure-search"
+
+$results[[1]]$locations
+$results[[1]]$locations[[1]]
+$results[[1]]$locations[[1]]$id
+[1] "point-to-1"
+
+$results[[1]]$locations[[1]]$properties
+$results[[1]]$locations[[1]]$properties[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$travel_time
+[1] 1251
+
+$results[[1]]$locations[[1]]$properties[[1]]$route
+$results[[1]]$locations[[1]]$properties[[1]]$route$departure_time
+[1] "2024-06-26T19:10:30+01:00"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$arrival_time
+[1] "2024-06-26T19:31:21+01:00"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$id
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$type
+[1] "start_end"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$directions
+[1] "Start your journey 28 meters southeast"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$distance
+[1] 28
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$travel_time
+[1] 20
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$coords[[1]]$lat
+[1] 51.51196
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$coords[[1]]$lng
+[1] -0.1279543
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$coords[[2]]$lat
+[1] 51.51172
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$coords[[2]]$lng
+[1] -0.127818
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[1]]$direction
+[1] "southeast"
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$id
+[1] 1
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$directions
+[1] "Walk 18 meters"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$distance
+[1] 18
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$travel_time
+[1] 16
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[1]]$lat
+[1] 51.51172
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[1]]$lng
+[1] -0.127818
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[2]]$lat
+[1] 51.51171
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[2]]$lng
+[1] -0.1277992
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[3]]$lat
+[1] 51.51165
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[3]]$lng
+[1] -0.1277612
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$id
+[1] 2
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$directions
+[1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$distance
+[1] 58
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$travel_time
+[1] 305
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[1]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[1]]$lng
+[1] -0.1278801
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[2]]$lat
+[1] 51.51161
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[2]]$lng
+[1] -0.1279264
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[3]]$lat
+[1] 51.51191
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[3]]$coords[[3]]$lng
+[1] -0.1285772
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$id
+[1] 3
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$type
+[1] "public_transport"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$mode
+[1] "rail_underground"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$directions
+[1] "Take a train (Northern (of London Underground (TfL)) line) from 'Leicester Square Underground Station' (leaves at 19:16) to 'Waterloo Underground Station' (arrives at 19:18) (3 stops)"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$distance
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$travel_time
+[1] 150
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[1]]$lat
+[1] 51.51191
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[1]]$lng
+[1] -0.1285772
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[2]]$lat
+[1] 51.5088
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[2]]$lng
+[1] -0.1255917
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[3]]$lat
+[1] 51.50729
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[3]]$lng
+[1] -0.1225412
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[4]]$lat
+[1] 51.50319
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$coords[[4]]$lng
+[1] -0.1135745
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$line
+[1] "Northern (of London Underground (TfL))"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$departure_station
+[1] "Leicester Square Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$arrival_station
+[1] "Waterloo Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$departs_at
+[1] "19:16"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$arrives_at
+[1] "19:18"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[4]]$num_stops
+[1] 3
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$id
+[1] 4
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$directions
+[1] "Change stop"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$distance
+[1] 74
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$travel_time
+[1] 132
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$coords[[1]]$lat
+[1] 51.50319
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$coords[[1]]$lng
+[1] -0.1135745
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$coords[[2]]$lat
+[1] 51.50268
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[5]]$coords[[2]]$lng
+[1] -0.112875
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$id
+[1] 5
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$type
+[1] "public_transport"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$mode
+[1] "rail_underground"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$directions
+[1] "Take a train (Waterloo &amp; City (of London Underground (TfL)) line) from 'Waterloo Underground Station' (leaves at 19:21) to 'Bank Underground Station' (arrives at 19:25) (1 stops)"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$distance
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$travel_time
+[1] 247
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$coords[[1]]$lat
+[1] 51.50268
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$coords[[1]]$lng
+[1] -0.112875
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$coords[[2]]$lat
+[1] 51.51331
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$coords[[2]]$lng
+[1] -0.08833874
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$line
+[1] "Waterloo &amp; City (of London Underground (TfL))"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$departure_station
+[1] "Waterloo Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$arrival_station
+[1] "Bank Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$departs_at
+[1] "19:21"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$arrives_at
+[1] "19:25"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[6]]$num_stops
+[1] 1
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$id
+[1] 6
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$directions
+[1] "Leave Bank Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$distance
+[1] 14
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$travel_time
+[1] 21
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[1]]$lat
+[1] 51.51331
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[1]]$lng
+[1] -0.08833874
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[2]]$lat
+[1] 51.51335
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[7]]$coords[[2]]$lng
+[1] -0.088138
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$id
+[1] 7
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$directions
+[1] "Walk 22 meters along Cornhill"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$distance
+[1] 22
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$travel_time
+[1] 17
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[1]]$lat
+[1] 51.51335
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[1]]$lng
+[1] -0.088138
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[2]]$lat
+[1] 51.51336
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[2]]$lng
+[1] -0.0880625
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[3]]$lat
+[1] 51.51337
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[3]]$lng
+[1] -0.0880111
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[4]]$lat
+[1] 51.51336
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[4]]$lng
+[1] -0.0879365
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[5]]$lat
+[1] 51.51335
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[5]]$lng
+[1] -0.0878813
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[6]]$lat
+[1] 51.51332
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$coords[[6]]$lng
+[1] -0.087818
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[8]]$road
+[1] "Cornhill"
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$id
+[1] 8
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$directions
+[1] "Turn right onto Popes Head Alley and walk 6 meters"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$distance
+[1] 6
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$travel_time
+[1] 5
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$coords[[1]]$lat
+[1] 51.51332
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$coords[[1]]$lng
+[1] -0.087818
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$coords[[2]]$lat
+[1] 51.51327
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$coords[[2]]$lng
+[1] -0.0878348
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$road
+[1] "Popes Head Alley"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[9]]$turn
+[1] "right"
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$id
+[1] 9
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$directions
+[1] "Go to 'Bank Station  Cornhill, Stop E'"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$distance
+[1] 5
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$travel_time
+[1] 8
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$coords[[1]]$lat
+[1] 51.51327
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$coords[[1]]$lng
+[1] -0.0878348
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$coords[[2]]$lat
+[1] 51.51327
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[10]]$coords[[2]]$lng
+[1] -0.08774938
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$id
+[1] 10
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$type
+[1] "public_transport"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$mode
+[1] "bus"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$directions
+[1] "Take a bus (25 (of Stagecoach London)) from 'Bank Station  Cornhill' (leaves at 19:26) to 'Poultry  Bank Station' (arrives at 19:26) (1 stops)"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$distance
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$travel_time
+[1] 41
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$coords[[1]]$lat
+[1] 51.51327
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$coords[[1]]$lng
+[1] -0.08774938
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$coords[[2]]$lat
+[1] 51.51359
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$coords[[2]]$lng
+[1] -0.09129586
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$line
+[1] "25 (of Stagecoach London)"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$departure_station
+[1] "Bank Station  Cornhill"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$arrival_station
+[1] "Poultry  Bank Station"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$departs_at
+[1] "19:26"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$arrives_at
+[1] "19:26"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[11]]$num_stops
+[1] 1
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$id
+[1] 11
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$directions
+[1] "Leave Poultry  Bank Station"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$distance
+[1] 9
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$travel_time
+[1] 13
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$coords[[1]]$lat
+[1] 51.51359
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$coords[[1]]$lng
+[1] -0.09129586
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$coords[[2]]$lat
+[1] 51.51367
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[12]]$coords[[2]]$lng
+[1] -0.0913163
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$id
+[1] 12
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$directions
+[1] "Walk 59 meters"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$distance
+[1] 59
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$travel_time
+[1] 53
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[1]]$lat
+[1] 51.51367
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[1]]$lng
+[1] -0.0913163
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[2]]$lat
+[1] 51.51371
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[2]]$lng
+[1] -0.0913021
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[3]]$lat
+[1] 51.51372
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[3]]$lng
+[1] -0.0912981
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[4]]$lat
+[1] 51.51383
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[4]]$lng
+[1] -0.0920269
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[5]]$lat
+[1] 51.51383
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[13]]$coords[[5]]$lng
+[1] -0.0920717
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$id
+[1] 13
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$directions
+[1] "Turn right onto Ironmonger Lane and walk 4 meters"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$distance
+[1] 4
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$travel_time
+[1] 3
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$coords[[1]]$lat
+[1] 51.51383
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$coords[[1]]$lng
+[1] -0.0920717
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$coords[[2]]$lat
+[1] 51.51387
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$coords[[2]]$lng
+[1] -0.0920617
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$road
+[1] "Ironmonger Lane"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[14]]$turn
+[1] "right"
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$id
+[1] 14
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$directions
+[1] "Turn left  and walk 138 meters"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$distance
+[1] 138
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$travel_time
+[1] 109
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[1]]$lat
+[1] 51.51387
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[1]]$lng
+[1] -0.0920617
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[2]]$lat
+[1] 51.51388
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[2]]$lng
+[1] -0.0920848
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[3]]$lat
+[1] 51.51388
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[3]]$lng
+[1] -0.092094
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[4]]$lat
+[1] 51.5139
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[4]]$lng
+[1] -0.0922426
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[5]]$lat
+[1] 51.5139
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[5]]$lng
+[1] -0.0922712
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[6]]$lat
+[1] 51.51392
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[6]]$lng
+[1] -0.0922715
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[7]]$lat
+[1] 51.51431
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[7]]$lng
+[1] -0.0921998
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[8]]$lat
+[1] 51.51441
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[8]]$lng
+[1] -0.0921822
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[9]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[9]]$lat
+[1] 51.51442
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[9]]$lng
+[1] -0.0921797
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[10]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[10]]$lat
+[1] 51.51461
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[10]]$lng
+[1] -0.0921495
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[11]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[11]]$lat
+[1] 51.51499
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[11]]$lng
+[1] -0.0920829
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[12]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[12]]$lat
+[1] 51.51499
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$coords[[12]]$lng
+[1] -0.0921332
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[15]]$turn
+[1] "left"
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$id
+[1] 15
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$directions
+[1] "Turn right onto King Street and walk 11 meters"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$distance
+[1] 11
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$travel_time
+[1] 8
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$coords[[1]]$lat
+[1] 51.51499
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$coords[[1]]$lng
+[1] -0.0921332
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$coords[[2]]$lat
+[1] 51.51509
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$coords[[2]]$lng
+[1] -0.0921149
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$road
+[1] "King Street"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[16]]$turn
+[1] "right"
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$id
+[1] 16
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$directions
+[1] "Continue onto Guildhall Yard for 48 meters"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$distance
+[1] 48
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$travel_time
+[1] 46
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[1]]$lat
+[1] 51.51509
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[1]]$lng
+[1] -0.0921149
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[2]]$lat
+[1] 51.51514
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[2]]$lng
+[1] -0.0921058
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[3]]$lat
+[1] 51.51515
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[3]]$lng
+[1] -0.092104
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[4]]$lat
+[1] 51.51532
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[4]]$lng
+[1] -0.0920678
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[5]]$lat
+[1] 51.51539
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[5]]$lng
+[1] -0.0920533
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[6]]$lat
+[1] 51.5154
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$coords[[6]]$lng
+[1] -0.0918024
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$road
+[1] "Guildhall Yard"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[17]]$turn
+[1] "straight"
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$id
+[1] 17
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$directions
+[1] "Continue onto Guildhall Buildings for 2 meters"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$distance
+[1] 2
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$travel_time
+[1] 2
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$coords[[1]]$lat
+[1] 51.5154
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$coords[[1]]$lng
+[1] -0.0918024
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$coords[[2]]$lat
+[1] 51.51541
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$coords[[2]]$lng
+[1] -0.0917623
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$road
+[1] "Guildhall Buildings"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[18]]$turn
+[1] "straight"
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$id
+[1] 18
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$directions
+[1] "Turn left onto Guildhall Yard and walk 63 meters"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$distance
+[1] 63
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$travel_time
+[1] 46
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[1]]$lat
+[1] 51.51541
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[1]]$lng
+[1] -0.0917623
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[2]]$lat
+[1] 51.51546
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[2]]$lng
+[1] -0.0917469
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[3]]$lat
+[1] 51.51556
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[3]]$lng
+[1] -0.0917495
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[4]]$lat
+[1] 51.5157
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[4]]$lng
+[1] -0.0917489
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[5]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[5]]$lng
+[1] -0.0917522
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[6]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[6]]$lng
+[1] -0.0918659
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[7]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[7]]$lng
+[1] -0.0919915
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[8]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[8]]$lng
+[1] -0.0921103
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[9]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[9]]$lat
+[1] 51.51572
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$coords[[9]]$lng
+[1] -0.0921105
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$road
+[1] "Guildhall Yard"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[19]]$turn
+[1] "left"
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$id
+[1] 19
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$type
+[1] "start_end"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$directions
+[1] "Your destination is 13 meters southeast"
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$distance
+[1] 13
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$travel_time
+[1] 9
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$coords
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$coords[[1]]$lat
+[1] 51.51572
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$coords[[1]]$lng
+[1] -0.0921105
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$coords[[2]]$lat
+[1] 51.51562
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$coords[[2]]$lng
+[1] -0.0919983
+
+
+
+$results[[1]]$locations[[1]]$properties[[1]]$route$parts[[20]]$direction
+[1] "southeast"
+
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$travel_time
+[1] 1284
+
+$results[[1]]$locations[[1]]$properties[[2]]$route
+$results[[1]]$locations[[1]]$properties[[2]]$route$departure_time
+[1] "2024-06-26T19:06:30+01:00"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$arrival_time
+[1] "2024-06-26T19:27:54+01:00"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$id
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$type
+[1] "start_end"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$directions
+[1] "Start your journey 28 meters southeast"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$distance
+[1] 28
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$travel_time
+[1] 20
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$coords[[1]]$lat
+[1] 51.51196
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$coords[[1]]$lng
+[1] -0.1279543
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$coords[[2]]$lat
+[1] 51.51172
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$coords[[2]]$lng
+[1] -0.127818
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[1]]$direction
+[1] "southeast"
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$id
+[1] 1
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$directions
+[1] "Walk 18 meters"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$distance
+[1] 18
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$travel_time
+[1] 16
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[1]]$lat
+[1] 51.51172
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[1]]$lng
+[1] -0.127818
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[2]]$lat
+[1] 51.51171
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[2]]$lng
+[1] -0.1277992
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[3]]$lat
+[1] 51.51165
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[3]]$lng
+[1] -0.1277612
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$id
+[1] 2
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$directions
+[1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$distance
+[1] 58
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$travel_time
+[1] 305
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[1]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[1]]$lng
+[1] -0.1278801
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[2]]$lat
+[1] 51.51161
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[2]]$lng
+[1] -0.1279264
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[3]]$lat
+[1] 51.51191
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[3]]$coords[[3]]$lng
+[1] -0.1285772
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$id
+[1] 3
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$type
+[1] "public_transport"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$mode
+[1] "rail_underground"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$directions
+[1] "Take a train (Northern (of London Underground (TfL)) line) from 'Leicester Square Underground Station' (leaves at 19:12) to 'Waterloo Underground Station' (arrives at 19:14) (3 stops)"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$distance
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$travel_time
+[1] 150
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[1]]$lat
+[1] 51.51191
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[1]]$lng
+[1] -0.1285772
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[2]]$lat
+[1] 51.5088
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[2]]$lng
+[1] -0.1255917
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[3]]$lat
+[1] 51.50729
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[3]]$lng
+[1] -0.1225412
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[4]]$lat
+[1] 51.50319
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$coords[[4]]$lng
+[1] -0.1135745
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$line
+[1] "Northern (of London Underground (TfL))"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$departure_station
+[1] "Leicester Square Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$arrival_station
+[1] "Waterloo Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$departs_at
+[1] "19:12"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$arrives_at
+[1] "19:14"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[4]]$num_stops
+[1] 3
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$id
+[1] 4
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$directions
+[1] "Change stop"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$distance
+[1] 74
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$travel_time
+[1] 132
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$coords[[1]]$lat
+[1] 51.50319
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$coords[[1]]$lng
+[1] -0.1135745
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$coords[[2]]$lat
+[1] 51.50268
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[5]]$coords[[2]]$lng
+[1] -0.112875
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$id
+[1] 5
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$type
+[1] "public_transport"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$mode
+[1] "rail_underground"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$directions
+[1] "Take a train (Waterloo &amp; City (of London Underground (TfL)) line) from 'Waterloo Underground Station' (leaves at 19:17) to 'Bank Underground Station' (arrives at 19:21) (1 stops)"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$distance
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$travel_time
+[1] 247
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$coords[[1]]$lat
+[1] 51.50268
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$coords[[1]]$lng
+[1] -0.112875
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$coords[[2]]$lat
+[1] 51.51331
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$coords[[2]]$lng
+[1] -0.08833874
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$line
+[1] "Waterloo &amp; City (of London Underground (TfL))"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$departure_station
+[1] "Waterloo Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$arrival_station
+[1] "Bank Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$departs_at
+[1] "19:17"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$arrives_at
+[1] "19:21"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[6]]$num_stops
+[1] 1
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$id
+[1] 6
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$directions
+[1] "Leave Bank Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$distance
+[1] 16
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$travel_time
+[1] 24
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[1]]$lat
+[1] 51.51331
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[1]]$lng
+[1] -0.08833874
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[2]]$lat
+[1] 51.51344
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[7]]$coords[[2]]$lng
+[1] -0.0884578
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$id
+[1] 7
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$directions
+[1] "Walk 379 meters"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$distance
+[1] 379
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$travel_time
+[1] 334
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[1]]$lat
+[1] 51.51344
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[1]]$lng
+[1] -0.0884578
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[2]]$lat
+[1] 51.51345
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[2]]$lng
+[1] -0.0884714
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[3]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[3]]$lng
+[1] -0.0884774
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[4]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[4]]$lng
+[1] -0.0884931
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[5]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[5]]$lng
+[1] -0.0885073
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[6]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[6]]$lng
+[1] -0.0885353
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[7]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[7]]$lng
+[1] -0.0885364
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[8]]$lat
+[1] 51.51348
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[8]]$lng
+[1] -0.0885281
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[9]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[9]]$lat
+[1] 51.51349
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[9]]$lng
+[1] -0.0885464
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[10]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[10]]$lat
+[1] 51.51351
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[10]]$lng
+[1] -0.0885851
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[11]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[11]]$lat
+[1] 51.51353
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[11]]$lng
+[1] -0.0886268
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[12]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[12]]$lat
+[1] 51.51356
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[12]]$lng
+[1] -0.0886882
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[13]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[13]]$lat
+[1] 51.51354
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[13]]$lng
+[1] -0.0887415
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[14]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[14]]$lat
+[1] 51.51353
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[14]]$lng
+[1] -0.0888122
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[15]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[15]]$lat
+[1] 51.51353
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[15]]$lng
+[1] -0.0888883
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[16]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[16]]$lat
+[1] 51.51354
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[16]]$lng
+[1] -0.0889143
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[17]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[17]]$lat
+[1] 51.51356
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[17]]$lng
+[1] -0.0889273
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[18]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[18]]$lat
+[1] 51.51451
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[18]]$lng
+[1] -0.089619
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[19]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[19]]$lat
+[1] 51.51464
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[19]]$lng
+[1] -0.0896809
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[20]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[20]]$lat
+[1] 51.51469
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[20]]$lng
+[1] -0.0896341
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[21]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[21]]$lat
+[1] 51.5147
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[21]]$lng
+[1] -0.0897491
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[22]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[22]]$lat
+[1] 51.51472
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[22]]$lng
+[1] -0.0898988
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[23]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[23]]$lat
+[1] 51.51476
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[23]]$lng
+[1] -0.0899594
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[24]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[24]]$lat
+[1] 51.51482
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[24]]$lng
+[1] -0.0899281
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[25]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[25]]$lat
+[1] 51.5149
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[25]]$lng
+[1] -0.0898848
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[26]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[26]]$lat
+[1] 51.51495
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[26]]$lng
+[1] -0.0902604
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[27]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[27]]$lat
+[1] 51.51495
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[27]]$lng
+[1] -0.0903181
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[28]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[28]]$lat
+[1] 51.51496
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[28]]$lng
+[1] -0.0903744
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[29]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[29]]$lat
+[1] 51.51503
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[29]]$lng
+[1] -0.0910251
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[30]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[30]]$lat
+[1] 51.51503
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[30]]$lng
+[1] -0.091083
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[31]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[31]]$lat
+[1] 51.51504
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[31]]$lng
+[1] -0.0911337
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[32]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[32]]$lat
+[1] 51.51537
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[32]]$lng
+[1] -0.091066
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[33]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[33]]$lat
+[1] 51.51539
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.0917676
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$id
+[1] 8
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$directions
+[1] "Turn right onto Guildhall Yard and walk 64 meters"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$distance
+[1] 64
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$travel_time
+[1] 47
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[1]]$lat
+[1] 51.51539
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[1]]$lng
+[1] -0.0917676
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[2]]$lat
+[1] 51.51541
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[2]]$lng
+[1] -0.0917623
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[3]]$lat
+[1] 51.51546
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[3]]$lng
+[1] -0.0917469
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[4]]$lat
+[1] 51.51556
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[4]]$lng
+[1] -0.0917495
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[5]]$lat
+[1] 51.5157
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[5]]$lng
+[1] -0.0917489
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[6]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[6]]$lng
+[1] -0.0917522
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[7]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[7]]$lng
+[1] -0.0918659
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[8]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[8]]$lng
+[1] -0.0919915
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[9]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[9]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[9]]$lng
+[1] -0.0921103
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[10]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[10]]$lat
+[1] 51.51572
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$coords[[10]]$lng
+[1] -0.0921105
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$road
+[1] "Guildhall Yard"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[9]]$turn
+[1] "right"
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$id
+[1] 9
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$type
+[1] "start_end"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$directions
+[1] "Your destination is 13 meters southeast"
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$distance
+[1] 13
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$travel_time
+[1] 9
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$coords
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$coords[[1]]$lat
+[1] 51.51572
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$coords[[1]]$lng
+[1] -0.0921105
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$coords[[2]]$lat
+[1] 51.51562
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$coords[[2]]$lng
+[1] -0.0919983
+
+
+
+$results[[1]]$locations[[1]]$properties[[2]]$route$parts[[10]]$direction
+[1] "southeast"
+
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]
+$results[[1]]$locations[[1]]$properties[[3]]$travel_time
+[1] 1284
+
+$results[[1]]$locations[[1]]$properties[[3]]$route
+$results[[1]]$locations[[1]]$properties[[3]]$route$departure_time
+[1] "2024-06-26T19:00:30+01:00"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$arrival_time
+[1] "2024-06-26T19:21:54+01:00"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$id
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$type
+[1] "start_end"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$directions
+[1] "Start your journey 28 meters southeast"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$distance
+[1] 28
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$travel_time
+[1] 20
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$coords[[1]]$lat
+[1] 51.51196
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$coords[[1]]$lng
+[1] -0.1279543
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$coords[[2]]$lat
+[1] 51.51172
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$coords[[2]]$lng
+[1] -0.127818
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[1]]$direction
+[1] "southeast"
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$id
+[1] 1
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$directions
+[1] "Walk 18 meters"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$distance
+[1] 18
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$travel_time
+[1] 16
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[1]]$lat
+[1] 51.51172
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[1]]$lng
+[1] -0.127818
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[2]]$lat
+[1] 51.51171
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[2]]$lng
+[1] -0.1277992
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[3]]$lat
+[1] 51.51165
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[3]]$lng
+[1] -0.1277612
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$id
+[1] 2
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$directions
+[1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$distance
+[1] 58
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$travel_time
+[1] 305
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[1]]$lat
+[1] 51.5116
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[1]]$lng
+[1] -0.1278801
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[2]]$lat
+[1] 51.51161
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[2]]$lng
+[1] -0.1279264
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[3]]$lat
+[1] 51.51191
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[3]]$coords[[3]]$lng
+[1] -0.1285772
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$id
+[1] 3
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$type
+[1] "public_transport"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$mode
+[1] "rail_underground"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$directions
+[1] "Take a train (Northern (of London Underground (TfL)) line) from 'Leicester Square Underground Station' (leaves at 19:06) to 'Waterloo Underground Station' (arrives at 19:08) (3 stops)"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$distance
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$travel_time
+[1] 150
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[1]]$lat
+[1] 51.51191
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[1]]$lng
+[1] -0.1285772
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[2]]$lat
+[1] 51.5088
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[2]]$lng
+[1] -0.1255917
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[3]]$lat
+[1] 51.50729
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[3]]$lng
+[1] -0.1225412
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[4]]$lat
+[1] 51.50319
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$coords[[4]]$lng
+[1] -0.1135745
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$line
+[1] "Northern (of London Underground (TfL))"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$departure_station
+[1] "Leicester Square Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$arrival_station
+[1] "Waterloo Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$departs_at
+[1] "19:06"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$arrives_at
+[1] "19:08"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[4]]$num_stops
+[1] 3
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$id
+[1] 4
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$directions
+[1] "Change stop"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$distance
+[1] 74
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$travel_time
+[1] 132
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$coords[[1]]$lat
+[1] 51.50319
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$coords[[1]]$lng
+[1] -0.1135745
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$coords[[2]]$lat
+[1] 51.50268
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[5]]$coords[[2]]$lng
+[1] -0.112875
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$id
+[1] 5
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$type
+[1] "public_transport"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$mode
+[1] "rail_underground"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$directions
+[1] "Take a train (Waterloo &amp; City (of London Underground (TfL)) line) from 'Waterloo Underground Station' (leaves at 19:11) to 'Bank Underground Station' (arrives at 19:15) (1 stops)"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$distance
+[1] 0
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$travel_time
+[1] 247
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$coords[[1]]$lat
+[1] 51.50268
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$coords[[1]]$lng
+[1] -0.112875
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$coords[[2]]$lat
+[1] 51.51331
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$coords[[2]]$lng
+[1] -0.08833874
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$line
+[1] "Waterloo &amp; City (of London Underground (TfL))"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$departure_station
+[1] "Waterloo Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$arrival_station
+[1] "Bank Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$departs_at
+[1] "19:11"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$arrives_at
+[1] "19:15"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[6]]$num_stops
+[1] 1
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$id
+[1] 6
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$type
+[1] "basic"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$directions
+[1] "Leave Bank Underground Station"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$distance
+[1] 16
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$travel_time
+[1] 24
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[1]]$lat
+[1] 51.51331
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[1]]$lng
+[1] -0.08833874
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[2]]$lat
+[1] 51.51344
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[7]]$coords[[2]]$lng
+[1] -0.0884578
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$id
+[1] 7
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$directions
+[1] "Walk 379 meters"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$distance
+[1] 379
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$travel_time
+[1] 334
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[1]]$lat
+[1] 51.51344
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[1]]$lng
+[1] -0.0884578
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[2]]$lat
+[1] 51.51345
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[2]]$lng
+[1] -0.0884714
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[3]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[3]]$lng
+[1] -0.0884774
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[4]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[4]]$lng
+[1] -0.0884931
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[5]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[5]]$lng
+[1] -0.0885073
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[6]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[6]]$lng
+[1] -0.0885353
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[7]]$lat
+[1] 51.51346
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[7]]$lng
+[1] -0.0885364
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[8]]$lat
+[1] 51.51348
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[8]]$lng
+[1] -0.0885281
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[9]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[9]]$lat
+[1] 51.51349
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[9]]$lng
+[1] -0.0885464
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[10]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[10]]$lat
+[1] 51.51351
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[10]]$lng
+[1] -0.0885851
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[11]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[11]]$lat
+[1] 51.51353
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[11]]$lng
+[1] -0.0886268
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[12]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[12]]$lat
+[1] 51.51356
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[12]]$lng
+[1] -0.0886882
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[13]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[13]]$lat
+[1] 51.51354
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[13]]$lng
+[1] -0.0887415
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[14]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[14]]$lat
+[1] 51.51353
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[14]]$lng
+[1] -0.0888122
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[15]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[15]]$lat
+[1] 51.51353
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[15]]$lng
+[1] -0.0888883
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[16]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[16]]$lat
+[1] 51.51354
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[16]]$lng
+[1] -0.0889143
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[17]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[17]]$lat
+[1] 51.51356
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[17]]$lng
+[1] -0.0889273
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[18]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[18]]$lat
+[1] 51.51451
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[18]]$lng
+[1] -0.089619
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[19]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[19]]$lat
+[1] 51.51464
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[19]]$lng
+[1] -0.0896809
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[20]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[20]]$lat
+[1] 51.51469
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[20]]$lng
+[1] -0.0896341
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[21]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[21]]$lat
+[1] 51.5147
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[21]]$lng
+[1] -0.0897491
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[22]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[22]]$lat
+[1] 51.51472
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[22]]$lng
+[1] -0.0898988
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[23]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[23]]$lat
+[1] 51.51476
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[23]]$lng
+[1] -0.0899594
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[24]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[24]]$lat
+[1] 51.51482
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[24]]$lng
+[1] -0.0899281
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[25]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[25]]$lat
+[1] 51.5149
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[25]]$lng
+[1] -0.0898848
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[26]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[26]]$lat
+[1] 51.51495
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[26]]$lng
+[1] -0.0902604
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[27]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[27]]$lat
+[1] 51.51495
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[27]]$lng
+[1] -0.0903181
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[28]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[28]]$lat
+[1] 51.51496
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[28]]$lng
+[1] -0.0903744
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[29]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[29]]$lat
+[1] 51.51503
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[29]]$lng
+[1] -0.0910251
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[30]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[30]]$lat
+[1] 51.51503
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[30]]$lng
+[1] -0.091083
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[31]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[31]]$lat
+[1] 51.51504
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[31]]$lng
+[1] -0.0911337
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[32]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[32]]$lat
+[1] 51.51537
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[32]]$lng
+[1] -0.091066
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[33]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[33]]$lat
+[1] 51.51539
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.0917676
+
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$id
+[1] 8
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$type
+[1] "road"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$directions
+[1] "Turn right onto Guildhall Yard and walk 64 meters"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$distance
+[1] 64
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$travel_time
+[1] 47
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[1]]$lat
+[1] 51.51539
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[1]]$lng
+[1] -0.0917676
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[2]]$lat
+[1] 51.51541
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[2]]$lng
+[1] -0.0917623
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[3]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[3]]$lat
+[1] 51.51546
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[3]]$lng
+[1] -0.0917469
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[4]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[4]]$lat
+[1] 51.51556
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[4]]$lng
+[1] -0.0917495
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[5]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[5]]$lat
+[1] 51.5157
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[5]]$lng
+[1] -0.0917489
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[6]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[6]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[6]]$lng
+[1] -0.0917522
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[7]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[7]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[7]]$lng
+[1] -0.0918659
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[8]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[8]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[8]]$lng
+[1] -0.0919915
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[9]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[9]]$lat
+[1] 51.51574
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[9]]$lng
+[1] -0.0921103
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[10]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[10]]$lat
+[1] 51.51572
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$coords[[10]]$lng
+[1] -0.0921105
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$road
+[1] "Guildhall Yard"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[9]]$turn
+[1] "right"
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$id
+[1] 9
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$type
+[1] "start_end"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$mode
+[1] "walk"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$directions
+[1] "Your destination is 13 meters southeast"
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$distance
+[1] 13
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$travel_time
+[1] 9
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$coords
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$coords[[1]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$coords[[1]]$lat
+[1] 51.51572
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$coords[[1]]$lng
+[1] -0.0921105
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$coords[[2]]
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$coords[[2]]$lat
+[1] 51.51562
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$coords[[2]]$lng
+[1] -0.0919983
+
+
+
+$results[[1]]$locations[[1]]$properties[[3]]$route$parts[[10]]$direction
+[1] "southeast"
+
+
+
+
+
+
+
+
+$results[[1]]$unreachable
+list()</code></pre>
+</div>
 </div>
 <ol start="10" type="1">
 <li>Créer une fonction <code>get_travel_time_api_response()</code> qui renvoie la réponse de l’API de TravelTime pour un endpoint et une requête donnés.</li>
@@ -379,31 +3225,31 @@ Qu’est ce qu’un fichier yaml ?
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>get_travel_time_api_response <span class="ot">&lt;-</span> <span class="cf">function</span>(api_url, request_body) {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># On prépare les headers</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  headers <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">add_headers</span>(</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Content-Type"</span> <span class="ot">=</span> <span class="st">"application/json"</span>,</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"X-Application-Id"</span> <span class="ot">=</span> X_API_ID,</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"X-Api-Key"</span> <span class="ot">=</span> X_API_KEY</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="do">## On envoie la requête avec les headers spécifiés</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  response <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">POST</span>(api_url, <span class="at">body =</span> request_body, <span class="at">encode =</span> <span class="st">"json"</span>, headers)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># On vérifie s'il y a eu une erreur</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span>httr<span class="sc">::</span><span class="fu">http_error</span>(response)) {</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Content"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">content</span>(response, <span class="at">as =</span> <span class="st">"parsed"</span>),</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Status_code"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">status_code</span>(response)</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    ))</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On affiche une message d'avertissement lorsque la requête n'a rien renvoyé</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">warning</span>(<span class="st">"Failed to retrieve data: "</span>, httr<span class="sc">::</span><span class="fu">http_status</span>(response)<span class="sc">$</span>message)</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Content"</span> <span class="ot">=</span> <span class="cn">NA</span>,</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Status_code"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">status_code</span>(response)</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    ))</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>get_travel_time_api_response <span class="ot">&lt;-</span> <span class="cf">function</span>(api_url, request_body) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># On prépare les headers</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  headers <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">add_headers</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Content-Type"</span> <span class="ot">=</span> <span class="st">"application/json"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"X-Application-Id"</span> <span class="ot">=</span> X_API_ID,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"X-Api-Key"</span> <span class="ot">=</span> X_API_KEY</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="do">## On envoie la requête avec les headers spécifiés</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  response <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">POST</span>(api_url, <span class="at">body =</span> request_body, <span class="at">encode =</span> <span class="st">"json"</span>, headers)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># On vérifie s'il y a eu une erreur</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span>httr<span class="sc">::</span><span class="fu">http_error</span>(response)) {</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Content"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">content</span>(response, <span class="at">as =</span> <span class="st">"parsed"</span>),</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Status_code"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">status_code</span>(response)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On affiche une message d'avertissement lorsque la requête n'a rien renvoyé</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">warning</span>(<span class="st">"Failed to retrieve data: "</span>, httr<span class="sc">::</span><span class="fu">http_status</span>(response)<span class="sc">$</span>message)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Content"</span> <span class="ot">=</span> <span class="cn">NA</span>,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Status_code"</span> <span class="ot">=</span> httr<span class="sc">::</span><span class="fu">status_code</span>(response)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="11" type="1">
@@ -412,7 +3258,7 @@ Qu’est ce qu’un fichier yaml ?
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>response_from_function <span class="ot">&lt;-</span> <span class="fu">get_travel_time_api_response</span>(ROUTES_API_URL, request_body)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>response_from_function <span class="ot">&lt;-</span> <span class="fu">get_travel_time_api_response</span>(ROUTES_API_URL, request_body)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="12" type="1">
@@ -421,9 +3267,2833 @@ Qu’est ce qu’un fichier yaml ?
 <div class="cell">
 <details class="code-fold">
 <summary>Cliquer pour voir la réponse</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>list_itinerary <span class="ot">&lt;-</span> response_from_function[[<span class="dv">1</span>]]<span class="sc">$</span>results[[<span class="dv">1</span>]]<span class="sc">$</span>locations[[<span class="dv">1</span>]]<span class="sc">$</span>properties</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(list_itinerary)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>list_itinerary <span class="ot">&lt;-</span> response_from_function[[<span class="dv">1</span>]]<span class="sc">$</span>results[[<span class="dv">1</span>]]<span class="sc">$</span>locations[[<span class="dv">1</span>]]<span class="sc">$</span>properties</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(list_itinerary)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre class="long-output"><code>[[1]]
+[[1]]$travel_time
+[1] 1251
+
+[[1]]$route
+[[1]]$route$departure_time
+[1] "2024-06-26T19:10:30+01:00"
+
+[[1]]$route$arrival_time
+[1] "2024-06-26T19:31:21+01:00"
+
+[[1]]$route$parts
+[[1]]$route$parts[[1]]
+[[1]]$route$parts[[1]]$id
+[1] 0
+
+[[1]]$route$parts[[1]]$type
+[1] "start_end"
+
+[[1]]$route$parts[[1]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[1]]$directions
+[1] "Start your journey 28 meters southeast"
+
+[[1]]$route$parts[[1]]$distance
+[1] 28
+
+[[1]]$route$parts[[1]]$travel_time
+[1] 20
+
+[[1]]$route$parts[[1]]$coords
+[[1]]$route$parts[[1]]$coords[[1]]
+[[1]]$route$parts[[1]]$coords[[1]]$lat
+[1] 51.51196
+
+[[1]]$route$parts[[1]]$coords[[1]]$lng
+[1] -0.1279543
+
+
+[[1]]$route$parts[[1]]$coords[[2]]
+[[1]]$route$parts[[1]]$coords[[2]]$lat
+[1] 51.51172
+
+[[1]]$route$parts[[1]]$coords[[2]]$lng
+[1] -0.127818
+
+
+
+[[1]]$route$parts[[1]]$direction
+[1] "southeast"
+
+
+[[1]]$route$parts[[2]]
+[[1]]$route$parts[[2]]$id
+[1] 1
+
+[[1]]$route$parts[[2]]$type
+[1] "road"
+
+[[1]]$route$parts[[2]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[2]]$directions
+[1] "Walk 18 meters"
+
+[[1]]$route$parts[[2]]$distance
+[1] 18
+
+[[1]]$route$parts[[2]]$travel_time
+[1] 16
+
+[[1]]$route$parts[[2]]$coords
+[[1]]$route$parts[[2]]$coords[[1]]
+[[1]]$route$parts[[2]]$coords[[1]]$lat
+[1] 51.51172
+
+[[1]]$route$parts[[2]]$coords[[1]]$lng
+[1] -0.127818
+
+
+[[1]]$route$parts[[2]]$coords[[2]]
+[[1]]$route$parts[[2]]$coords[[2]]$lat
+[1] 51.51171
+
+[[1]]$route$parts[[2]]$coords[[2]]$lng
+[1] -0.1277992
+
+
+[[1]]$route$parts[[2]]$coords[[3]]
+[[1]]$route$parts[[2]]$coords[[3]]$lat
+[1] 51.51165
+
+[[1]]$route$parts[[2]]$coords[[3]]$lng
+[1] -0.1277612
+
+
+[[1]]$route$parts[[2]]$coords[[4]]
+[[1]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+[[1]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+[[1]]$route$parts[[2]]$coords[[5]]
+[[1]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+[[1]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+[[1]]$route$parts[[2]]$coords[[6]]
+[[1]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+[[1]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+[[1]]$route$parts[[2]]$coords[[7]]
+[[1]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+[[1]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+[[1]]$route$parts[[2]]$coords[[8]]
+[[1]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+[[1]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
+
+
+[[1]]$route$parts[[3]]
+[[1]]$route$parts[[3]]$id
+[1] 2
+
+[[1]]$route$parts[[3]]$type
+[1] "basic"
+
+[[1]]$route$parts[[3]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[3]]$directions
+[1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
+
+[[1]]$route$parts[[3]]$distance
+[1] 58
+
+[[1]]$route$parts[[3]]$travel_time
+[1] 305
+
+[[1]]$route$parts[[3]]$coords
+[[1]]$route$parts[[3]]$coords[[1]]
+[[1]]$route$parts[[3]]$coords[[1]]$lat
+[1] 51.5116
+
+[[1]]$route$parts[[3]]$coords[[1]]$lng
+[1] -0.1278801
+
+
+[[1]]$route$parts[[3]]$coords[[2]]
+[[1]]$route$parts[[3]]$coords[[2]]$lat
+[1] 51.51161
+
+[[1]]$route$parts[[3]]$coords[[2]]$lng
+[1] -0.1279264
+
+
+[[1]]$route$parts[[3]]$coords[[3]]
+[[1]]$route$parts[[3]]$coords[[3]]$lat
+[1] 51.51191
+
+[[1]]$route$parts[[3]]$coords[[3]]$lng
+[1] -0.1285772
+
+
+
+
+[[1]]$route$parts[[4]]
+[[1]]$route$parts[[4]]$id
+[1] 3
+
+[[1]]$route$parts[[4]]$type
+[1] "public_transport"
+
+[[1]]$route$parts[[4]]$mode
+[1] "rail_underground"
+
+[[1]]$route$parts[[4]]$directions
+[1] "Take a train (Northern (of London Underground (TfL)) line) from 'Leicester Square Underground Station' (leaves at 19:16) to 'Waterloo Underground Station' (arrives at 19:18) (3 stops)"
+
+[[1]]$route$parts[[4]]$distance
+[1] 0
+
+[[1]]$route$parts[[4]]$travel_time
+[1] 150
+
+[[1]]$route$parts[[4]]$coords
+[[1]]$route$parts[[4]]$coords[[1]]
+[[1]]$route$parts[[4]]$coords[[1]]$lat
+[1] 51.51191
+
+[[1]]$route$parts[[4]]$coords[[1]]$lng
+[1] -0.1285772
+
+
+[[1]]$route$parts[[4]]$coords[[2]]
+[[1]]$route$parts[[4]]$coords[[2]]$lat
+[1] 51.5088
+
+[[1]]$route$parts[[4]]$coords[[2]]$lng
+[1] -0.1255917
+
+
+[[1]]$route$parts[[4]]$coords[[3]]
+[[1]]$route$parts[[4]]$coords[[3]]$lat
+[1] 51.50729
+
+[[1]]$route$parts[[4]]$coords[[3]]$lng
+[1] -0.1225412
+
+
+[[1]]$route$parts[[4]]$coords[[4]]
+[[1]]$route$parts[[4]]$coords[[4]]$lat
+[1] 51.50319
+
+[[1]]$route$parts[[4]]$coords[[4]]$lng
+[1] -0.1135745
+
+
+
+[[1]]$route$parts[[4]]$line
+[1] "Northern (of London Underground (TfL))"
+
+[[1]]$route$parts[[4]]$departure_station
+[1] "Leicester Square Underground Station"
+
+[[1]]$route$parts[[4]]$arrival_station
+[1] "Waterloo Underground Station"
+
+[[1]]$route$parts[[4]]$departs_at
+[1] "19:16"
+
+[[1]]$route$parts[[4]]$arrives_at
+[1] "19:18"
+
+[[1]]$route$parts[[4]]$num_stops
+[1] 3
+
+
+[[1]]$route$parts[[5]]
+[[1]]$route$parts[[5]]$id
+[1] 4
+
+[[1]]$route$parts[[5]]$type
+[1] "basic"
+
+[[1]]$route$parts[[5]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[5]]$directions
+[1] "Change stop"
+
+[[1]]$route$parts[[5]]$distance
+[1] 74
+
+[[1]]$route$parts[[5]]$travel_time
+[1] 132
+
+[[1]]$route$parts[[5]]$coords
+[[1]]$route$parts[[5]]$coords[[1]]
+[[1]]$route$parts[[5]]$coords[[1]]$lat
+[1] 51.50319
+
+[[1]]$route$parts[[5]]$coords[[1]]$lng
+[1] -0.1135745
+
+
+[[1]]$route$parts[[5]]$coords[[2]]
+[[1]]$route$parts[[5]]$coords[[2]]$lat
+[1] 51.50268
+
+[[1]]$route$parts[[5]]$coords[[2]]$lng
+[1] -0.112875
+
+
+
+
+[[1]]$route$parts[[6]]
+[[1]]$route$parts[[6]]$id
+[1] 5
+
+[[1]]$route$parts[[6]]$type
+[1] "public_transport"
+
+[[1]]$route$parts[[6]]$mode
+[1] "rail_underground"
+
+[[1]]$route$parts[[6]]$directions
+[1] "Take a train (Waterloo &amp; City (of London Underground (TfL)) line) from 'Waterloo Underground Station' (leaves at 19:21) to 'Bank Underground Station' (arrives at 19:25) (1 stops)"
+
+[[1]]$route$parts[[6]]$distance
+[1] 0
+
+[[1]]$route$parts[[6]]$travel_time
+[1] 247
+
+[[1]]$route$parts[[6]]$coords
+[[1]]$route$parts[[6]]$coords[[1]]
+[[1]]$route$parts[[6]]$coords[[1]]$lat
+[1] 51.50268
+
+[[1]]$route$parts[[6]]$coords[[1]]$lng
+[1] -0.112875
+
+
+[[1]]$route$parts[[6]]$coords[[2]]
+[[1]]$route$parts[[6]]$coords[[2]]$lat
+[1] 51.51331
+
+[[1]]$route$parts[[6]]$coords[[2]]$lng
+[1] -0.08833874
+
+
+
+[[1]]$route$parts[[6]]$line
+[1] "Waterloo &amp; City (of London Underground (TfL))"
+
+[[1]]$route$parts[[6]]$departure_station
+[1] "Waterloo Underground Station"
+
+[[1]]$route$parts[[6]]$arrival_station
+[1] "Bank Underground Station"
+
+[[1]]$route$parts[[6]]$departs_at
+[1] "19:21"
+
+[[1]]$route$parts[[6]]$arrives_at
+[1] "19:25"
+
+[[1]]$route$parts[[6]]$num_stops
+[1] 1
+
+
+[[1]]$route$parts[[7]]
+[[1]]$route$parts[[7]]$id
+[1] 6
+
+[[1]]$route$parts[[7]]$type
+[1] "basic"
+
+[[1]]$route$parts[[7]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[7]]$directions
+[1] "Leave Bank Underground Station"
+
+[[1]]$route$parts[[7]]$distance
+[1] 14
+
+[[1]]$route$parts[[7]]$travel_time
+[1] 21
+
+[[1]]$route$parts[[7]]$coords
+[[1]]$route$parts[[7]]$coords[[1]]
+[[1]]$route$parts[[7]]$coords[[1]]$lat
+[1] 51.51331
+
+[[1]]$route$parts[[7]]$coords[[1]]$lng
+[1] -0.08833874
+
+
+[[1]]$route$parts[[7]]$coords[[2]]
+[[1]]$route$parts[[7]]$coords[[2]]$lat
+[1] 51.51335
+
+[[1]]$route$parts[[7]]$coords[[2]]$lng
+[1] -0.088138
+
+
+
+
+[[1]]$route$parts[[8]]
+[[1]]$route$parts[[8]]$id
+[1] 7
+
+[[1]]$route$parts[[8]]$type
+[1] "road"
+
+[[1]]$route$parts[[8]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[8]]$directions
+[1] "Walk 22 meters along Cornhill"
+
+[[1]]$route$parts[[8]]$distance
+[1] 22
+
+[[1]]$route$parts[[8]]$travel_time
+[1] 17
+
+[[1]]$route$parts[[8]]$coords
+[[1]]$route$parts[[8]]$coords[[1]]
+[[1]]$route$parts[[8]]$coords[[1]]$lat
+[1] 51.51335
+
+[[1]]$route$parts[[8]]$coords[[1]]$lng
+[1] -0.088138
+
+
+[[1]]$route$parts[[8]]$coords[[2]]
+[[1]]$route$parts[[8]]$coords[[2]]$lat
+[1] 51.51336
+
+[[1]]$route$parts[[8]]$coords[[2]]$lng
+[1] -0.0880625
+
+
+[[1]]$route$parts[[8]]$coords[[3]]
+[[1]]$route$parts[[8]]$coords[[3]]$lat
+[1] 51.51337
+
+[[1]]$route$parts[[8]]$coords[[3]]$lng
+[1] -0.0880111
+
+
+[[1]]$route$parts[[8]]$coords[[4]]
+[[1]]$route$parts[[8]]$coords[[4]]$lat
+[1] 51.51336
+
+[[1]]$route$parts[[8]]$coords[[4]]$lng
+[1] -0.0879365
+
+
+[[1]]$route$parts[[8]]$coords[[5]]
+[[1]]$route$parts[[8]]$coords[[5]]$lat
+[1] 51.51335
+
+[[1]]$route$parts[[8]]$coords[[5]]$lng
+[1] -0.0878813
+
+
+[[1]]$route$parts[[8]]$coords[[6]]
+[[1]]$route$parts[[8]]$coords[[6]]$lat
+[1] 51.51332
+
+[[1]]$route$parts[[8]]$coords[[6]]$lng
+[1] -0.087818
+
+
+
+[[1]]$route$parts[[8]]$road
+[1] "Cornhill"
+
+
+[[1]]$route$parts[[9]]
+[[1]]$route$parts[[9]]$id
+[1] 8
+
+[[1]]$route$parts[[9]]$type
+[1] "road"
+
+[[1]]$route$parts[[9]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[9]]$directions
+[1] "Turn right onto Popes Head Alley and walk 6 meters"
+
+[[1]]$route$parts[[9]]$distance
+[1] 6
+
+[[1]]$route$parts[[9]]$travel_time
+[1] 5
+
+[[1]]$route$parts[[9]]$coords
+[[1]]$route$parts[[9]]$coords[[1]]
+[[1]]$route$parts[[9]]$coords[[1]]$lat
+[1] 51.51332
+
+[[1]]$route$parts[[9]]$coords[[1]]$lng
+[1] -0.087818
+
+
+[[1]]$route$parts[[9]]$coords[[2]]
+[[1]]$route$parts[[9]]$coords[[2]]$lat
+[1] 51.51327
+
+[[1]]$route$parts[[9]]$coords[[2]]$lng
+[1] -0.0878348
+
+
+
+[[1]]$route$parts[[9]]$road
+[1] "Popes Head Alley"
+
+[[1]]$route$parts[[9]]$turn
+[1] "right"
+
+
+[[1]]$route$parts[[10]]
+[[1]]$route$parts[[10]]$id
+[1] 9
+
+[[1]]$route$parts[[10]]$type
+[1] "basic"
+
+[[1]]$route$parts[[10]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[10]]$directions
+[1] "Go to 'Bank Station  Cornhill, Stop E'"
+
+[[1]]$route$parts[[10]]$distance
+[1] 5
+
+[[1]]$route$parts[[10]]$travel_time
+[1] 8
+
+[[1]]$route$parts[[10]]$coords
+[[1]]$route$parts[[10]]$coords[[1]]
+[[1]]$route$parts[[10]]$coords[[1]]$lat
+[1] 51.51327
+
+[[1]]$route$parts[[10]]$coords[[1]]$lng
+[1] -0.0878348
+
+
+[[1]]$route$parts[[10]]$coords[[2]]
+[[1]]$route$parts[[10]]$coords[[2]]$lat
+[1] 51.51327
+
+[[1]]$route$parts[[10]]$coords[[2]]$lng
+[1] -0.08774938
+
+
+
+
+[[1]]$route$parts[[11]]
+[[1]]$route$parts[[11]]$id
+[1] 10
+
+[[1]]$route$parts[[11]]$type
+[1] "public_transport"
+
+[[1]]$route$parts[[11]]$mode
+[1] "bus"
+
+[[1]]$route$parts[[11]]$directions
+[1] "Take a bus (25 (of Stagecoach London)) from 'Bank Station  Cornhill' (leaves at 19:26) to 'Poultry  Bank Station' (arrives at 19:26) (1 stops)"
+
+[[1]]$route$parts[[11]]$distance
+[1] 0
+
+[[1]]$route$parts[[11]]$travel_time
+[1] 41
+
+[[1]]$route$parts[[11]]$coords
+[[1]]$route$parts[[11]]$coords[[1]]
+[[1]]$route$parts[[11]]$coords[[1]]$lat
+[1] 51.51327
+
+[[1]]$route$parts[[11]]$coords[[1]]$lng
+[1] -0.08774938
+
+
+[[1]]$route$parts[[11]]$coords[[2]]
+[[1]]$route$parts[[11]]$coords[[2]]$lat
+[1] 51.51359
+
+[[1]]$route$parts[[11]]$coords[[2]]$lng
+[1] -0.09129586
+
+
+
+[[1]]$route$parts[[11]]$line
+[1] "25 (of Stagecoach London)"
+
+[[1]]$route$parts[[11]]$departure_station
+[1] "Bank Station  Cornhill"
+
+[[1]]$route$parts[[11]]$arrival_station
+[1] "Poultry  Bank Station"
+
+[[1]]$route$parts[[11]]$departs_at
+[1] "19:26"
+
+[[1]]$route$parts[[11]]$arrives_at
+[1] "19:26"
+
+[[1]]$route$parts[[11]]$num_stops
+[1] 1
+
+
+[[1]]$route$parts[[12]]
+[[1]]$route$parts[[12]]$id
+[1] 11
+
+[[1]]$route$parts[[12]]$type
+[1] "basic"
+
+[[1]]$route$parts[[12]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[12]]$directions
+[1] "Leave Poultry  Bank Station"
+
+[[1]]$route$parts[[12]]$distance
+[1] 9
+
+[[1]]$route$parts[[12]]$travel_time
+[1] 13
+
+[[1]]$route$parts[[12]]$coords
+[[1]]$route$parts[[12]]$coords[[1]]
+[[1]]$route$parts[[12]]$coords[[1]]$lat
+[1] 51.51359
+
+[[1]]$route$parts[[12]]$coords[[1]]$lng
+[1] -0.09129586
+
+
+[[1]]$route$parts[[12]]$coords[[2]]
+[[1]]$route$parts[[12]]$coords[[2]]$lat
+[1] 51.51367
+
+[[1]]$route$parts[[12]]$coords[[2]]$lng
+[1] -0.0913163
+
+
+
+
+[[1]]$route$parts[[13]]
+[[1]]$route$parts[[13]]$id
+[1] 12
+
+[[1]]$route$parts[[13]]$type
+[1] "road"
+
+[[1]]$route$parts[[13]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[13]]$directions
+[1] "Walk 59 meters"
+
+[[1]]$route$parts[[13]]$distance
+[1] 59
+
+[[1]]$route$parts[[13]]$travel_time
+[1] 53
+
+[[1]]$route$parts[[13]]$coords
+[[1]]$route$parts[[13]]$coords[[1]]
+[[1]]$route$parts[[13]]$coords[[1]]$lat
+[1] 51.51367
+
+[[1]]$route$parts[[13]]$coords[[1]]$lng
+[1] -0.0913163
+
+
+[[1]]$route$parts[[13]]$coords[[2]]
+[[1]]$route$parts[[13]]$coords[[2]]$lat
+[1] 51.51371
+
+[[1]]$route$parts[[13]]$coords[[2]]$lng
+[1] -0.0913021
+
+
+[[1]]$route$parts[[13]]$coords[[3]]
+[[1]]$route$parts[[13]]$coords[[3]]$lat
+[1] 51.51372
+
+[[1]]$route$parts[[13]]$coords[[3]]$lng
+[1] -0.0912981
+
+
+[[1]]$route$parts[[13]]$coords[[4]]
+[[1]]$route$parts[[13]]$coords[[4]]$lat
+[1] 51.51383
+
+[[1]]$route$parts[[13]]$coords[[4]]$lng
+[1] -0.0920269
+
+
+[[1]]$route$parts[[13]]$coords[[5]]
+[[1]]$route$parts[[13]]$coords[[5]]$lat
+[1] 51.51383
+
+[[1]]$route$parts[[13]]$coords[[5]]$lng
+[1] -0.0920717
+
+
+
+
+[[1]]$route$parts[[14]]
+[[1]]$route$parts[[14]]$id
+[1] 13
+
+[[1]]$route$parts[[14]]$type
+[1] "road"
+
+[[1]]$route$parts[[14]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[14]]$directions
+[1] "Turn right onto Ironmonger Lane and walk 4 meters"
+
+[[1]]$route$parts[[14]]$distance
+[1] 4
+
+[[1]]$route$parts[[14]]$travel_time
+[1] 3
+
+[[1]]$route$parts[[14]]$coords
+[[1]]$route$parts[[14]]$coords[[1]]
+[[1]]$route$parts[[14]]$coords[[1]]$lat
+[1] 51.51383
+
+[[1]]$route$parts[[14]]$coords[[1]]$lng
+[1] -0.0920717
+
+
+[[1]]$route$parts[[14]]$coords[[2]]
+[[1]]$route$parts[[14]]$coords[[2]]$lat
+[1] 51.51387
+
+[[1]]$route$parts[[14]]$coords[[2]]$lng
+[1] -0.0920617
+
+
+
+[[1]]$route$parts[[14]]$road
+[1] "Ironmonger Lane"
+
+[[1]]$route$parts[[14]]$turn
+[1] "right"
+
+
+[[1]]$route$parts[[15]]
+[[1]]$route$parts[[15]]$id
+[1] 14
+
+[[1]]$route$parts[[15]]$type
+[1] "road"
+
+[[1]]$route$parts[[15]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[15]]$directions
+[1] "Turn left  and walk 138 meters"
+
+[[1]]$route$parts[[15]]$distance
+[1] 138
+
+[[1]]$route$parts[[15]]$travel_time
+[1] 109
+
+[[1]]$route$parts[[15]]$coords
+[[1]]$route$parts[[15]]$coords[[1]]
+[[1]]$route$parts[[15]]$coords[[1]]$lat
+[1] 51.51387
+
+[[1]]$route$parts[[15]]$coords[[1]]$lng
+[1] -0.0920617
+
+
+[[1]]$route$parts[[15]]$coords[[2]]
+[[1]]$route$parts[[15]]$coords[[2]]$lat
+[1] 51.51388
+
+[[1]]$route$parts[[15]]$coords[[2]]$lng
+[1] -0.0920848
+
+
+[[1]]$route$parts[[15]]$coords[[3]]
+[[1]]$route$parts[[15]]$coords[[3]]$lat
+[1] 51.51388
+
+[[1]]$route$parts[[15]]$coords[[3]]$lng
+[1] -0.092094
+
+
+[[1]]$route$parts[[15]]$coords[[4]]
+[[1]]$route$parts[[15]]$coords[[4]]$lat
+[1] 51.5139
+
+[[1]]$route$parts[[15]]$coords[[4]]$lng
+[1] -0.0922426
+
+
+[[1]]$route$parts[[15]]$coords[[5]]
+[[1]]$route$parts[[15]]$coords[[5]]$lat
+[1] 51.5139
+
+[[1]]$route$parts[[15]]$coords[[5]]$lng
+[1] -0.0922712
+
+
+[[1]]$route$parts[[15]]$coords[[6]]
+[[1]]$route$parts[[15]]$coords[[6]]$lat
+[1] 51.51392
+
+[[1]]$route$parts[[15]]$coords[[6]]$lng
+[1] -0.0922715
+
+
+[[1]]$route$parts[[15]]$coords[[7]]
+[[1]]$route$parts[[15]]$coords[[7]]$lat
+[1] 51.51431
+
+[[1]]$route$parts[[15]]$coords[[7]]$lng
+[1] -0.0921998
+
+
+[[1]]$route$parts[[15]]$coords[[8]]
+[[1]]$route$parts[[15]]$coords[[8]]$lat
+[1] 51.51441
+
+[[1]]$route$parts[[15]]$coords[[8]]$lng
+[1] -0.0921822
+
+
+[[1]]$route$parts[[15]]$coords[[9]]
+[[1]]$route$parts[[15]]$coords[[9]]$lat
+[1] 51.51442
+
+[[1]]$route$parts[[15]]$coords[[9]]$lng
+[1] -0.0921797
+
+
+[[1]]$route$parts[[15]]$coords[[10]]
+[[1]]$route$parts[[15]]$coords[[10]]$lat
+[1] 51.51461
+
+[[1]]$route$parts[[15]]$coords[[10]]$lng
+[1] -0.0921495
+
+
+[[1]]$route$parts[[15]]$coords[[11]]
+[[1]]$route$parts[[15]]$coords[[11]]$lat
+[1] 51.51499
+
+[[1]]$route$parts[[15]]$coords[[11]]$lng
+[1] -0.0920829
+
+
+[[1]]$route$parts[[15]]$coords[[12]]
+[[1]]$route$parts[[15]]$coords[[12]]$lat
+[1] 51.51499
+
+[[1]]$route$parts[[15]]$coords[[12]]$lng
+[1] -0.0921332
+
+
+
+[[1]]$route$parts[[15]]$turn
+[1] "left"
+
+
+[[1]]$route$parts[[16]]
+[[1]]$route$parts[[16]]$id
+[1] 15
+
+[[1]]$route$parts[[16]]$type
+[1] "road"
+
+[[1]]$route$parts[[16]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[16]]$directions
+[1] "Turn right onto King Street and walk 11 meters"
+
+[[1]]$route$parts[[16]]$distance
+[1] 11
+
+[[1]]$route$parts[[16]]$travel_time
+[1] 8
+
+[[1]]$route$parts[[16]]$coords
+[[1]]$route$parts[[16]]$coords[[1]]
+[[1]]$route$parts[[16]]$coords[[1]]$lat
+[1] 51.51499
+
+[[1]]$route$parts[[16]]$coords[[1]]$lng
+[1] -0.0921332
+
+
+[[1]]$route$parts[[16]]$coords[[2]]
+[[1]]$route$parts[[16]]$coords[[2]]$lat
+[1] 51.51509
+
+[[1]]$route$parts[[16]]$coords[[2]]$lng
+[1] -0.0921149
+
+
+
+[[1]]$route$parts[[16]]$road
+[1] "King Street"
+
+[[1]]$route$parts[[16]]$turn
+[1] "right"
+
+
+[[1]]$route$parts[[17]]
+[[1]]$route$parts[[17]]$id
+[1] 16
+
+[[1]]$route$parts[[17]]$type
+[1] "road"
+
+[[1]]$route$parts[[17]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[17]]$directions
+[1] "Continue onto Guildhall Yard for 48 meters"
+
+[[1]]$route$parts[[17]]$distance
+[1] 48
+
+[[1]]$route$parts[[17]]$travel_time
+[1] 46
+
+[[1]]$route$parts[[17]]$coords
+[[1]]$route$parts[[17]]$coords[[1]]
+[[1]]$route$parts[[17]]$coords[[1]]$lat
+[1] 51.51509
+
+[[1]]$route$parts[[17]]$coords[[1]]$lng
+[1] -0.0921149
+
+
+[[1]]$route$parts[[17]]$coords[[2]]
+[[1]]$route$parts[[17]]$coords[[2]]$lat
+[1] 51.51514
+
+[[1]]$route$parts[[17]]$coords[[2]]$lng
+[1] -0.0921058
+
+
+[[1]]$route$parts[[17]]$coords[[3]]
+[[1]]$route$parts[[17]]$coords[[3]]$lat
+[1] 51.51515
+
+[[1]]$route$parts[[17]]$coords[[3]]$lng
+[1] -0.092104
+
+
+[[1]]$route$parts[[17]]$coords[[4]]
+[[1]]$route$parts[[17]]$coords[[4]]$lat
+[1] 51.51532
+
+[[1]]$route$parts[[17]]$coords[[4]]$lng
+[1] -0.0920678
+
+
+[[1]]$route$parts[[17]]$coords[[5]]
+[[1]]$route$parts[[17]]$coords[[5]]$lat
+[1] 51.51539
+
+[[1]]$route$parts[[17]]$coords[[5]]$lng
+[1] -0.0920533
+
+
+[[1]]$route$parts[[17]]$coords[[6]]
+[[1]]$route$parts[[17]]$coords[[6]]$lat
+[1] 51.5154
+
+[[1]]$route$parts[[17]]$coords[[6]]$lng
+[1] -0.0918024
+
+
+
+[[1]]$route$parts[[17]]$road
+[1] "Guildhall Yard"
+
+[[1]]$route$parts[[17]]$turn
+[1] "straight"
+
+
+[[1]]$route$parts[[18]]
+[[1]]$route$parts[[18]]$id
+[1] 17
+
+[[1]]$route$parts[[18]]$type
+[1] "road"
+
+[[1]]$route$parts[[18]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[18]]$directions
+[1] "Continue onto Guildhall Buildings for 2 meters"
+
+[[1]]$route$parts[[18]]$distance
+[1] 2
+
+[[1]]$route$parts[[18]]$travel_time
+[1] 2
+
+[[1]]$route$parts[[18]]$coords
+[[1]]$route$parts[[18]]$coords[[1]]
+[[1]]$route$parts[[18]]$coords[[1]]$lat
+[1] 51.5154
+
+[[1]]$route$parts[[18]]$coords[[1]]$lng
+[1] -0.0918024
+
+
+[[1]]$route$parts[[18]]$coords[[2]]
+[[1]]$route$parts[[18]]$coords[[2]]$lat
+[1] 51.51541
+
+[[1]]$route$parts[[18]]$coords[[2]]$lng
+[1] -0.0917623
+
+
+
+[[1]]$route$parts[[18]]$road
+[1] "Guildhall Buildings"
+
+[[1]]$route$parts[[18]]$turn
+[1] "straight"
+
+
+[[1]]$route$parts[[19]]
+[[1]]$route$parts[[19]]$id
+[1] 18
+
+[[1]]$route$parts[[19]]$type
+[1] "road"
+
+[[1]]$route$parts[[19]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[19]]$directions
+[1] "Turn left onto Guildhall Yard and walk 63 meters"
+
+[[1]]$route$parts[[19]]$distance
+[1] 63
+
+[[1]]$route$parts[[19]]$travel_time
+[1] 46
+
+[[1]]$route$parts[[19]]$coords
+[[1]]$route$parts[[19]]$coords[[1]]
+[[1]]$route$parts[[19]]$coords[[1]]$lat
+[1] 51.51541
+
+[[1]]$route$parts[[19]]$coords[[1]]$lng
+[1] -0.0917623
+
+
+[[1]]$route$parts[[19]]$coords[[2]]
+[[1]]$route$parts[[19]]$coords[[2]]$lat
+[1] 51.51546
+
+[[1]]$route$parts[[19]]$coords[[2]]$lng
+[1] -0.0917469
+
+
+[[1]]$route$parts[[19]]$coords[[3]]
+[[1]]$route$parts[[19]]$coords[[3]]$lat
+[1] 51.51556
+
+[[1]]$route$parts[[19]]$coords[[3]]$lng
+[1] -0.0917495
+
+
+[[1]]$route$parts[[19]]$coords[[4]]
+[[1]]$route$parts[[19]]$coords[[4]]$lat
+[1] 51.5157
+
+[[1]]$route$parts[[19]]$coords[[4]]$lng
+[1] -0.0917489
+
+
+[[1]]$route$parts[[19]]$coords[[5]]
+[[1]]$route$parts[[19]]$coords[[5]]$lat
+[1] 51.51574
+
+[[1]]$route$parts[[19]]$coords[[5]]$lng
+[1] -0.0917522
+
+
+[[1]]$route$parts[[19]]$coords[[6]]
+[[1]]$route$parts[[19]]$coords[[6]]$lat
+[1] 51.51574
+
+[[1]]$route$parts[[19]]$coords[[6]]$lng
+[1] -0.0918659
+
+
+[[1]]$route$parts[[19]]$coords[[7]]
+[[1]]$route$parts[[19]]$coords[[7]]$lat
+[1] 51.51574
+
+[[1]]$route$parts[[19]]$coords[[7]]$lng
+[1] -0.0919915
+
+
+[[1]]$route$parts[[19]]$coords[[8]]
+[[1]]$route$parts[[19]]$coords[[8]]$lat
+[1] 51.51574
+
+[[1]]$route$parts[[19]]$coords[[8]]$lng
+[1] -0.0921103
+
+
+[[1]]$route$parts[[19]]$coords[[9]]
+[[1]]$route$parts[[19]]$coords[[9]]$lat
+[1] 51.51572
+
+[[1]]$route$parts[[19]]$coords[[9]]$lng
+[1] -0.0921105
+
+
+
+[[1]]$route$parts[[19]]$road
+[1] "Guildhall Yard"
+
+[[1]]$route$parts[[19]]$turn
+[1] "left"
+
+
+[[1]]$route$parts[[20]]
+[[1]]$route$parts[[20]]$id
+[1] 19
+
+[[1]]$route$parts[[20]]$type
+[1] "start_end"
+
+[[1]]$route$parts[[20]]$mode
+[1] "walk"
+
+[[1]]$route$parts[[20]]$directions
+[1] "Your destination is 13 meters southeast"
+
+[[1]]$route$parts[[20]]$distance
+[1] 13
+
+[[1]]$route$parts[[20]]$travel_time
+[1] 9
+
+[[1]]$route$parts[[20]]$coords
+[[1]]$route$parts[[20]]$coords[[1]]
+[[1]]$route$parts[[20]]$coords[[1]]$lat
+[1] 51.51572
+
+[[1]]$route$parts[[20]]$coords[[1]]$lng
+[1] -0.0921105
+
+
+[[1]]$route$parts[[20]]$coords[[2]]
+[[1]]$route$parts[[20]]$coords[[2]]$lat
+[1] 51.51562
+
+[[1]]$route$parts[[20]]$coords[[2]]$lng
+[1] -0.0919983
+
+
+
+[[1]]$route$parts[[20]]$direction
+[1] "southeast"
+
+
+
+
+
+[[2]]
+[[2]]$travel_time
+[1] 1284
+
+[[2]]$route
+[[2]]$route$departure_time
+[1] "2024-06-26T19:06:30+01:00"
+
+[[2]]$route$arrival_time
+[1] "2024-06-26T19:27:54+01:00"
+
+[[2]]$route$parts
+[[2]]$route$parts[[1]]
+[[2]]$route$parts[[1]]$id
+[1] 0
+
+[[2]]$route$parts[[1]]$type
+[1] "start_end"
+
+[[2]]$route$parts[[1]]$mode
+[1] "walk"
+
+[[2]]$route$parts[[1]]$directions
+[1] "Start your journey 28 meters southeast"
+
+[[2]]$route$parts[[1]]$distance
+[1] 28
+
+[[2]]$route$parts[[1]]$travel_time
+[1] 20
+
+[[2]]$route$parts[[1]]$coords
+[[2]]$route$parts[[1]]$coords[[1]]
+[[2]]$route$parts[[1]]$coords[[1]]$lat
+[1] 51.51196
+
+[[2]]$route$parts[[1]]$coords[[1]]$lng
+[1] -0.1279543
+
+
+[[2]]$route$parts[[1]]$coords[[2]]
+[[2]]$route$parts[[1]]$coords[[2]]$lat
+[1] 51.51172
+
+[[2]]$route$parts[[1]]$coords[[2]]$lng
+[1] -0.127818
+
+
+
+[[2]]$route$parts[[1]]$direction
+[1] "southeast"
+
+
+[[2]]$route$parts[[2]]
+[[2]]$route$parts[[2]]$id
+[1] 1
+
+[[2]]$route$parts[[2]]$type
+[1] "road"
+
+[[2]]$route$parts[[2]]$mode
+[1] "walk"
+
+[[2]]$route$parts[[2]]$directions
+[1] "Walk 18 meters"
+
+[[2]]$route$parts[[2]]$distance
+[1] 18
+
+[[2]]$route$parts[[2]]$travel_time
+[1] 16
+
+[[2]]$route$parts[[2]]$coords
+[[2]]$route$parts[[2]]$coords[[1]]
+[[2]]$route$parts[[2]]$coords[[1]]$lat
+[1] 51.51172
+
+[[2]]$route$parts[[2]]$coords[[1]]$lng
+[1] -0.127818
+
+
+[[2]]$route$parts[[2]]$coords[[2]]
+[[2]]$route$parts[[2]]$coords[[2]]$lat
+[1] 51.51171
+
+[[2]]$route$parts[[2]]$coords[[2]]$lng
+[1] -0.1277992
+
+
+[[2]]$route$parts[[2]]$coords[[3]]
+[[2]]$route$parts[[2]]$coords[[3]]$lat
+[1] 51.51165
+
+[[2]]$route$parts[[2]]$coords[[3]]$lng
+[1] -0.1277612
+
+
+[[2]]$route$parts[[2]]$coords[[4]]
+[[2]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+[[2]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+[[2]]$route$parts[[2]]$coords[[5]]
+[[2]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+[[2]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+[[2]]$route$parts[[2]]$coords[[6]]
+[[2]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+[[2]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+[[2]]$route$parts[[2]]$coords[[7]]
+[[2]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+[[2]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+[[2]]$route$parts[[2]]$coords[[8]]
+[[2]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+[[2]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
+
+
+[[2]]$route$parts[[3]]
+[[2]]$route$parts[[3]]$id
+[1] 2
+
+[[2]]$route$parts[[3]]$type
+[1] "basic"
+
+[[2]]$route$parts[[3]]$mode
+[1] "walk"
+
+[[2]]$route$parts[[3]]$directions
+[1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
+
+[[2]]$route$parts[[3]]$distance
+[1] 58
+
+[[2]]$route$parts[[3]]$travel_time
+[1] 305
+
+[[2]]$route$parts[[3]]$coords
+[[2]]$route$parts[[3]]$coords[[1]]
+[[2]]$route$parts[[3]]$coords[[1]]$lat
+[1] 51.5116
+
+[[2]]$route$parts[[3]]$coords[[1]]$lng
+[1] -0.1278801
+
+
+[[2]]$route$parts[[3]]$coords[[2]]
+[[2]]$route$parts[[3]]$coords[[2]]$lat
+[1] 51.51161
+
+[[2]]$route$parts[[3]]$coords[[2]]$lng
+[1] -0.1279264
+
+
+[[2]]$route$parts[[3]]$coords[[3]]
+[[2]]$route$parts[[3]]$coords[[3]]$lat
+[1] 51.51191
+
+[[2]]$route$parts[[3]]$coords[[3]]$lng
+[1] -0.1285772
+
+
+
+
+[[2]]$route$parts[[4]]
+[[2]]$route$parts[[4]]$id
+[1] 3
+
+[[2]]$route$parts[[4]]$type
+[1] "public_transport"
+
+[[2]]$route$parts[[4]]$mode
+[1] "rail_underground"
+
+[[2]]$route$parts[[4]]$directions
+[1] "Take a train (Northern (of London Underground (TfL)) line) from 'Leicester Square Underground Station' (leaves at 19:12) to 'Waterloo Underground Station' (arrives at 19:14) (3 stops)"
+
+[[2]]$route$parts[[4]]$distance
+[1] 0
+
+[[2]]$route$parts[[4]]$travel_time
+[1] 150
+
+[[2]]$route$parts[[4]]$coords
+[[2]]$route$parts[[4]]$coords[[1]]
+[[2]]$route$parts[[4]]$coords[[1]]$lat
+[1] 51.51191
+
+[[2]]$route$parts[[4]]$coords[[1]]$lng
+[1] -0.1285772
+
+
+[[2]]$route$parts[[4]]$coords[[2]]
+[[2]]$route$parts[[4]]$coords[[2]]$lat
+[1] 51.5088
+
+[[2]]$route$parts[[4]]$coords[[2]]$lng
+[1] -0.1255917
+
+
+[[2]]$route$parts[[4]]$coords[[3]]
+[[2]]$route$parts[[4]]$coords[[3]]$lat
+[1] 51.50729
+
+[[2]]$route$parts[[4]]$coords[[3]]$lng
+[1] -0.1225412
+
+
+[[2]]$route$parts[[4]]$coords[[4]]
+[[2]]$route$parts[[4]]$coords[[4]]$lat
+[1] 51.50319
+
+[[2]]$route$parts[[4]]$coords[[4]]$lng
+[1] -0.1135745
+
+
+
+[[2]]$route$parts[[4]]$line
+[1] "Northern (of London Underground (TfL))"
+
+[[2]]$route$parts[[4]]$departure_station
+[1] "Leicester Square Underground Station"
+
+[[2]]$route$parts[[4]]$arrival_station
+[1] "Waterloo Underground Station"
+
+[[2]]$route$parts[[4]]$departs_at
+[1] "19:12"
+
+[[2]]$route$parts[[4]]$arrives_at
+[1] "19:14"
+
+[[2]]$route$parts[[4]]$num_stops
+[1] 3
+
+
+[[2]]$route$parts[[5]]
+[[2]]$route$parts[[5]]$id
+[1] 4
+
+[[2]]$route$parts[[5]]$type
+[1] "basic"
+
+[[2]]$route$parts[[5]]$mode
+[1] "walk"
+
+[[2]]$route$parts[[5]]$directions
+[1] "Change stop"
+
+[[2]]$route$parts[[5]]$distance
+[1] 74
+
+[[2]]$route$parts[[5]]$travel_time
+[1] 132
+
+[[2]]$route$parts[[5]]$coords
+[[2]]$route$parts[[5]]$coords[[1]]
+[[2]]$route$parts[[5]]$coords[[1]]$lat
+[1] 51.50319
+
+[[2]]$route$parts[[5]]$coords[[1]]$lng
+[1] -0.1135745
+
+
+[[2]]$route$parts[[5]]$coords[[2]]
+[[2]]$route$parts[[5]]$coords[[2]]$lat
+[1] 51.50268
+
+[[2]]$route$parts[[5]]$coords[[2]]$lng
+[1] -0.112875
+
+
+
+
+[[2]]$route$parts[[6]]
+[[2]]$route$parts[[6]]$id
+[1] 5
+
+[[2]]$route$parts[[6]]$type
+[1] "public_transport"
+
+[[2]]$route$parts[[6]]$mode
+[1] "rail_underground"
+
+[[2]]$route$parts[[6]]$directions
+[1] "Take a train (Waterloo &amp; City (of London Underground (TfL)) line) from 'Waterloo Underground Station' (leaves at 19:17) to 'Bank Underground Station' (arrives at 19:21) (1 stops)"
+
+[[2]]$route$parts[[6]]$distance
+[1] 0
+
+[[2]]$route$parts[[6]]$travel_time
+[1] 247
+
+[[2]]$route$parts[[6]]$coords
+[[2]]$route$parts[[6]]$coords[[1]]
+[[2]]$route$parts[[6]]$coords[[1]]$lat
+[1] 51.50268
+
+[[2]]$route$parts[[6]]$coords[[1]]$lng
+[1] -0.112875
+
+
+[[2]]$route$parts[[6]]$coords[[2]]
+[[2]]$route$parts[[6]]$coords[[2]]$lat
+[1] 51.51331
+
+[[2]]$route$parts[[6]]$coords[[2]]$lng
+[1] -0.08833874
+
+
+
+[[2]]$route$parts[[6]]$line
+[1] "Waterloo &amp; City (of London Underground (TfL))"
+
+[[2]]$route$parts[[6]]$departure_station
+[1] "Waterloo Underground Station"
+
+[[2]]$route$parts[[6]]$arrival_station
+[1] "Bank Underground Station"
+
+[[2]]$route$parts[[6]]$departs_at
+[1] "19:17"
+
+[[2]]$route$parts[[6]]$arrives_at
+[1] "19:21"
+
+[[2]]$route$parts[[6]]$num_stops
+[1] 1
+
+
+[[2]]$route$parts[[7]]
+[[2]]$route$parts[[7]]$id
+[1] 6
+
+[[2]]$route$parts[[7]]$type
+[1] "basic"
+
+[[2]]$route$parts[[7]]$mode
+[1] "walk"
+
+[[2]]$route$parts[[7]]$directions
+[1] "Leave Bank Underground Station"
+
+[[2]]$route$parts[[7]]$distance
+[1] 16
+
+[[2]]$route$parts[[7]]$travel_time
+[1] 24
+
+[[2]]$route$parts[[7]]$coords
+[[2]]$route$parts[[7]]$coords[[1]]
+[[2]]$route$parts[[7]]$coords[[1]]$lat
+[1] 51.51331
+
+[[2]]$route$parts[[7]]$coords[[1]]$lng
+[1] -0.08833874
+
+
+[[2]]$route$parts[[7]]$coords[[2]]
+[[2]]$route$parts[[7]]$coords[[2]]$lat
+[1] 51.51344
+
+[[2]]$route$parts[[7]]$coords[[2]]$lng
+[1] -0.0884578
+
+
+
+
+[[2]]$route$parts[[8]]
+[[2]]$route$parts[[8]]$id
+[1] 7
+
+[[2]]$route$parts[[8]]$type
+[1] "road"
+
+[[2]]$route$parts[[8]]$mode
+[1] "walk"
+
+[[2]]$route$parts[[8]]$directions
+[1] "Walk 379 meters"
+
+[[2]]$route$parts[[8]]$distance
+[1] 379
+
+[[2]]$route$parts[[8]]$travel_time
+[1] 334
+
+[[2]]$route$parts[[8]]$coords
+[[2]]$route$parts[[8]]$coords[[1]]
+[[2]]$route$parts[[8]]$coords[[1]]$lat
+[1] 51.51344
+
+[[2]]$route$parts[[8]]$coords[[1]]$lng
+[1] -0.0884578
+
+
+[[2]]$route$parts[[8]]$coords[[2]]
+[[2]]$route$parts[[8]]$coords[[2]]$lat
+[1] 51.51345
+
+[[2]]$route$parts[[8]]$coords[[2]]$lng
+[1] -0.0884714
+
+
+[[2]]$route$parts[[8]]$coords[[3]]
+[[2]]$route$parts[[8]]$coords[[3]]$lat
+[1] 51.51346
+
+[[2]]$route$parts[[8]]$coords[[3]]$lng
+[1] -0.0884774
+
+
+[[2]]$route$parts[[8]]$coords[[4]]
+[[2]]$route$parts[[8]]$coords[[4]]$lat
+[1] 51.51346
+
+[[2]]$route$parts[[8]]$coords[[4]]$lng
+[1] -0.0884931
+
+
+[[2]]$route$parts[[8]]$coords[[5]]
+[[2]]$route$parts[[8]]$coords[[5]]$lat
+[1] 51.51346
+
+[[2]]$route$parts[[8]]$coords[[5]]$lng
+[1] -0.0885073
+
+
+[[2]]$route$parts[[8]]$coords[[6]]
+[[2]]$route$parts[[8]]$coords[[6]]$lat
+[1] 51.51346
+
+[[2]]$route$parts[[8]]$coords[[6]]$lng
+[1] -0.0885353
+
+
+[[2]]$route$parts[[8]]$coords[[7]]
+[[2]]$route$parts[[8]]$coords[[7]]$lat
+[1] 51.51346
+
+[[2]]$route$parts[[8]]$coords[[7]]$lng
+[1] -0.0885364
+
+
+[[2]]$route$parts[[8]]$coords[[8]]
+[[2]]$route$parts[[8]]$coords[[8]]$lat
+[1] 51.51348
+
+[[2]]$route$parts[[8]]$coords[[8]]$lng
+[1] -0.0885281
+
+
+[[2]]$route$parts[[8]]$coords[[9]]
+[[2]]$route$parts[[8]]$coords[[9]]$lat
+[1] 51.51349
+
+[[2]]$route$parts[[8]]$coords[[9]]$lng
+[1] -0.0885464
+
+
+[[2]]$route$parts[[8]]$coords[[10]]
+[[2]]$route$parts[[8]]$coords[[10]]$lat
+[1] 51.51351
+
+[[2]]$route$parts[[8]]$coords[[10]]$lng
+[1] -0.0885851
+
+
+[[2]]$route$parts[[8]]$coords[[11]]
+[[2]]$route$parts[[8]]$coords[[11]]$lat
+[1] 51.51353
+
+[[2]]$route$parts[[8]]$coords[[11]]$lng
+[1] -0.0886268
+
+
+[[2]]$route$parts[[8]]$coords[[12]]
+[[2]]$route$parts[[8]]$coords[[12]]$lat
+[1] 51.51356
+
+[[2]]$route$parts[[8]]$coords[[12]]$lng
+[1] -0.0886882
+
+
+[[2]]$route$parts[[8]]$coords[[13]]
+[[2]]$route$parts[[8]]$coords[[13]]$lat
+[1] 51.51354
+
+[[2]]$route$parts[[8]]$coords[[13]]$lng
+[1] -0.0887415
+
+
+[[2]]$route$parts[[8]]$coords[[14]]
+[[2]]$route$parts[[8]]$coords[[14]]$lat
+[1] 51.51353
+
+[[2]]$route$parts[[8]]$coords[[14]]$lng
+[1] -0.0888122
+
+
+[[2]]$route$parts[[8]]$coords[[15]]
+[[2]]$route$parts[[8]]$coords[[15]]$lat
+[1] 51.51353
+
+[[2]]$route$parts[[8]]$coords[[15]]$lng
+[1] -0.0888883
+
+
+[[2]]$route$parts[[8]]$coords[[16]]
+[[2]]$route$parts[[8]]$coords[[16]]$lat
+[1] 51.51354
+
+[[2]]$route$parts[[8]]$coords[[16]]$lng
+[1] -0.0889143
+
+
+[[2]]$route$parts[[8]]$coords[[17]]
+[[2]]$route$parts[[8]]$coords[[17]]$lat
+[1] 51.51356
+
+[[2]]$route$parts[[8]]$coords[[17]]$lng
+[1] -0.0889273
+
+
+[[2]]$route$parts[[8]]$coords[[18]]
+[[2]]$route$parts[[8]]$coords[[18]]$lat
+[1] 51.51451
+
+[[2]]$route$parts[[8]]$coords[[18]]$lng
+[1] -0.089619
+
+
+[[2]]$route$parts[[8]]$coords[[19]]
+[[2]]$route$parts[[8]]$coords[[19]]$lat
+[1] 51.51464
+
+[[2]]$route$parts[[8]]$coords[[19]]$lng
+[1] -0.0896809
+
+
+[[2]]$route$parts[[8]]$coords[[20]]
+[[2]]$route$parts[[8]]$coords[[20]]$lat
+[1] 51.51469
+
+[[2]]$route$parts[[8]]$coords[[20]]$lng
+[1] -0.0896341
+
+
+[[2]]$route$parts[[8]]$coords[[21]]
+[[2]]$route$parts[[8]]$coords[[21]]$lat
+[1] 51.5147
+
+[[2]]$route$parts[[8]]$coords[[21]]$lng
+[1] -0.0897491
+
+
+[[2]]$route$parts[[8]]$coords[[22]]
+[[2]]$route$parts[[8]]$coords[[22]]$lat
+[1] 51.51472
+
+[[2]]$route$parts[[8]]$coords[[22]]$lng
+[1] -0.0898988
+
+
+[[2]]$route$parts[[8]]$coords[[23]]
+[[2]]$route$parts[[8]]$coords[[23]]$lat
+[1] 51.51476
+
+[[2]]$route$parts[[8]]$coords[[23]]$lng
+[1] -0.0899594
+
+
+[[2]]$route$parts[[8]]$coords[[24]]
+[[2]]$route$parts[[8]]$coords[[24]]$lat
+[1] 51.51482
+
+[[2]]$route$parts[[8]]$coords[[24]]$lng
+[1] -0.0899281
+
+
+[[2]]$route$parts[[8]]$coords[[25]]
+[[2]]$route$parts[[8]]$coords[[25]]$lat
+[1] 51.5149
+
+[[2]]$route$parts[[8]]$coords[[25]]$lng
+[1] -0.0898848
+
+
+[[2]]$route$parts[[8]]$coords[[26]]
+[[2]]$route$parts[[8]]$coords[[26]]$lat
+[1] 51.51495
+
+[[2]]$route$parts[[8]]$coords[[26]]$lng
+[1] -0.0902604
+
+
+[[2]]$route$parts[[8]]$coords[[27]]
+[[2]]$route$parts[[8]]$coords[[27]]$lat
+[1] 51.51495
+
+[[2]]$route$parts[[8]]$coords[[27]]$lng
+[1] -0.0903181
+
+
+[[2]]$route$parts[[8]]$coords[[28]]
+[[2]]$route$parts[[8]]$coords[[28]]$lat
+[1] 51.51496
+
+[[2]]$route$parts[[8]]$coords[[28]]$lng
+[1] -0.0903744
+
+
+[[2]]$route$parts[[8]]$coords[[29]]
+[[2]]$route$parts[[8]]$coords[[29]]$lat
+[1] 51.51503
+
+[[2]]$route$parts[[8]]$coords[[29]]$lng
+[1] -0.0910251
+
+
+[[2]]$route$parts[[8]]$coords[[30]]
+[[2]]$route$parts[[8]]$coords[[30]]$lat
+[1] 51.51503
+
+[[2]]$route$parts[[8]]$coords[[30]]$lng
+[1] -0.091083
+
+
+[[2]]$route$parts[[8]]$coords[[31]]
+[[2]]$route$parts[[8]]$coords[[31]]$lat
+[1] 51.51504
+
+[[2]]$route$parts[[8]]$coords[[31]]$lng
+[1] -0.0911337
+
+
+[[2]]$route$parts[[8]]$coords[[32]]
+[[2]]$route$parts[[8]]$coords[[32]]$lat
+[1] 51.51537
+
+[[2]]$route$parts[[8]]$coords[[32]]$lng
+[1] -0.091066
+
+
+[[2]]$route$parts[[8]]$coords[[33]]
+[[2]]$route$parts[[8]]$coords[[33]]$lat
+[1] 51.51539
+
+[[2]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.0917676
+
+
+
+
+[[2]]$route$parts[[9]]
+[[2]]$route$parts[[9]]$id
+[1] 8
+
+[[2]]$route$parts[[9]]$type
+[1] "road"
+
+[[2]]$route$parts[[9]]$mode
+[1] "walk"
+
+[[2]]$route$parts[[9]]$directions
+[1] "Turn right onto Guildhall Yard and walk 64 meters"
+
+[[2]]$route$parts[[9]]$distance
+[1] 64
+
+[[2]]$route$parts[[9]]$travel_time
+[1] 47
+
+[[2]]$route$parts[[9]]$coords
+[[2]]$route$parts[[9]]$coords[[1]]
+[[2]]$route$parts[[9]]$coords[[1]]$lat
+[1] 51.51539
+
+[[2]]$route$parts[[9]]$coords[[1]]$lng
+[1] -0.0917676
+
+
+[[2]]$route$parts[[9]]$coords[[2]]
+[[2]]$route$parts[[9]]$coords[[2]]$lat
+[1] 51.51541
+
+[[2]]$route$parts[[9]]$coords[[2]]$lng
+[1] -0.0917623
+
+
+[[2]]$route$parts[[9]]$coords[[3]]
+[[2]]$route$parts[[9]]$coords[[3]]$lat
+[1] 51.51546
+
+[[2]]$route$parts[[9]]$coords[[3]]$lng
+[1] -0.0917469
+
+
+[[2]]$route$parts[[9]]$coords[[4]]
+[[2]]$route$parts[[9]]$coords[[4]]$lat
+[1] 51.51556
+
+[[2]]$route$parts[[9]]$coords[[4]]$lng
+[1] -0.0917495
+
+
+[[2]]$route$parts[[9]]$coords[[5]]
+[[2]]$route$parts[[9]]$coords[[5]]$lat
+[1] 51.5157
+
+[[2]]$route$parts[[9]]$coords[[5]]$lng
+[1] -0.0917489
+
+
+[[2]]$route$parts[[9]]$coords[[6]]
+[[2]]$route$parts[[9]]$coords[[6]]$lat
+[1] 51.51574
+
+[[2]]$route$parts[[9]]$coords[[6]]$lng
+[1] -0.0917522
+
+
+[[2]]$route$parts[[9]]$coords[[7]]
+[[2]]$route$parts[[9]]$coords[[7]]$lat
+[1] 51.51574
+
+[[2]]$route$parts[[9]]$coords[[7]]$lng
+[1] -0.0918659
+
+
+[[2]]$route$parts[[9]]$coords[[8]]
+[[2]]$route$parts[[9]]$coords[[8]]$lat
+[1] 51.51574
+
+[[2]]$route$parts[[9]]$coords[[8]]$lng
+[1] -0.0919915
+
+
+[[2]]$route$parts[[9]]$coords[[9]]
+[[2]]$route$parts[[9]]$coords[[9]]$lat
+[1] 51.51574
+
+[[2]]$route$parts[[9]]$coords[[9]]$lng
+[1] -0.0921103
+
+
+[[2]]$route$parts[[9]]$coords[[10]]
+[[2]]$route$parts[[9]]$coords[[10]]$lat
+[1] 51.51572
+
+[[2]]$route$parts[[9]]$coords[[10]]$lng
+[1] -0.0921105
+
+
+
+[[2]]$route$parts[[9]]$road
+[1] "Guildhall Yard"
+
+[[2]]$route$parts[[9]]$turn
+[1] "right"
+
+
+[[2]]$route$parts[[10]]
+[[2]]$route$parts[[10]]$id
+[1] 9
+
+[[2]]$route$parts[[10]]$type
+[1] "start_end"
+
+[[2]]$route$parts[[10]]$mode
+[1] "walk"
+
+[[2]]$route$parts[[10]]$directions
+[1] "Your destination is 13 meters southeast"
+
+[[2]]$route$parts[[10]]$distance
+[1] 13
+
+[[2]]$route$parts[[10]]$travel_time
+[1] 9
+
+[[2]]$route$parts[[10]]$coords
+[[2]]$route$parts[[10]]$coords[[1]]
+[[2]]$route$parts[[10]]$coords[[1]]$lat
+[1] 51.51572
+
+[[2]]$route$parts[[10]]$coords[[1]]$lng
+[1] -0.0921105
+
+
+[[2]]$route$parts[[10]]$coords[[2]]
+[[2]]$route$parts[[10]]$coords[[2]]$lat
+[1] 51.51562
+
+[[2]]$route$parts[[10]]$coords[[2]]$lng
+[1] -0.0919983
+
+
+
+[[2]]$route$parts[[10]]$direction
+[1] "southeast"
+
+
+
+
+
+[[3]]
+[[3]]$travel_time
+[1] 1284
+
+[[3]]$route
+[[3]]$route$departure_time
+[1] "2024-06-26T19:00:30+01:00"
+
+[[3]]$route$arrival_time
+[1] "2024-06-26T19:21:54+01:00"
+
+[[3]]$route$parts
+[[3]]$route$parts[[1]]
+[[3]]$route$parts[[1]]$id
+[1] 0
+
+[[3]]$route$parts[[1]]$type
+[1] "start_end"
+
+[[3]]$route$parts[[1]]$mode
+[1] "walk"
+
+[[3]]$route$parts[[1]]$directions
+[1] "Start your journey 28 meters southeast"
+
+[[3]]$route$parts[[1]]$distance
+[1] 28
+
+[[3]]$route$parts[[1]]$travel_time
+[1] 20
+
+[[3]]$route$parts[[1]]$coords
+[[3]]$route$parts[[1]]$coords[[1]]
+[[3]]$route$parts[[1]]$coords[[1]]$lat
+[1] 51.51196
+
+[[3]]$route$parts[[1]]$coords[[1]]$lng
+[1] -0.1279543
+
+
+[[3]]$route$parts[[1]]$coords[[2]]
+[[3]]$route$parts[[1]]$coords[[2]]$lat
+[1] 51.51172
+
+[[3]]$route$parts[[1]]$coords[[2]]$lng
+[1] -0.127818
+
+
+
+[[3]]$route$parts[[1]]$direction
+[1] "southeast"
+
+
+[[3]]$route$parts[[2]]
+[[3]]$route$parts[[2]]$id
+[1] 1
+
+[[3]]$route$parts[[2]]$type
+[1] "road"
+
+[[3]]$route$parts[[2]]$mode
+[1] "walk"
+
+[[3]]$route$parts[[2]]$directions
+[1] "Walk 18 meters"
+
+[[3]]$route$parts[[2]]$distance
+[1] 18
+
+[[3]]$route$parts[[2]]$travel_time
+[1] 16
+
+[[3]]$route$parts[[2]]$coords
+[[3]]$route$parts[[2]]$coords[[1]]
+[[3]]$route$parts[[2]]$coords[[1]]$lat
+[1] 51.51172
+
+[[3]]$route$parts[[2]]$coords[[1]]$lng
+[1] -0.127818
+
+
+[[3]]$route$parts[[2]]$coords[[2]]
+[[3]]$route$parts[[2]]$coords[[2]]$lat
+[1] 51.51171
+
+[[3]]$route$parts[[2]]$coords[[2]]$lng
+[1] -0.1277992
+
+
+[[3]]$route$parts[[2]]$coords[[3]]
+[[3]]$route$parts[[2]]$coords[[3]]$lat
+[1] 51.51165
+
+[[3]]$route$parts[[2]]$coords[[3]]$lng
+[1] -0.1277612
+
+
+[[3]]$route$parts[[2]]$coords[[4]]
+[[3]]$route$parts[[2]]$coords[[4]]$lat
+[1] 51.51163
+
+[[3]]$route$parts[[2]]$coords[[4]]$lng
+[1] -0.1277487
+
+
+[[3]]$route$parts[[2]]$coords[[5]]
+[[3]]$route$parts[[2]]$coords[[5]]$lat
+[1] 51.51162
+
+[[3]]$route$parts[[2]]$coords[[5]]$lng
+[1] -0.1277957
+
+
+[[3]]$route$parts[[2]]$coords[[6]]
+[[3]]$route$parts[[2]]$coords[[6]]$lat
+[1] 51.51162
+
+[[3]]$route$parts[[2]]$coords[[6]]$lng
+[1] -0.1278105
+
+
+[[3]]$route$parts[[2]]$coords[[7]]
+[[3]]$route$parts[[2]]$coords[[7]]$lat
+[1] 51.5116
+
+[[3]]$route$parts[[2]]$coords[[7]]$lng
+[1] -0.127838
+
+
+[[3]]$route$parts[[2]]$coords[[8]]
+[[3]]$route$parts[[2]]$coords[[8]]$lat
+[1] 51.5116
+
+[[3]]$route$parts[[2]]$coords[[8]]$lng
+[1] -0.1278801
+
+
+
+
+[[3]]$route$parts[[3]]
+[[3]]$route$parts[[3]]$id
+[1] 2
+
+[[3]]$route$parts[[3]]$type
+[1] "basic"
+
+[[3]]$route$parts[[3]]$mode
+[1] "walk"
+
+[[3]]$route$parts[[3]]$directions
+[1] "Enter 'Leicester Square Underground Station' through 'Entrance 3'"
+
+[[3]]$route$parts[[3]]$distance
+[1] 58
+
+[[3]]$route$parts[[3]]$travel_time
+[1] 305
+
+[[3]]$route$parts[[3]]$coords
+[[3]]$route$parts[[3]]$coords[[1]]
+[[3]]$route$parts[[3]]$coords[[1]]$lat
+[1] 51.5116
+
+[[3]]$route$parts[[3]]$coords[[1]]$lng
+[1] -0.1278801
+
+
+[[3]]$route$parts[[3]]$coords[[2]]
+[[3]]$route$parts[[3]]$coords[[2]]$lat
+[1] 51.51161
+
+[[3]]$route$parts[[3]]$coords[[2]]$lng
+[1] -0.1279264
+
+
+[[3]]$route$parts[[3]]$coords[[3]]
+[[3]]$route$parts[[3]]$coords[[3]]$lat
+[1] 51.51191
+
+[[3]]$route$parts[[3]]$coords[[3]]$lng
+[1] -0.1285772
+
+
+
+
+[[3]]$route$parts[[4]]
+[[3]]$route$parts[[4]]$id
+[1] 3
+
+[[3]]$route$parts[[4]]$type
+[1] "public_transport"
+
+[[3]]$route$parts[[4]]$mode
+[1] "rail_underground"
+
+[[3]]$route$parts[[4]]$directions
+[1] "Take a train (Northern (of London Underground (TfL)) line) from 'Leicester Square Underground Station' (leaves at 19:06) to 'Waterloo Underground Station' (arrives at 19:08) (3 stops)"
+
+[[3]]$route$parts[[4]]$distance
+[1] 0
+
+[[3]]$route$parts[[4]]$travel_time
+[1] 150
+
+[[3]]$route$parts[[4]]$coords
+[[3]]$route$parts[[4]]$coords[[1]]
+[[3]]$route$parts[[4]]$coords[[1]]$lat
+[1] 51.51191
+
+[[3]]$route$parts[[4]]$coords[[1]]$lng
+[1] -0.1285772
+
+
+[[3]]$route$parts[[4]]$coords[[2]]
+[[3]]$route$parts[[4]]$coords[[2]]$lat
+[1] 51.5088
+
+[[3]]$route$parts[[4]]$coords[[2]]$lng
+[1] -0.1255917
+
+
+[[3]]$route$parts[[4]]$coords[[3]]
+[[3]]$route$parts[[4]]$coords[[3]]$lat
+[1] 51.50729
+
+[[3]]$route$parts[[4]]$coords[[3]]$lng
+[1] -0.1225412
+
+
+[[3]]$route$parts[[4]]$coords[[4]]
+[[3]]$route$parts[[4]]$coords[[4]]$lat
+[1] 51.50319
+
+[[3]]$route$parts[[4]]$coords[[4]]$lng
+[1] -0.1135745
+
+
+
+[[3]]$route$parts[[4]]$line
+[1] "Northern (of London Underground (TfL))"
+
+[[3]]$route$parts[[4]]$departure_station
+[1] "Leicester Square Underground Station"
+
+[[3]]$route$parts[[4]]$arrival_station
+[1] "Waterloo Underground Station"
+
+[[3]]$route$parts[[4]]$departs_at
+[1] "19:06"
+
+[[3]]$route$parts[[4]]$arrives_at
+[1] "19:08"
+
+[[3]]$route$parts[[4]]$num_stops
+[1] 3
+
+
+[[3]]$route$parts[[5]]
+[[3]]$route$parts[[5]]$id
+[1] 4
+
+[[3]]$route$parts[[5]]$type
+[1] "basic"
+
+[[3]]$route$parts[[5]]$mode
+[1] "walk"
+
+[[3]]$route$parts[[5]]$directions
+[1] "Change stop"
+
+[[3]]$route$parts[[5]]$distance
+[1] 74
+
+[[3]]$route$parts[[5]]$travel_time
+[1] 132
+
+[[3]]$route$parts[[5]]$coords
+[[3]]$route$parts[[5]]$coords[[1]]
+[[3]]$route$parts[[5]]$coords[[1]]$lat
+[1] 51.50319
+
+[[3]]$route$parts[[5]]$coords[[1]]$lng
+[1] -0.1135745
+
+
+[[3]]$route$parts[[5]]$coords[[2]]
+[[3]]$route$parts[[5]]$coords[[2]]$lat
+[1] 51.50268
+
+[[3]]$route$parts[[5]]$coords[[2]]$lng
+[1] -0.112875
+
+
+
+
+[[3]]$route$parts[[6]]
+[[3]]$route$parts[[6]]$id
+[1] 5
+
+[[3]]$route$parts[[6]]$type
+[1] "public_transport"
+
+[[3]]$route$parts[[6]]$mode
+[1] "rail_underground"
+
+[[3]]$route$parts[[6]]$directions
+[1] "Take a train (Waterloo &amp; City (of London Underground (TfL)) line) from 'Waterloo Underground Station' (leaves at 19:11) to 'Bank Underground Station' (arrives at 19:15) (1 stops)"
+
+[[3]]$route$parts[[6]]$distance
+[1] 0
+
+[[3]]$route$parts[[6]]$travel_time
+[1] 247
+
+[[3]]$route$parts[[6]]$coords
+[[3]]$route$parts[[6]]$coords[[1]]
+[[3]]$route$parts[[6]]$coords[[1]]$lat
+[1] 51.50268
+
+[[3]]$route$parts[[6]]$coords[[1]]$lng
+[1] -0.112875
+
+
+[[3]]$route$parts[[6]]$coords[[2]]
+[[3]]$route$parts[[6]]$coords[[2]]$lat
+[1] 51.51331
+
+[[3]]$route$parts[[6]]$coords[[2]]$lng
+[1] -0.08833874
+
+
+
+[[3]]$route$parts[[6]]$line
+[1] "Waterloo &amp; City (of London Underground (TfL))"
+
+[[3]]$route$parts[[6]]$departure_station
+[1] "Waterloo Underground Station"
+
+[[3]]$route$parts[[6]]$arrival_station
+[1] "Bank Underground Station"
+
+[[3]]$route$parts[[6]]$departs_at
+[1] "19:11"
+
+[[3]]$route$parts[[6]]$arrives_at
+[1] "19:15"
+
+[[3]]$route$parts[[6]]$num_stops
+[1] 1
+
+
+[[3]]$route$parts[[7]]
+[[3]]$route$parts[[7]]$id
+[1] 6
+
+[[3]]$route$parts[[7]]$type
+[1] "basic"
+
+[[3]]$route$parts[[7]]$mode
+[1] "walk"
+
+[[3]]$route$parts[[7]]$directions
+[1] "Leave Bank Underground Station"
+
+[[3]]$route$parts[[7]]$distance
+[1] 16
+
+[[3]]$route$parts[[7]]$travel_time
+[1] 24
+
+[[3]]$route$parts[[7]]$coords
+[[3]]$route$parts[[7]]$coords[[1]]
+[[3]]$route$parts[[7]]$coords[[1]]$lat
+[1] 51.51331
+
+[[3]]$route$parts[[7]]$coords[[1]]$lng
+[1] -0.08833874
+
+
+[[3]]$route$parts[[7]]$coords[[2]]
+[[3]]$route$parts[[7]]$coords[[2]]$lat
+[1] 51.51344
+
+[[3]]$route$parts[[7]]$coords[[2]]$lng
+[1] -0.0884578
+
+
+
+
+[[3]]$route$parts[[8]]
+[[3]]$route$parts[[8]]$id
+[1] 7
+
+[[3]]$route$parts[[8]]$type
+[1] "road"
+
+[[3]]$route$parts[[8]]$mode
+[1] "walk"
+
+[[3]]$route$parts[[8]]$directions
+[1] "Walk 379 meters"
+
+[[3]]$route$parts[[8]]$distance
+[1] 379
+
+[[3]]$route$parts[[8]]$travel_time
+[1] 334
+
+[[3]]$route$parts[[8]]$coords
+[[3]]$route$parts[[8]]$coords[[1]]
+[[3]]$route$parts[[8]]$coords[[1]]$lat
+[1] 51.51344
+
+[[3]]$route$parts[[8]]$coords[[1]]$lng
+[1] -0.0884578
+
+
+[[3]]$route$parts[[8]]$coords[[2]]
+[[3]]$route$parts[[8]]$coords[[2]]$lat
+[1] 51.51345
+
+[[3]]$route$parts[[8]]$coords[[2]]$lng
+[1] -0.0884714
+
+
+[[3]]$route$parts[[8]]$coords[[3]]
+[[3]]$route$parts[[8]]$coords[[3]]$lat
+[1] 51.51346
+
+[[3]]$route$parts[[8]]$coords[[3]]$lng
+[1] -0.0884774
+
+
+[[3]]$route$parts[[8]]$coords[[4]]
+[[3]]$route$parts[[8]]$coords[[4]]$lat
+[1] 51.51346
+
+[[3]]$route$parts[[8]]$coords[[4]]$lng
+[1] -0.0884931
+
+
+[[3]]$route$parts[[8]]$coords[[5]]
+[[3]]$route$parts[[8]]$coords[[5]]$lat
+[1] 51.51346
+
+[[3]]$route$parts[[8]]$coords[[5]]$lng
+[1] -0.0885073
+
+
+[[3]]$route$parts[[8]]$coords[[6]]
+[[3]]$route$parts[[8]]$coords[[6]]$lat
+[1] 51.51346
+
+[[3]]$route$parts[[8]]$coords[[6]]$lng
+[1] -0.0885353
+
+
+[[3]]$route$parts[[8]]$coords[[7]]
+[[3]]$route$parts[[8]]$coords[[7]]$lat
+[1] 51.51346
+
+[[3]]$route$parts[[8]]$coords[[7]]$lng
+[1] -0.0885364
+
+
+[[3]]$route$parts[[8]]$coords[[8]]
+[[3]]$route$parts[[8]]$coords[[8]]$lat
+[1] 51.51348
+
+[[3]]$route$parts[[8]]$coords[[8]]$lng
+[1] -0.0885281
+
+
+[[3]]$route$parts[[8]]$coords[[9]]
+[[3]]$route$parts[[8]]$coords[[9]]$lat
+[1] 51.51349
+
+[[3]]$route$parts[[8]]$coords[[9]]$lng
+[1] -0.0885464
+
+
+[[3]]$route$parts[[8]]$coords[[10]]
+[[3]]$route$parts[[8]]$coords[[10]]$lat
+[1] 51.51351
+
+[[3]]$route$parts[[8]]$coords[[10]]$lng
+[1] -0.0885851
+
+
+[[3]]$route$parts[[8]]$coords[[11]]
+[[3]]$route$parts[[8]]$coords[[11]]$lat
+[1] 51.51353
+
+[[3]]$route$parts[[8]]$coords[[11]]$lng
+[1] -0.0886268
+
+
+[[3]]$route$parts[[8]]$coords[[12]]
+[[3]]$route$parts[[8]]$coords[[12]]$lat
+[1] 51.51356
+
+[[3]]$route$parts[[8]]$coords[[12]]$lng
+[1] -0.0886882
+
+
+[[3]]$route$parts[[8]]$coords[[13]]
+[[3]]$route$parts[[8]]$coords[[13]]$lat
+[1] 51.51354
+
+[[3]]$route$parts[[8]]$coords[[13]]$lng
+[1] -0.0887415
+
+
+[[3]]$route$parts[[8]]$coords[[14]]
+[[3]]$route$parts[[8]]$coords[[14]]$lat
+[1] 51.51353
+
+[[3]]$route$parts[[8]]$coords[[14]]$lng
+[1] -0.0888122
+
+
+[[3]]$route$parts[[8]]$coords[[15]]
+[[3]]$route$parts[[8]]$coords[[15]]$lat
+[1] 51.51353
+
+[[3]]$route$parts[[8]]$coords[[15]]$lng
+[1] -0.0888883
+
+
+[[3]]$route$parts[[8]]$coords[[16]]
+[[3]]$route$parts[[8]]$coords[[16]]$lat
+[1] 51.51354
+
+[[3]]$route$parts[[8]]$coords[[16]]$lng
+[1] -0.0889143
+
+
+[[3]]$route$parts[[8]]$coords[[17]]
+[[3]]$route$parts[[8]]$coords[[17]]$lat
+[1] 51.51356
+
+[[3]]$route$parts[[8]]$coords[[17]]$lng
+[1] -0.0889273
+
+
+[[3]]$route$parts[[8]]$coords[[18]]
+[[3]]$route$parts[[8]]$coords[[18]]$lat
+[1] 51.51451
+
+[[3]]$route$parts[[8]]$coords[[18]]$lng
+[1] -0.089619
+
+
+[[3]]$route$parts[[8]]$coords[[19]]
+[[3]]$route$parts[[8]]$coords[[19]]$lat
+[1] 51.51464
+
+[[3]]$route$parts[[8]]$coords[[19]]$lng
+[1] -0.0896809
+
+
+[[3]]$route$parts[[8]]$coords[[20]]
+[[3]]$route$parts[[8]]$coords[[20]]$lat
+[1] 51.51469
+
+[[3]]$route$parts[[8]]$coords[[20]]$lng
+[1] -0.0896341
+
+
+[[3]]$route$parts[[8]]$coords[[21]]
+[[3]]$route$parts[[8]]$coords[[21]]$lat
+[1] 51.5147
+
+[[3]]$route$parts[[8]]$coords[[21]]$lng
+[1] -0.0897491
+
+
+[[3]]$route$parts[[8]]$coords[[22]]
+[[3]]$route$parts[[8]]$coords[[22]]$lat
+[1] 51.51472
+
+[[3]]$route$parts[[8]]$coords[[22]]$lng
+[1] -0.0898988
+
+
+[[3]]$route$parts[[8]]$coords[[23]]
+[[3]]$route$parts[[8]]$coords[[23]]$lat
+[1] 51.51476
+
+[[3]]$route$parts[[8]]$coords[[23]]$lng
+[1] -0.0899594
+
+
+[[3]]$route$parts[[8]]$coords[[24]]
+[[3]]$route$parts[[8]]$coords[[24]]$lat
+[1] 51.51482
+
+[[3]]$route$parts[[8]]$coords[[24]]$lng
+[1] -0.0899281
+
+
+[[3]]$route$parts[[8]]$coords[[25]]
+[[3]]$route$parts[[8]]$coords[[25]]$lat
+[1] 51.5149
+
+[[3]]$route$parts[[8]]$coords[[25]]$lng
+[1] -0.0898848
+
+
+[[3]]$route$parts[[8]]$coords[[26]]
+[[3]]$route$parts[[8]]$coords[[26]]$lat
+[1] 51.51495
+
+[[3]]$route$parts[[8]]$coords[[26]]$lng
+[1] -0.0902604
+
+
+[[3]]$route$parts[[8]]$coords[[27]]
+[[3]]$route$parts[[8]]$coords[[27]]$lat
+[1] 51.51495
+
+[[3]]$route$parts[[8]]$coords[[27]]$lng
+[1] -0.0903181
+
+
+[[3]]$route$parts[[8]]$coords[[28]]
+[[3]]$route$parts[[8]]$coords[[28]]$lat
+[1] 51.51496
+
+[[3]]$route$parts[[8]]$coords[[28]]$lng
+[1] -0.0903744
+
+
+[[3]]$route$parts[[8]]$coords[[29]]
+[[3]]$route$parts[[8]]$coords[[29]]$lat
+[1] 51.51503
+
+[[3]]$route$parts[[8]]$coords[[29]]$lng
+[1] -0.0910251
+
+
+[[3]]$route$parts[[8]]$coords[[30]]
+[[3]]$route$parts[[8]]$coords[[30]]$lat
+[1] 51.51503
+
+[[3]]$route$parts[[8]]$coords[[30]]$lng
+[1] -0.091083
+
+
+[[3]]$route$parts[[8]]$coords[[31]]
+[[3]]$route$parts[[8]]$coords[[31]]$lat
+[1] 51.51504
+
+[[3]]$route$parts[[8]]$coords[[31]]$lng
+[1] -0.0911337
+
+
+[[3]]$route$parts[[8]]$coords[[32]]
+[[3]]$route$parts[[8]]$coords[[32]]$lat
+[1] 51.51537
+
+[[3]]$route$parts[[8]]$coords[[32]]$lng
+[1] -0.091066
+
+
+[[3]]$route$parts[[8]]$coords[[33]]
+[[3]]$route$parts[[8]]$coords[[33]]$lat
+[1] 51.51539
+
+[[3]]$route$parts[[8]]$coords[[33]]$lng
+[1] -0.0917676
+
+
+
+
+[[3]]$route$parts[[9]]
+[[3]]$route$parts[[9]]$id
+[1] 8
+
+[[3]]$route$parts[[9]]$type
+[1] "road"
+
+[[3]]$route$parts[[9]]$mode
+[1] "walk"
+
+[[3]]$route$parts[[9]]$directions
+[1] "Turn right onto Guildhall Yard and walk 64 meters"
+
+[[3]]$route$parts[[9]]$distance
+[1] 64
+
+[[3]]$route$parts[[9]]$travel_time
+[1] 47
+
+[[3]]$route$parts[[9]]$coords
+[[3]]$route$parts[[9]]$coords[[1]]
+[[3]]$route$parts[[9]]$coords[[1]]$lat
+[1] 51.51539
+
+[[3]]$route$parts[[9]]$coords[[1]]$lng
+[1] -0.0917676
+
+
+[[3]]$route$parts[[9]]$coords[[2]]
+[[3]]$route$parts[[9]]$coords[[2]]$lat
+[1] 51.51541
+
+[[3]]$route$parts[[9]]$coords[[2]]$lng
+[1] -0.0917623
+
+
+[[3]]$route$parts[[9]]$coords[[3]]
+[[3]]$route$parts[[9]]$coords[[3]]$lat
+[1] 51.51546
+
+[[3]]$route$parts[[9]]$coords[[3]]$lng
+[1] -0.0917469
+
+
+[[3]]$route$parts[[9]]$coords[[4]]
+[[3]]$route$parts[[9]]$coords[[4]]$lat
+[1] 51.51556
+
+[[3]]$route$parts[[9]]$coords[[4]]$lng
+[1] -0.0917495
+
+
+[[3]]$route$parts[[9]]$coords[[5]]
+[[3]]$route$parts[[9]]$coords[[5]]$lat
+[1] 51.5157
+
+[[3]]$route$parts[[9]]$coords[[5]]$lng
+[1] -0.0917489
+
+
+[[3]]$route$parts[[9]]$coords[[6]]
+[[3]]$route$parts[[9]]$coords[[6]]$lat
+[1] 51.51574
+
+[[3]]$route$parts[[9]]$coords[[6]]$lng
+[1] -0.0917522
+
+
+[[3]]$route$parts[[9]]$coords[[7]]
+[[3]]$route$parts[[9]]$coords[[7]]$lat
+[1] 51.51574
+
+[[3]]$route$parts[[9]]$coords[[7]]$lng
+[1] -0.0918659
+
+
+[[3]]$route$parts[[9]]$coords[[8]]
+[[3]]$route$parts[[9]]$coords[[8]]$lat
+[1] 51.51574
+
+[[3]]$route$parts[[9]]$coords[[8]]$lng
+[1] -0.0919915
+
+
+[[3]]$route$parts[[9]]$coords[[9]]
+[[3]]$route$parts[[9]]$coords[[9]]$lat
+[1] 51.51574
+
+[[3]]$route$parts[[9]]$coords[[9]]$lng
+[1] -0.0921103
+
+
+[[3]]$route$parts[[9]]$coords[[10]]
+[[3]]$route$parts[[9]]$coords[[10]]$lat
+[1] 51.51572
+
+[[3]]$route$parts[[9]]$coords[[10]]$lng
+[1] -0.0921105
+
+
+
+[[3]]$route$parts[[9]]$road
+[1] "Guildhall Yard"
+
+[[3]]$route$parts[[9]]$turn
+[1] "right"
+
+
+[[3]]$route$parts[[10]]
+[[3]]$route$parts[[10]]$id
+[1] 9
+
+[[3]]$route$parts[[10]]$type
+[1] "start_end"
+
+[[3]]$route$parts[[10]]$mode
+[1] "walk"
+
+[[3]]$route$parts[[10]]$directions
+[1] "Your destination is 13 meters southeast"
+
+[[3]]$route$parts[[10]]$distance
+[1] 13
+
+[[3]]$route$parts[[10]]$travel_time
+[1] 9
+
+[[3]]$route$parts[[10]]$coords
+[[3]]$route$parts[[10]]$coords[[1]]
+[[3]]$route$parts[[10]]$coords[[1]]$lat
+[1] 51.51572
+
+[[3]]$route$parts[[10]]$coords[[1]]$lng
+[1] -0.0921105
+
+
+[[3]]$route$parts[[10]]$coords[[2]]
+[[3]]$route$parts[[10]]$coords[[2]]$lat
+[1] 51.51562
+
+[[3]]$route$parts[[10]]$coords[[2]]$lng
+[1] -0.0919983
+
+
+
+[[3]]$route$parts[[10]]$direction
+[1] "southeast"</code></pre>
+</div>
 </div>
 </div>
 </div>
